@@ -10,6 +10,14 @@ IMGFILE=$2
 IMGNAME=`echo $IMGFILE | grep "[a-zA-Z0-9\.\_\-]*$" - `
 MNTDIR=/mnt/$IMGNAME.dir
 
+# Sprawdzanie czy jestem rootem
+if [ "$EUID" -ne 0 ] ; then 
+  echo "Proszę, uruchom ten skypt jako root."
+  exit 1
+fi
+
+
+# Sprawdzanie ilości argumentów
 if [ "$#" -lt 2 ] ; then
 		echo "Podałeś za mało argumentów skryptu."
 		echo "Przykładowe użycie : "
