@@ -7,6 +7,8 @@ else
 	exit 1
 fi
 
-cd $GIT_REPO_DIR
+cd $REPO_DIR
+echo $REPO_DIR
 mkdir $REPOSITORYNAME
-sudo git init --bare
+cd $REPOSITORYNAME
+git init --bare
