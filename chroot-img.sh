@@ -9,6 +9,12 @@ IMGFILE=$2
 IMGNAME=`echo $IMGFILE | grep "[a-zA-Z0-9\.\_\-]*$" - `
 MNTDIR=/mnt/$IMGNAME.dir
 
+if [ "$#" -lt 2 ] ; then
+		echo "Podałeś za mało argumentów skryptu."
+		echo "Przykładowe użycie : "
+		echo " ./chroot-img.sh [m/u] [nazwaobrazu] "
+fi
+
 if [ $1 = "m" ] ; then
 		echo "Montowanie systemu."
 		mkdir $MNTDIR
