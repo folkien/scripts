@@ -56,7 +56,6 @@ elif [ $1 = "u" ] ; then
 		umount $MNTDIR/dev
 		#Demontaż oraz usuwanie obrazu
 		umount $MNTDIR
-		rm -rf $MNTDIR
 		pyNotify -s "Mount : Odmontowano $MNTDIR oraz proc,sys,dev."
 fi
 
