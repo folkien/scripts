@@ -7,8 +7,17 @@
 # $1 - argument czy "m"ontować czy nie "u"
 # $2 - nazwa obrazu,
 IMGFILE=$2
-IMGNAME=`echo $IMGFILE | grep "[a-zA-Z0-9\.\_\-]*$" - `
-MNTDIR=/mnt/$IMGNAME.dir
+
+#Sprawdzamy czy IMGFILE to plik czy katalog ?
+if [ -d $IMGFILE ] ; then
+		MNTDIR=$IMGFILE
+else
+		IMGNAME=`echo $IMGFILE | grep "[a-zA-Z0-9\.\_\-]*$" - `
+		MNTDIR=/mnt/$IMGNAME.dir
+fi
+
+
+
 
 # Sprawdzanie czy jestem rootem
 if [ "$EUID" -ne 0 ] ; then 
@@ -25,7 +34,6 @@ if [ "$#" -lt 2 ] ; then
 fi
 
 if [ $1 = "m" ] ; then
-		echo "Montowanie systemu."
 		# Czy katalog istnieje
 		if [ -d $MNTDIR ] ; then
 				echo "Katalog istnieje."
@@ -39,7 +47,9 @@ if [ $1 = "m" ] ; then
 				mount $IMGFILE -t ext4 $MNTDIR -v
 				pyNotify -s "Mount : Zamontowano $IMGFILE w $MNTDIR."
 		fi
+
 		# bindowanie katalogów kernela
+		echo "Binduje katalogi."
 		mount --bind /proc $MNTDIR/proc
 		mount --bind /sys $MNTDIR/sys
 		mount --bind /dev $MNTDIR/dev
