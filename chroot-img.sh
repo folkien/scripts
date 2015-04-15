@@ -17,8 +17,19 @@ fi
 
 if [ $1 = "m" ] ; then
 		echo "Montowanie systemu."
-		mkdir $MNTDIR
-		mount $IMGFILE $MNTDIR
+		# Czy katalog istnieje
+		if [ -d $MNTDIR ] ; then
+				echo "Katalog istnieje."
+		else
+				mkdir $MNTDIR -v
+		fi
+		# Czy katalog nie jest pusty ?
+		if [ "$(ls -A $DIR)" ]; then
+				echo "System jest juz zamontowany."
+		else
+				mount $IMGFILE $MNTDIR -v
+		fi
+		# bindowanie katalogów kernela
 		mount --bind /proc $MNTDIR/proc
 		mount --bind /sys $MNTDIR/sys
 		mount --bind /dev $MNTDIR/dev
