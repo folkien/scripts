@@ -3,6 +3,7 @@ source /etc/profile
 #Wciagamy kolory, pod warunkiem ze zostały poprawnie zainstalowane.
 source /etc/colors.sh
 
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -158,3 +159,9 @@ alias gvi="gvim --remote-tab"
 alias PulpitSonel='rdesktop $SWIDNICAIP -u spaszko -p $SONELPASS -g 1200x800 -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\'
 alias PulpitWroclaw='rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g 1100x700 -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\'
 alias sshSonel="ssh -X spaszko@$MYSONELIP" 
+
+# Poprawka do prompt'a systemowego
+export SYSTEMVER=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
+export SYSTEM=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
+export TODAY=`date +"%d.%m.%Y"`
+export PS1="$White(ubuntu)$Red$USER@$Yellow$TODAY:~\$$Color_Off "
