@@ -1,4 +1,8 @@
 source /etc/profile
+
+#Wciagamy kolory, pod warunkiem ze zostały poprawnie zainstalowane.
+source /etc/colors.sh
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -10,7 +14,7 @@ case $- in
 esac
 
 #Wersja Basha
-echo "Bash spasz-home v.0.1"
+echo -e "$Purple#Bash spasz-ubuntu-universal v.0.2.$Color_Off"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -117,6 +121,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+#Wciagamy zmienne systemowe
 source /home/$USER/variables.sh
 
 #zmienne 
