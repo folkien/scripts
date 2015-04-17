@@ -158,8 +158,8 @@ alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.
 alias gvi="gvim --remote-tab"
 alias serial_MI0="sudo miniterm.py -b 115200 -p /dev/ttyMI0"
 
-alias PulpitSonel="rdesktop $SWIDNICAIP -u spaszko -p $SONELPASS -g $DESKTOPWIDTHx$DESKTOPHEIGHT -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
-alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g $DESKTOPWIDTHx$DESKTOPHEIGHT -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
+alias PulpitSonel="rdesktop $SWIDNICAIP -u spaszko -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
+alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias sshSonel="ssh -X spaszko@$MYSONELIP" 
 
 # Poprawka do prompt'a systemowego
