@@ -170,6 +170,6 @@ if [ $(id -u) -eq 0 ];
 then # you are root, set red colour prompt
   export PS1="\\[$(tput setaf 1)\\]\\u@\\h:\\w #\\[$(tput sgr0)\\]"
 else # normal
-  export PS1="[\\u@\\D{%d.%m.%Y}] $ "
+  export PS1="[\\u@\\D{%d.%m.%Y} \\W] $ "
 fi
 
