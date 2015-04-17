@@ -8,6 +8,8 @@ ln -s $DIR/git-create-repository.sh git-create-repository
 ln -s $DIR/tars.sh tars
 ln -s $DIR/trim.py trim
 ln -s $DIR/after.py after
+ln -s $DIR/volumeup.sh volumeup
+ln -s $DIR/volumedown.sh volumedown
  
 cd $DIR
 cp -rfv colors.sh /etc/
