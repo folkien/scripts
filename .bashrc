@@ -132,6 +132,7 @@ export gdrive="/home/$USER/Dokumenty/folkus@gmail.com/"
 export linux="/home/$USER/Dokumenty/folkus@gmail.com/Linux"
 export hasla="$gdrive/Osobiste/hasla.cpt"
 export sne="$gdrive/SNE"
+export gentoo="$MOUNTSSD/gentoo"
 export embedded="$MOUNTSSD/embedded-linux"
 export bitbake="$embedded/setup-scripts"
 export metasonel="$embedded/setup-scripts/sources/meta-sonel"
@@ -155,9 +156,10 @@ alias mv='mv -fv'
 #Aliasy
 alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias gvi="gvim --remote-tab"
+alias serial_MI0="sudo miniterm.py -b 115200 -p /dev/ttyMI0"
 
-alias PulpitSonel='rdesktop $SWIDNICAIP -u spaszko -p $SONELPASS -g 1200x800 -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\'
-alias PulpitWroclaw='rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g 1100x700 -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\'
+alias PulpitSonel="rdesktop $SWIDNICAIP -u spaszko -p $SONELPASS -g $DESKTOPWIDTHx$DESKTOPHEIGHT -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
+alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g $DESKTOPWIDTHx$DESKTOPHEIGHT -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias sshSonel="ssh -X spaszko@$MYSONELIP" 
 
 # Poprawka do prompt'a systemowego
