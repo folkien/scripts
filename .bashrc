@@ -148,6 +148,10 @@ export kiry="/home/spasz/Dokumenty/folkus@gmail.com/Wyjazdy/kiry"
 export scripts="/home/$USER/scripts"
 export boisko="/home/$USER/Dokumenty/boisko"
 export git="/home/$USER/Dokumenty/git"
+export gentoo_mnt="/mnt/mmr-imx-gentoo.ext4.dir"
+export initramfs="$gentoo_mnt/usr/src/initramfs"
+export kernel="$gentoo_mnt/usr/src/linux"
+export bake="$gentoo_mnt/scripts"
 
 #nadpisane polecenia
 alias cp='cp -rfv'
