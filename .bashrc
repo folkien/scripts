@@ -126,7 +126,7 @@ fi
 source /home/$USER/variables.sh
 
 #zmienne 
-export MOUNTSSD="/mnt/linux"
+export MOUNTSSD="/media/linux"
 export bashrc="/home/$USER/.bashrc"
 export gdrive="/home/$USER/Dokumenty/folkus@gmail.com/"
 export linux="/home/$USER/Dokumenty/folkus@gmail.com/Linux"
@@ -136,6 +136,7 @@ export gentoo="$MOUNTSSD/gentoo"
 export embedded="$MOUNTSSD/embedded-linux"
 export bitbake="$embedded/setup-scripts"
 export metasonel="$embedded/setup-scripts/sources/meta-sonel"
+export metasonelimx="$embedded/setup-scripts/sources/meta-sonel-imx"
 export metagrinn="$embedded/setup-scripts/sources/meta-grinn"
 export deploy="$embedded/setup-scripts/deploy/glibc/images/mmr"
 export kernel="$embedded/setup-scripts"
