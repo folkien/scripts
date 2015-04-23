@@ -1,0 +1,200 @@
+#!/bin/bash
+
+NOTE_B0=31
+NOTE_C1=33
+NOTE_CS=35
+NOTE_D1=37
+NOTE_DS=39
+NOTE_E1=41
+NOTE_F1=44
+NOTE_FS=46
+NOTE_G1=49
+NOTE_GS=52
+NOTE_A1=55
+NOTE_AS=58
+NOTE_B1=62
+NOTE_C2=65
+NOTE_CS=69
+NOTE_D2=73
+NOTE_DS=78
+NOTE_E2=82
+NOTE_F2=87
+NOTE_FS=93
+NOTE_G2=98
+NOTE_GS=104
+NOTE_A2=110
+NOTE_AS=117
+NOTE_B2=123
+NOTE_C3=131
+NOTE_CS=139
+NOTE_D3=147
+NOTE_DS=156
+NOTE_E3=165
+NOTE_F3=175
+NOTE_FS=185
+NOTE_G3=196
+NOTE_GS=208
+NOTE_A3=220
+NOTE_AS=233
+NOTE_B3=247
+NOTE_C4=262
+NOTE_CS=277
+NOTE_D4=294
+NOTE_DS=311
+NOTE_E4=330
+NOTE_F4=349
+NOTE_FS=370
+NOTE_G4=392
+NOTE_GS=415
+NOTE_A4=440
+NOTE_AS=466
+NOTE_B4=494
+NOTE_C5=523
+NOTE_CS=554
+NOTE_D5=587
+NOTE_DS=622
+NOTE_E5=659
+NOTE_F5=698
+NOTE_FS=740
+NOTE_G5=784
+NOTE_GS=831
+NOTE_A5=880
+NOTE_AS=932
+NOTE_B5=988
+NOTE_C6=1047
+NOTE_CS=1109
+NOTE_D6=1175
+NOTE_DS=1245
+NOTE_E6=1319
+NOTE_F6=1397
+NOTE_FS=1480
+NOTE_G6=1568
+NOTE_GS=1661
+NOTE_A6=1760
+NOTE_AS=1865
+NOTE_B6=1976
+NOTE_C7=2093
+NOTE_CS=2217
+NOTE_D7=2349
+NOTE_DS=2489
+NOTE_E7=2637
+NOTE_F7=2794
+NOTE_FS=2960
+NOTE_G7=3136
+NOTE_GS=3322
+NOTE_A7=3520
+NOTE_AS=3729
+NOTE_B7=3951
+NOTE_C8=4186
+NOTE_CS=4435
+NOTE_D8=4699
+NOTE_DS=4978
+
+TEMPO12=83333
+TEMPO9=111111
+TEMPO12=83
+TEMPO9=111
+TEMPO12=166
+TEMPO9=222
+
+# Meloda Mario Bros
+beep -f $NOTE_E7 -l $TEMPO12
+beep -f $NOTE_E7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_E7 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_C7 -l $TEMPO12
+beep -f $NOTE_E7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+
+beep -f $NOTE_G7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+
+beep -f $NOTE_G6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+ 
+beep -f $NOTE_C7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_G6 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_E6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_A6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_B6 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_A6 -l $TEMPO12
+beep -f $NOTE_A6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+ 
+
+beep -f $NOTE_G6 -l $TEMPO9
+beep -f $NOTE_E7 -l $TEMPO9
+beep -f $NOTE_G7 -l $TEMPO9
+
+beep -f $NOTE_A7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_F7 -l $TEMPO12
+beep -f $NOTE_G7 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_E7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_C7 -l $TEMPO12
+
+beep -f $NOTE_D7 -l $TEMPO12
+beep -f $NOTE_B6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+ 
+
+beep -f $NOTE_C7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_G6 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_E6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_A6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_B6 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_A6 -l $TEMPO12
+beep -f $NOTE_A6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+
+ 
+beep -f $NOTE_G6 -l $TEMPO9
+beep -f $NOTE_E7 -l $TEMPO9
+beep -f $NOTE_G7 -l $TEMPO9
+
+beep -f $NOTE_A7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_F7 -l $TEMPO12
+beep -f $NOTE_G7 -l $TEMPO12
+
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_E7 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f $NOTE_C7 -l $TEMPO12
+
+beep -f $NOTE_D7 -l $TEMPO12
+beep -f $NOTE_B6 -l $TEMPO12
+beep -f 1 -l $TEMPO12
+beep -f 1 -l $TEMPO12
