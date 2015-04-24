@@ -15,7 +15,7 @@ case $- in
 esac
 
 #Wersja Basha
-echo -e "$Purple#Bash spasz-ubuntu-universal v.0.2.$Color_Off"
+echo -e "$Purple#Bash spasz-ubuntu-universal v.0.3.$Color_Off"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -175,8 +175,8 @@ export TODAY=`date +"%d.%m.%Y"`
 # If id command returns zero, you’ve root access.
 if [ $(id -u) -eq 0 ];
 then # you are root, set red colour prompt
-		export PS1="\\[$(tput setaf 1)\\]\\u@\\D{%d.%m.%Y}:\\W # \\[$(tput sgr0)\\]"
+		export PS1="[\\[$(tput setaf 1)\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$Yellow\\] \\W \\[$(tput sgr0)\\]] $ "
 else # normal
-		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\W \\[$(tput sgr0)\\]] $ "
+		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$IYellow\\] \\W \\[$(tput sgr0)\\]] $ "
 fi
 
