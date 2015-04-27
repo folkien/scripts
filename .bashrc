@@ -159,6 +159,8 @@ alias cp='cp -rfv'
 alias rm='rm -rfv'
 alias mv='mv -fv'
 #Aliasy
+alias serialUSB0="sudo gtkterm --port /dev/ttyUSB0  --speed 115200"
+alias serialttyMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
 alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias gvi="gvim --remote-tab"
 alias serial_MI0="sudo miniterm.py -b 115200 -p /dev/ttyMI0"
@@ -179,4 +181,3 @@ then # you are root, set red colour prompt
 else # normal
 		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$IYellow\\] \\W \\[$(tput sgr0)\\]] $ "
 fi
-
