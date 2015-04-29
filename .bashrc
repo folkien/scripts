@@ -1,8 +1,11 @@
+#autor Sławomir Paszko
+BASHRCVERSION="0.4"
+
+# Wciągamy profile
 source /etc/profile
 
 #Wciagamy kolory, pod warunkiem ze zostały poprawnie zainstalowane.
 source /etc/colors.sh
-
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -15,7 +18,7 @@ case $- in
 esac
 
 #Wersja Basha
-echo -e "$Purple#Bash spasz-ubuntu-universal v.0.3.$Color_Off"
+echo -e "$Purple#Bash spasz-ubuntu-universal v.$BASHRCVERSION.$Color_Off"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -126,12 +129,19 @@ fi
 source /home/$USER/variables.sh
 
 #zmienne 
-export MOUNTSSD="/media/linux"
 export bashrc="/home/$USER/.bashrc"
+
+# stałe dotyczące dysku google
 export gdrive="/home/$USER/Dokumenty/folkus@gmail.com/"
-export linux="/home/$USER/Dokumenty/folkus@gmail.com/Linux"
+export kiry="$gdrive/Wyjazdy/kiry"
 export hasla="$gdrive/Osobiste/hasla.cpt"
 export sne="$gdrive/SNE"
+export linux="/home/$USER/Dokumenty/folkus@gmail.com/Linux"
+export ubuntupackages="$linux/ubuntu-packages"
+export baseimage="$linux/base-image.sh"\
+
+#Stałe dotyczące dysku SSD i embedded
+export MOUNTSSD="/media/linux"
 export gentoo="$MOUNTSSD/gentoo"
 export embedded="$MOUNTSSD/embedded-linux"
 export bitbake="$embedded/setup-scripts"
@@ -142,13 +152,16 @@ export deploy="$embedded/setup-scripts/deploy/glibc/images/mmr"
 export kernel="$embedded/setup-scripts"
 export sdcards="$embedded/sdcards"
 export sysroot="$sdcards/sysroot"
-export ubuntupackages="/home/$USER/Dokumenty/folkus@gmail.com/Linux/ubuntu-packages"
-export baseimage="/home/$USER/Dokumenty/folkus@gmail.com/Linux/base-image.sh"
+
+# Stałe dotyczace apache
 export www="/var/www/html" 
-export kiry="/home/spasz/Dokumenty/folkus@gmail.com/Wyjazdy/kiry"
+
+# Stałe dotyczące katalogów użytkownika
 export scripts="/home/$USER/scripts"
 export boisko="/home/$USER/Dokumenty/boisko"
 export git="/home/$USER/Dokumenty/git"
+
+# Stałe dotyczace mmr-gentoo
 export gentoo_mnt="/mnt/mmr-imx-gentoo.ext4.dir"
 export initramfs="$gentoo_mnt/usr/src/initramfs"
 export kernel="$gentoo_mnt/usr/src/linux"
@@ -158,12 +171,12 @@ export bake="$gentoo_mnt/scripts"
 alias cp='cp -rfv'
 alias rm='rm -rfv'
 alias mv='mv -fv'
+
 #Aliasy
 alias serialUSB0="sudo gtkterm --port /dev/ttyUSB0  --speed 115200"
-alias serialttyMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
+alias serialMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
 alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias gvi="gvim --remote-tab"
-alias serial_MI0="sudo miniterm.py -b 115200 -p /dev/ttyMI0"
 
 alias PulpitSonel="rdesktop $SWIDNICAIP -u spaszko -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
