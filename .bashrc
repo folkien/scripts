@@ -178,9 +178,11 @@ alias serialMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
 alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias gvi="gvim --remote-tab"
 
-alias PulpitSonel="rdesktop $SWIDNICAIP -u spaszko -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
+alias PulpitSonel="rdesktop $SWIDNICAIP -u $SWIDNICAUSER -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias sshSonel="ssh -X spaszko@$MYSONELIP" 
+alias tohex="printf '%x\n' "
+alias todec="printf '%d\n' "
 
 # Poprawka do prompt'a systemowego
 export SYSTEMVER=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
