@@ -148,9 +148,9 @@ export bitbake="$embedded/setup-scripts"
 export metasonel="$embedded/setup-scripts/sources/meta-sonel"
 export metasonelimx="$embedded/setup-scripts/sources/meta-sonel-imx"
 export metagrinn="$embedded/setup-scripts/sources/meta-grinn"
-export deploy="$embedded/setup-scripts/deploy/glibc/images/mmr"
+export deploy="$embedded/setup-scripts/deploy/glibc/images/mmr-imx"
 export kernel="$embedded/setup-scripts"
-export sdcards="$embedded/sdcards"
+export sdcards="$embedded/sd-cards"
 export sysroot="$sdcards/sysroot"
 
 # Stałe dotyczace apache
