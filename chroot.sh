@@ -21,7 +21,7 @@ fi
 
 # Sprawdzanie czy jestem rootem
 if [ "$EUID" -ne 0 ] ; then 
-  echo "Proszę, uruchom ten skypt jako root."
+  echo "Proszę, uruchom ten skypt jako root i najlepiej 'sudo su' ze wzgledu na to ze samo sudo powoduje duzo dziwnych problemow."
   exit 1
 fi
 
