@@ -175,7 +175,7 @@ alias mv='mv -fv'
 #Aliasy
 alias du="ncdu"
 alias df="pydf"
-alias mostused="history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10"
+alias mostused="history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head -n10"
 alias serialUSB0="sudo gtkterm --port /dev/ttyUSB0  --speed 115200"
 alias serialMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
 alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
