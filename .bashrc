@@ -142,7 +142,7 @@ export baseimage="$linux/base-image.sh"\
 
 #Stałe dotyczące dysku SSD i embedded
 export MOUNTSSD="/media/linux"
-export gentoo="$MOUNTSSD/gentoo"
+export gentoo="/home/$USER/Dokumenty/gentoo"
 export embedded="$MOUNTSSD/embedded-linux"
 export bitbake="$embedded/setup-scripts"
 export metasonel="$embedded/setup-scripts/sources/meta-sonel"
