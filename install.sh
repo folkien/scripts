@@ -11,6 +11,7 @@ ln -s $DIR/after.py after
 ln -s $DIR/volumeup.sh volumeup
 ln -s $DIR/volumedown.sh volumedown
 ln -s $DIR/ysess.py ysess
+ln -s $DIR/burnimage burnimage
  
 cd $DIR
 cp -rfv colors.sh /etc/
