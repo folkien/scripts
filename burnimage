@@ -1,0 +1,31 @@
+#!/bin/bash
+# Wypalenie obrazu z FROM do dysku WHERE
+
+do_upload() {
+    FROM=$1
+    WHERE=$2
+    IMAGESIZE=$(stat -c%s "$FROM")
+
+    echo "Wypalanie obrazu."
+    dd if=$FROM | pv --size ${IMAGESIZE} | dd of=$WHERE
+    echo "Sprawdzanie dysku."
+    e2fsck -f -y -v -C 0 $WHERE
+    echo "Poszerzanie partycji."
+    resize2fs -p $WHERE
+}
+
+if [ $# -ne 2 ]; then 
+	echo "Argumentów $#. Prosze podać : do_upload (FROM) (WHERE)"
+	exit 1
+fi
+
+if [ -e $1 ] ; then
+    if [ -e $2 ] ; then
+        do_upload $1 $2
+    else
+        echo "Plik $2 nie istnieje."
+    fi
+else
+    echo "Plik $1 nie istnieje."
+fi
+
