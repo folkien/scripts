@@ -12,6 +12,10 @@ ln -s $DIR/volumeup.sh volumeup
 ln -s $DIR/volumedown.sh volumedown
 ln -s $DIR/ysess.py ysess
 ln -s $DIR/burnimage burnimage
+
+#Instalacja konfiguracji XFCE4
+rm -rf ~/.config/xfce4
+ln -sf $DIR/config/xfce4/ ~/.config/xfce4
  
 cd $DIR
 cp -rfv colors.sh /etc/
