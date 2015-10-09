@@ -1,0 +1,12 @@
+[radio plugin]
+dev=/dev/radio
+startup_cmd=
+shutdown_cmd=
+frq=10795
+scroll=0
+show_signal=true
+update_display=true
+show_label=true
+resolve_presets_in_label=true
+graphical_signal=true
+
