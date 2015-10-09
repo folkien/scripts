@@ -45,7 +45,10 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-3" type="string" value="tasklist"/>
+    <property name="plugin-3" type="string" value="tasklist">
+      <property name="grouping" type="uint" value="1"/>
+      <property name="show-wireframes" type="bool" value="true"/>
+    </property>
     <property name="plugin-15" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>

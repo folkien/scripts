@@ -139,6 +139,8 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_4" type="string" value="move_window_workspace_4_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;KP_5" type="string" value="move_window_workspace_5_key"/>
       <property name="override" type="bool" value="true"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;Up" type="string" value="maximize_horiz_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;Right" type="string" value="maximize_vert_key"/>
     </property>
   </property>
   <property name="providers" type="array">
