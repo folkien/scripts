@@ -12,6 +12,7 @@ ln -s $DIR/volumeup.sh volumeup
 ln -s $DIR/volumedown.sh volumedown
 ln -s $DIR/ysess.py ysess
 ln -s $DIR/burnimage burnimage
+ln -s $DIR/grep-email.sh  grep-email
 
 #Instalacja konfiguracji XFCE4
 rm -rf ~/.config/xfce4
