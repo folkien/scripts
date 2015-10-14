@@ -1,5 +1,5 @@
-favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-mail-reader.desktop,exo-web-browser.desktop
-recent=
+favorites=palemoon.desktop,Thunar.desktop,terminator.desktop,gvim.desktop,spotify.desktop,taskcoach.desktop
+recent=gcalctool.desktop,spotify.desktop,gnome-screenshot.desktop
 button-title=Menu programów
 button-icon=xfce4-whiskermenu
 show-button-title=false

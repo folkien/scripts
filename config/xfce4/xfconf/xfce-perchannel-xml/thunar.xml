@@ -6,10 +6,12 @@
   <property name="last-window-maximized" type="bool" value="true"/>
   <property name="last-separator-position" type="int" value="268"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_SMALLER"/>
-  <property name="last-details-view-column-widths" type="string" value="50,662,50,50,657,50,50,88,186"/>
+  <property name="last-details-view-column-widths" type="string" value="50,1138,50,50,181,50,50,88,186"/>
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="last-location-bar" type="string" value="ThunarLocationEntry"/>
   <property name="last-side-pane" type="string" value="ThunarTreePane"/>
   <property name="last-window-width" type="int" value="640"/>
   <property name="last-window-height" type="int" value="480"/>
+  <property name="last-sort-column" type="string" value="THUNAR_COLUMN_DATE_MODIFIED"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_DESCENDING"/>
 </channel>

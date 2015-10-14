@@ -1,0 +1,17 @@
+[Desktop Entry]
+GenericName=Text Editor
+GenericName[pl]=Edytor tekstu
+Name=KWrite
+Name[pl]=KWrite
+MimeType=text/plain;
+Exec=kwrite %U
+X-KDE-StartupNotify=true
+Icon=accessories-text-editor
+X-DocPath=kwrite/index.html
+Type=Application
+Terminal=false
+InitialPreference=8
+X-DBUS-StartupType=Multi
+X-DBUS-ServiceName=org.kate-editor.kwrite
+Categories=Qt;KDE;Utility;TextEditor;
+X-XFCE-Source=file:///usr/share/applications/kde4/kwrite.desktop

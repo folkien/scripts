@@ -14,12 +14,16 @@ row=7
 col=0
 
 [/home/spasz/Publiczny]
-row=8
+row=0
+col=3
+
+[/home/spasz/main.conf]
+row=1
 col=2
 
-[/home/spasz/2015-10-08-110226_1920x1080_scrot.png]
-row=8
-col=1
+[/home/spasz/Pobrane]
+row=1
+col=3
 
 [/home/spasz/ysess.py]
 row=7
@@ -50,15 +54,15 @@ row=1
 col=0
 
 [/home/spasz/TOD2]
-row=3
+row=2
 col=2
 
 [/home/spasz/run.svg]
-row=1
+row=0
 col=2
 
 [/home/spasz/Dokumenty]
-row=7
+row=8
 col=2
 
 [/home/spasz/Przejscie-LCD-OFO.png]
@@ -66,23 +70,27 @@ row=2
 col=1
 
 [/home/spasz/start]
-row=0
-col=2
+row=8
+col=1
 
 [/home/spasz/LTspice IV.desktop]
 row=1
 col=1
 
+[/home/spasz/test-input]
+row=5
+col=2
+
 [/home/spasz/Programy]
-row=1
-col=3
-
-[/home/spasz/Pobrane]
-row=0
-col=3
-
-[/home/spasz/main.conf]
 row=2
+col=3
+
+[/home/spasz/bluez-test-input]
+row=6
+col=2
+
+[/home/spasz/yakuake.ini]
+row=4
 col=2
 
 [/home/spasz/Pulpit]
@@ -93,20 +101,16 @@ col=0
 row=5
 col=0
 
-[/home/spasz/yakuake.ini]
-row=6
-col=2
-
 [/home/spasz/linux-installer]
 row=0
 col=0
 
 [/home/spasz/VirtualBox VMs]
-row=4
+row=7
 col=2
 
 [/home/spasz/vimrc.local.copy]
-row=5
+row=3
 col=2
 
 [/home/spasz/linux-boot.jpg]
