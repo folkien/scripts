@@ -181,6 +181,7 @@ alias serialMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
 alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias gvi="gvim --remote-tab"
 alias g="git"
+alias check_ssh_servers="sudo nmap -p 22 --open -sV 172.31.0.0/24"
 
 alias PulpitSonel="rdesktop $SWIDNICAIP -u $SWIDNICAUSER -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
@@ -200,4 +201,3 @@ then # you are root, set red colour prompt
 else # normal
 		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$IYellow\\] \\W \\[$(tput sgr0)\\]] $ "
 fi
-alias check_ssh_servers=sudo nmap -p 22 --open -sV 172.31.0.0/24
