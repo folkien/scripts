@@ -12,6 +12,8 @@ ln -s $DIR/volumeup.sh volumeup
 ln -s $DIR/volumedown.sh volumedown
 ln -s $DIR/ysess.py ysess
 ln -s $DIR/burnimage burnimage
+ln -s $DIR/arm-chroot.sh arm-chroot
+ln -s $DIR/chroot.sh mount-chroot
 
 #Instalacja konfiguracji XFCE4
 rm -rf ~/.config/xfce4
