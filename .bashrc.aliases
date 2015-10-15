@@ -1,0 +1,30 @@
+#autor Sławomir Paszko
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+#nadpisane polecenia
+alias cp='cp -rf'
+alias rm='rm -rf'
+alias mv='mv -fv'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+#Aliasy
+alias du="ncdu"
+alias df="pydf"
+alias mostused="history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head -n10"
+alias serialUSB0="sudo gtkterm --port /dev/ttyUSB0  --speed 115200"
+alias serialMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
+alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+alias gvi="gvim --remote-tab"
+alias g="git"
+alias check_ssh_servers="sudo nmap -p 22 --open -sV 172.31.0.0/24"
+
+alias PulpitSonel="rdesktop $SWIDNICAIP -u $SWIDNICAUSER -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
+alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
+alias sshSonel="ssh -X spaszko@$MYSONELIP" 
+alias tohex="printf '%x\n' "
+alias todec="printf '%d\n' "
+

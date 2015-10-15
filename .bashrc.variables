@@ -1,0 +1,57 @@
+#autor Sławomir Paszko
+
+#Wciagamy zmienne systemowe
+if [ -f /home/$USER/variables.sh ] ; then
+    source /home/$USER/variables.sh
+fi
+
+export bashrc="/home/$USER/.bashrc"
+
+# stałe dotyczące dysku google
+export gdrive="/home/$USER/Dokumenty/folkus@gmail.com/"
+export kiry="$gdrive/Wyjazdy/kiry"
+export hasla="$gdrive/Osobiste/hasla.cpt"
+export sne="$gdrive/SNE"
+export linux="/home/$USER/Dokumenty/folkus@gmail.com/Linux"
+export ubuntupackages="$linux/ubuntu-packages"
+export baseimage="$linux/base-image.sh"\
+
+#Stałe dotyczące dysku SSD i embedded
+export MOUNTSSD="/media/linux"
+export gentoo="$MOUNTSSD/gentoo"
+export embedded="$MOUNTSSD/embedded-linux"
+export bitbake="$embedded/setup-scripts"
+export metasonel="$embedded/setup-scripts/sources/meta-sonel"
+export metasonelimx="$embedded/setup-scripts/sources/meta-sonel-imx"
+export metagrinn="$embedded/setup-scripts/sources/meta-grinn"
+export deploy="$embedded/setup-scripts/deploy/glibc/images/mmr-imx"
+export kernel="$embedded/setup-scripts"
+export sdcards="$embedded/sd-cards"
+export sysroot="$sdcards/sysroot"
+
+# Stałe dotyczace apache
+export www="/var/www/html" 
+
+# Stałe dotyczące katalogów użytkownika
+export scripts="/home/$USER/scripts"
+export boisko="/home/$USER/Dokumenty/boisko"
+export git="/home/$USER/Dokumenty/git"
+
+# Stałe dotyczace mmr-gentoo
+export gentoo_mnt="/mnt/mmr-imx-gentoo.ext4.dir"
+export initramfs="$gentoo_mnt/usr/src/initramfs"
+export kernel="$gentoo_mnt/usr/src/linux"
+export bake="$gentoo_mnt/scripts"
+
+# Poprawka do prompt'a systemowego
+export SYSTEMVER=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
+export SYSTEM=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
+export TODAY=`date +"%d.%m.%Y"`
+
+# If id command returns zero, you’ve root access.
+if [ $(id -u) -eq 0 ];
+then # you are root, set red colour prompt
+		export PS1="[\\[$(tput setaf 1)\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$Yellow\\] \\W \\[$(tput sgr0)\\]] $ "
+else # normal
+		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$IYellow\\] \\W \\[$(tput sgr0)\\]] $ "
+fi
