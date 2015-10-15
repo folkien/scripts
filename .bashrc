@@ -142,7 +142,7 @@ export baseimage="$linux/base-image.sh"\
 
 #Stałe dotyczące dysku SSD i embedded
 export MOUNTSSD="/media/linux"
-export gentoo="/home/$USER/Dokumenty/gentoo"
+export gentoo="$MOUNTSSD/gentoo"
 export embedded="$MOUNTSSD/embedded-linux"
 export bitbake="$embedded/setup-scripts"
 export metasonel="$embedded/setup-scripts/sources/meta-sonel"
@@ -180,6 +180,8 @@ alias serialUSB0="sudo gtkterm --port /dev/ttyUSB0  --speed 115200"
 alias serialMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
 alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias gvi="gvim --remote-tab"
+alias g="git"
+alias check_ssh_servers="sudo nmap -p 22 --open -sV 172.31.0.0/24"
 
 alias PulpitSonel="rdesktop $SWIDNICAIP -u $SWIDNICAUSER -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "

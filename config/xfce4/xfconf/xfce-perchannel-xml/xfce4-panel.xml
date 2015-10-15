@@ -32,13 +32,17 @@
         <value type="int" value="11"/>
         <value type="int" value="8"/>
         <value type="int" value="20"/>
-        <value type="int" value="10"/>
         <value type="int" value="12"/>
-        <value type="int" value="13"/>
         <value type="int" value="1"/>
-        <value type="int" value="9"/>
-        <value type="int" value="17"/>
+        <value type="int" value="25"/>
         <value type="int" value="19"/>
+        <value type="int" value="23"/>
+        <value type="int" value="13"/>
+        <value type="int" value="9"/>
+        <value type="int" value="24"/>
+        <value type="int" value="17"/>
+        <value type="int" value="26"/>
+        <value type="int" value="2"/>
       </property>
       <property name="autohide" type="bool" value="false"/>
       <property name="position-locked" type="bool" value="true"/>
@@ -66,11 +70,6 @@
       <property name="disable-tooltips" type="bool" value="false"/>
       <property name="show-label" type="bool" value="false"/>
       <property name="arrow-position" type="uint" value="4"/>
-    </property>
-    <property name="plugin-10" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="14443178068.desktop"/>
-      </property>
     </property>
     <property name="plugin-11" type="string" value="launcher">
       <property name="items" type="array">
@@ -122,9 +121,37 @@
     </property>
     <property name="plugin-21" type="string" value="systray">
       <property name="names-visible" type="array">
+        <value type="string" value="systray icon"/>
+        <value type="string" value="aplet networkmanager"/>
+        <value type="string" value="xchat"/>
         <value type="string" value="ibus panel"/>
       </property>
     </property>
     <property name="plugin-22" type="string" value="actions"/>
+    <property name="plugin-23" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14443931686.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-24" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14443982347.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-25" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14443982568.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-26" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="144439836910.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-2" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14447421241.desktop"/>
+      </property>
+    </property>
   </property>
 </channel>
