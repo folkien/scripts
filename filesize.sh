@@ -1,2 +1,2 @@
 #!/bin/bash
-stat --printf="%s"
+stat --printf="%s" $@
