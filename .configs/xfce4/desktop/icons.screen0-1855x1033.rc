@@ -14,19 +14,15 @@ row=7
 col=0
 
 [/home/spasz/Publiczny]
-row=0
-col=3
-
-[/home/spasz/main.conf]
-row=1
+row=8
 col=2
 
-[/home/spasz/Pobrane]
-row=1
-col=3
+[/home/spasz/main.conf]
+row=0
+col=2
 
 [/home/spasz/ysess.py]
-row=7
+row=6
 col=1
 
 [/home/spasz/partycjonowanie-bartek.png]
@@ -38,8 +34,8 @@ row=8
 col=0
 
 [/home/spasz/TOD]
-row=6
-col=1
+row=1
+col=2
 
 [/home/spasz/Telefony.xls]
 row=5
@@ -54,23 +50,23 @@ row=1
 col=0
 
 [/home/spasz/TOD2]
-row=2
-col=2
+row=1
+col=10
 
 [/home/spasz/run.svg]
-row=0
-col=2
-
-[/home/spasz/Dokumenty]
 row=8
-col=2
+col=1
+
+[/home/spasz/Pobrane]
+row=0
+col=3
 
 [/home/spasz/Przejscie-LCD-OFO.png]
 row=2
 col=1
 
 [/home/spasz/start]
-row=8
+row=7
 col=1
 
 [/home/spasz/LTspice IV.desktop]
@@ -78,39 +74,43 @@ row=1
 col=1
 
 [/home/spasz/test-input]
-row=5
+row=4
 col=2
 
 [/home/spasz/Programy]
-row=2
+row=1
 col=3
 
 [/home/spasz/bluez-test-input]
-row=6
+row=5
 col=2
 
 [/home/spasz/yakuake.ini]
-row=4
+row=3
 col=2
 
 [/home/spasz/Pulpit]
 row=3
 col=0
 
-[/home/spasz/LTspice IV.lnk]
-row=5
-col=0
-
 [/home/spasz/linux-installer]
 row=0
 col=0
 
+[/home/spasz/LTspice IV.lnk]
+row=5
+col=0
+
 [/home/spasz/VirtualBox VMs]
+row=6
+col=2
+
+[/home/spasz/Dokumenty]
 row=7
 col=2
 
 [/home/spasz/vimrc.local.copy]
-row=3
+row=2
 col=2
 
 [/home/spasz/linux-boot.jpg]
