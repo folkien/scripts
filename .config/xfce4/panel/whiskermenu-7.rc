@@ -1,5 +1,5 @@
 favorites=palemoon.desktop,Thunar.desktop,terminator.desktop,gvim.desktop,spotify.desktop,taskcoach.desktop
-recent=gcalctool.desktop,spotify.desktop,gnome-screenshot.desktop
+recent=gnome-screenshot.desktop,firefox.desktop,gcalctool.desktop,spotify.desktop
 button-title=Menu programów
 button-icon=xfce4-whiskermenu
 show-button-title=false

@@ -1,12 +1,29 @@
 #autor Sławomir Paszko
-BASHRCVERSION="0.55"
+BASHRCVERSION="0.6"
 
-#Wciagamy kolory, pod warunkiem ze zostały poprawnie zainstalowane.
-if [ -f /etc/colors.sh ] ; then
-    source /etc/colors.sh
+# Sekcja zmiennych
+##################################################
+source /home/$USER/Dokumenty/git/scripts/.bashrc.variables
+
+#Wciągamy zmienne, które zdefiniował sobie użytkownik
+if [ -f $user_variables ] ; then
+    source $user_variables
 else
-    echo "Brakuje pliku /etc/colors.sh"
+    touch $user_variables
+    echo "Stworzono $user_variables."
 fi
 
+#Wciagamy kolory, pod warunkiem ze zostały poprawnie zainstalowane.
+if [ -f $shell_colors ] ; then
+    source $shell_colors
+else
+    echo "Brakuje pliku $shell_colors."
+fi
+##################################################
+
+# Sekcja aliasów
+##################################################
+
 source /home/$USER/Dokumenty/git/scripts/.bashrc.aliases
-source /home/$USER/Dokumenty/git/scripts/.bashrc.variables
+
+##################################################

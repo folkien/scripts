@@ -1,28 +1,13 @@
-#autor Sławomir Paszko
-BASHRCVERSION="0.45"
-
-# Wciągamy profile
-source /etc/profile
-
-#Wciagamy kolory, pod warunkiem ze zostały poprawnie zainstalowane.
-source /etc/colors.sh
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+[ -z "$PS1" ] && return
 
-#Wersja Basha
-echo -e "$Purple#Bash spasz-ubuntu-universal v.$BASHRCVERSION.$Color_Off"
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -35,15 +20,11 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
@@ -101,10 +82,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -117,87 +94,7 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-#Wciagamy zmienne systemowe
-source /home/$USER/variables.sh
-
-#zmienne 
-export bashrc="/home/$USER/.bashrc"
-
-# stałe dotyczące dysku google
-export gdrive="/home/$USER/Dokumenty/folkus@gmail.com/"
-export kiry="$gdrive/Wyjazdy/kiry"
-export hasla="$gdrive/Osobiste/hasla.cpt"
-export sne="$gdrive/SNE"
-export linux="/home/$USER/Dokumenty/folkus@gmail.com/Linux"
-export ubuntupackages="$linux/ubuntu-packages"
-export baseimage="$linux/base-image.sh"\
-
-#Stałe dotyczące dysku SSD i embedded
-export MOUNTSSD="/media/linux"
-export gentoo="$MOUNTSSD/gentoo"
-export embedded="$MOUNTSSD/embedded-linux"
-export bitbake="$embedded/setup-scripts"
-export metasonel="$embedded/setup-scripts/sources/meta-sonel"
-export metasonelimx="$embedded/setup-scripts/sources/meta-sonel-imx"
-export metagrinn="$embedded/setup-scripts/sources/meta-grinn"
-export deploy="$embedded/setup-scripts/deploy/glibc/images/mmr-imx"
-export kernel="$embedded/setup-scripts"
-export sdcards="$embedded/sd-cards"
-export sysroot="$sdcards/sysroot"
-
-# Stałe dotyczace apache
-export www="/var/www/html" 
-
-# Stałe dotyczące katalogów użytkownika
-export scripts="/home/$USER/scripts"
-export boisko="/home/$USER/Dokumenty/boisko"
-export git="/home/$USER/Dokumenty/git"
-
-# Stałe dotyczace mmr-gentoo
-export gentoo_mnt="/mnt/mmr-imx-gentoo.ext4.dir"
-export initramfs="$gentoo_mnt/usr/src/initramfs"
-export kernel="$gentoo_mnt/usr/src/linux"
-export bake="$gentoo_mnt/scripts"
-
-#nadpisane polecenia
-alias cp='cp -rfv'
-alias rm='rm -rfv'
-alias mv='mv -fv'
-
-#Aliasy
-alias du="ncdu"
-alias df="pydf"
-alias mostused="history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | grep -v \"./\" | column -c3 -s \" \" -t | sort -nr | nl |  head -n10"
-alias serialUSB0="sudo gtkterm --port /dev/ttyUSB0  --speed 115200"
-alias serialMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
-alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
-alias gvi="gvim --remote-tab"
-alias g="git"
-alias check_ssh_servers="sudo nmap -p 22 --open -sV 172.31.0.0/24"
-
-alias PulpitSonel="rdesktop $SWIDNICAIP -u $SWIDNICAUSER -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
-alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
-alias sshSonel="ssh -X spaszko@$MYSONELIP" 
-alias tohex="printf '%x\n' "
-alias todec="printf '%d\n' "
-
-# Poprawka do prompt'a systemowego
-export SYSTEMVER=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
-export SYSTEM=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
-export TODAY=`date +"%d.%m.%Y"`
-
-# If id command returns zero, you’ve root access.
-if [ $(id -u) -eq 0 ];
-then # you are root, set red colour prompt
-		export PS1="[\\[$(tput setaf 1)\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$Yellow\\] \\W \\[$(tput sgr0)\\]] $ "
-else # normal
-		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$IYellow\\] \\W \\[$(tput sgr0)\\]] $ "
-fi
+#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+#    . /etc/bash_completion
+#fi
+source /home/spasz/Dokumenty/git/scripts/.bashrc.base

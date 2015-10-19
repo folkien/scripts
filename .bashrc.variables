@@ -5,7 +5,19 @@ if [ -f /home/$USER/variables.sh ] ; then
     source /home/$USER/variables.sh
 fi
 
-export bashrc="/home/$USER/.bashrc"
+# Stałe dotyczące katalogów użytkownika
+export git="/home/$USER/Dokumenty/git"
+export scripts="$git/scripts"
+export boisko="/home/$USER/Dokumenty/boisko"
+export user_variables="/home/$USER/variables.sh"
+export shell_colors="/etc/colors.sh"
+
+# bashrc
+export bashrc="$scripts/.bashrc.base"
+export bashrc_old="/home/$USER/.bashrc"
+export bashrc_aliases="$scripts/.bashrc.aliases"
+export bashrc_variables="$scripts/.bashrc.variables"
+
 
 # stałe dotyczące dysku google
 export gdrive="/home/$USER/Dokumenty/folkus@gmail.com/"
@@ -30,12 +42,7 @@ export sdcards="$embedded/sd-cards"
 export sysroot="$sdcards/sysroot"
 
 # Stałe dotyczace apache
-export www="/var/www/html" 
-
-# Stałe dotyczące katalogów użytkownika
-export scripts="/home/$USER/scripts"
-export boisko="/home/$USER/Dokumenty/boisko"
-export git="/home/$USER/Dokumenty/git"
+export www="/var/www/html"
 
 # Stałe dotyczace mmr-gentoo
 export gentoo_mnt="/mnt/mmr-imx-gentoo.ext4.dir"
