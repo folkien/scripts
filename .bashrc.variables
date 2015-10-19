@@ -9,12 +9,15 @@ fi
 export git="/home/$USER/Dokumenty/git"
 export scripts="$git/scripts"
 export boisko="/home/$USER/Dokumenty/boisko"
+export user_variables="/home/$USER/variables.sh"
+export shell_colors="/etc/colors.sh"
 
 # bashrc
 export bashrc="$scripts/.bashrc.base"
 export bashrc_old="/home/$USER/.bashrc"
 export bashrc_aliases="$scripts/.bashrc.aliases"
 export bashrc_variables="$scripts/.bashrc.variables"
+
 
 # stałe dotyczące dysku google
 export gdrive="/home/$USER/Dokumenty/folkus@gmail.com/"
