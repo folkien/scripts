@@ -1,6 +1,9 @@
 #autor Sławomir Paszko
 BASHRCVERSION="0.55"
 
+#Wciągamy zmienne, które zdefiniował sobie użytkownik
+source /home/$USER/variables.sh
+
 #Wciagamy kolory, pod warunkiem ze zostały poprawnie zainstalowane.
 if [ -f /etc/colors.sh ] ; then
     source /etc/colors.sh
