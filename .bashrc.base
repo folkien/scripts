@@ -27,3 +27,12 @@ fi
 source /home/$USER/Dokumenty/git/scripts/.bashrc.aliases
 
 ##################################################
+
+# Prompt systmowy
+# If id command returns zero, you’ve root access.
+if [ $(id -u) -eq 0 ];
+then # you are root, set red colour prompt
+		export PS1="[\\[$(tput setaf 1)\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$Yellow\\] \\W \\[$(tput sgr0)\\]] $ "
+else # normal
+		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$IYellow\\] \\W \\[$(tput sgr0)\\]] $ "
+fi

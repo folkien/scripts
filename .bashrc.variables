@@ -54,11 +54,3 @@ export bake="$gentoo_mnt/scripts"
 export SYSTEMVER=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
 export SYSTEM=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
 export TODAY=`date +"%d.%m.%Y"`
-
-# If id command returns zero, you’ve root access.
-if [ $(id -u) -eq 0 ];
-then # you are root, set red colour prompt
-		export PS1="[\\[$(tput setaf 1)\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$Yellow\\] \\W \\[$(tput sgr0)\\]] $ "
-else # normal
-		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$IYellow\\] \\W \\[$(tput sgr0)\\]] $ "
-fi
