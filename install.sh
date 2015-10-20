@@ -17,4 +17,5 @@ ln -sf $DIR/arm-chroot.sh arm-chroot
 ln -sf $DIR/chroot.sh mount-chroot
 ln -sf $DIR/append.sh append
 ln -sf $DIR/filesize.sh filesize
+ln -sf $DIR/focus_or_launch.sh focus_or_launch
 
