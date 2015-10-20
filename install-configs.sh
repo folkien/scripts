@@ -1,6 +1,10 @@
+#!/bin/bash
+DIR=$(pwd)
+machine=$(cat /etc/hostname)
+
 #Instalacja konfiguracji XFCE4
 rm -rf ~/.config/xfce4
-ln -sf $DIR/config/xfce4/ ~/.config/xfce4
+ln -sf $DIR/.config/$machine/xfce4/ ~/.config/xfce4
  
 cd $DIR
 cp -rfv colors.sh /etc/
