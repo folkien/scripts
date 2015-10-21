@@ -6,7 +6,7 @@ row=2
 col=0
 
 [/home/spasz/przecjsiowki.png]
-row=4
+row=3
 col=1
 
 [/home/spasz/python]
@@ -18,11 +18,11 @@ row=8
 col=2
 
 [/home/spasz/main.conf]
-row=0
+row=1
 col=2
 
 [/home/spasz/ysess.py]
-row=6
+row=5
 col=1
 
 [/home/spasz/partycjonowanie-bartek.png]
@@ -34,11 +34,11 @@ row=8
 col=0
 
 [/home/spasz/TOD]
-row=1
-col=2
+row=7
+col=1
 
 [/home/spasz/Telefony.xls]
-row=5
+row=4
 col=1
 
 [/home/spasz/generatorBg.py]
@@ -54,23 +54,23 @@ row=1
 col=10
 
 [/home/spasz/run.svg]
-row=8
-col=1
+row=0
+col=2
 
 [/home/spasz/Pobrane]
 row=0
 col=3
 
 [/home/spasz/Przejscie-LCD-OFO.png]
-row=2
+row=1
 col=1
 
 [/home/spasz/start]
-row=7
+row=8
 col=1
 
 [/home/spasz/LTspice IV.desktop]
-row=1
+row=6
 col=1
 
 [/home/spasz/test-input]
@@ -118,46 +118,6 @@ row=6
 col=0
 
 [/home/spasz/Evernote.desktop]
-row=3
-col=1
-
-[karo]
-row=8
-col=3
-
-[62CAE0CFCAE0A111]
-row=4
-col=3
-
-[07cb1d52-3d38-4ba4-883d-39d369dc2009]
 row=2
-col=3
-
-[TX6-2015-03-27]
-row=6
-col=3
-
-[A86483F26483C194]
-row=5
-col=3
-
-[01CF816758A27490]
-row=3
-col=3
-
-[Dysk Dyskietka]
-row=7
-col=3
-
-[Kosz]
-row=0
-col=4
-
-[/]
-row=1
-col=4
-
-[/home/spasz]
-row=3
-col=4
+col=1
 

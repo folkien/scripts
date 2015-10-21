@@ -43,6 +43,8 @@
         <value type="int" value="17"/>
         <value type="int" value="26"/>
         <value type="int" value="2"/>
+        <value type="int" value="6"/>
+        <value type="int" value="10"/>
       </property>
       <property name="autohide" type="bool" value="false"/>
       <property name="position-locked" type="bool" value="true"/>
@@ -122,6 +124,7 @@
     <property name="plugin-21" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="systray icon"/>
+        <value type="string" value="skype"/>
         <value type="string" value="aplet networkmanager"/>
         <value type="string" value="xchat"/>
         <value type="string" value="ibus panel"/>
@@ -153,5 +156,11 @@
         <value type="string" value="14447421241.desktop"/>
       </property>
     </property>
+    <property name="plugin-6" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14453333811.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-10" type="string" value="xfce4-verve-plugin"/>
   </property>
 </channel>
