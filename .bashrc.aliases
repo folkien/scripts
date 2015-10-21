@@ -21,9 +21,9 @@ alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.
 alias gvi="gvim --remote-tab"
 alias g="git"
 
-alias detect_ssh_172="sudo nmap -p 22 --open -sV 172.31.0.0/24"
-alias detect_ssh_192="sudo nmap -p 22 --open -sV 192.168.100.0/24"
-alias detect_ssh_local="sudo nmap -p 22 --open -sV 192.168.0.0/24"
+alias ssh_detect_172="sudo nmap -p 22 --open -sV 172.31.0.0/24"
+alias ssh_detect_192="sudo nmap -p 22 --open -sV 192.168.100.0/24"
+alias ssh_detect_local="sudo nmap -p 22 --open -sV 192.168.0.0/24"
 
 alias PulpitSonel="rdesktop $SWIDNICAIP -u $SWIDNICAUSER -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -p $SONELPASS -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
