@@ -6,7 +6,7 @@ row=2
 col=0
 
 [/home/spasz/przecjsiowki.png]
-row=3
+row=4
 col=1
 
 [/home/spasz/python]
@@ -22,7 +22,7 @@ row=1
 col=2
 
 [/home/spasz/ysess.py]
-row=5
+row=6
 col=1
 
 [/home/spasz/partycjonowanie-bartek.png]
@@ -38,7 +38,7 @@ row=7
 col=1
 
 [/home/spasz/Telefony.xls]
-row=4
+row=5
 col=1
 
 [/home/spasz/generatorBg.py]
@@ -62,7 +62,7 @@ row=0
 col=3
 
 [/home/spasz/Przejscie-LCD-OFO.png]
-row=1
+row=2
 col=1
 
 [/home/spasz/start]
@@ -70,11 +70,11 @@ row=8
 col=1
 
 [/home/spasz/LTspice IV.desktop]
-row=6
+row=1
 col=1
 
 [/home/spasz/test-input]
-row=4
+row=5
 col=2
 
 [/home/spasz/Programy]
@@ -82,11 +82,11 @@ row=1
 col=3
 
 [/home/spasz/bluez-test-input]
-row=5
+row=6
 col=2
 
 [/home/spasz/yakuake.ini]
-row=3
+row=4
 col=2
 
 [/home/spasz/Pulpit]
@@ -102,7 +102,7 @@ row=5
 col=0
 
 [/home/spasz/VirtualBox VMs]
-row=6
+row=2
 col=2
 
 [/home/spasz/Dokumenty]
@@ -110,7 +110,7 @@ row=7
 col=2
 
 [/home/spasz/vimrc.local.copy]
-row=2
+row=3
 col=2
 
 [/home/spasz/linux-boot.jpg]
@@ -118,6 +118,6 @@ row=6
 col=0
 
 [/home/spasz/Evernote.desktop]
-row=2
+row=3
 col=1
 

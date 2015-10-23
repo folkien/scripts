@@ -44,10 +44,12 @@
         <value type="int" value="26"/>
         <value type="int" value="2"/>
         <value type="int" value="6"/>
+        <value type="int" value="27"/>
         <value type="int" value="10"/>
       </property>
       <property name="autohide" type="bool" value="false"/>
       <property name="position-locked" type="bool" value="true"/>
+      <property name="background-style" type="uint" value="0"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -162,5 +164,10 @@
       </property>
     </property>
     <property name="plugin-10" type="string" value="xfce4-verve-plugin"/>
+    <property name="plugin-27" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14455226681.desktop"/>
+      </property>
+    </property>
   </property>
 </channel>
