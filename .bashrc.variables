@@ -14,7 +14,7 @@ export shell_colors="/etc/colors.sh"
 
 # bashrc
 export bashrc="$scripts/.bashrc.base"
-export bashrc_old="/home/$USER/.bashrc"
+export bashrc_native="/home/$USER/.bashrc"
 export bashrc_aliases="$scripts/.bashrc.aliases"
 export bashrc_variables="$scripts/.bashrc.variables"
 
