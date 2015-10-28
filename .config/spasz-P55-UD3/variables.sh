@@ -1,6 +1,7 @@
+echo "Variables sourced."
 
 #define the height in px of the top system-bar:
-TOPMARGIN=30
+export TOPMARGIN=30
 
 #sum in px of all horizontal borders:
-RIGHTMARGIN=48
+export RIGHTMARGIN=48

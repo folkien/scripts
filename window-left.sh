@@ -1,7 +1,7 @@
 #!/bin/bash
 # resizes the window to full height and 50% width and moves into upper right corner
 
-source $scripts/.config/$(cat /etc/hostname)/variables.sh
+source /home/$USER/Dokumenty/git/scripts/.config/$(cat /etc/hostname)/variables.sh
 
 # get width of screen and height of screen
 SCREEN_WIDTH=$(xwininfo -root | awk '$1=="Width:" {print $2}')
@@ -16,7 +16,7 @@ H=$(( $SCREEN_HEIGHT - 2 * $TOPMARGIN ))
 # moving to the right half of the screen:
 #X=$(( $SCREEN_WIDTH / 2 ))
 # moving to the left:
-X=0; 
+X=$RIGHTMARGIN; 
 
 Y=$TOPMARGIN
 

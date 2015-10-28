@@ -29,7 +29,10 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;Left" type="string" value="/home/spasz/Dokumenty/git/scripts/window-left.sh"/>
-      <property name="&lt;Primary&gt;Right" type="string" value="/home/spasz/Dokumenty/git/scripts/window-right.sh"/>
+      <property name="&lt;Primary&gt;Up" type="string" value="/home/spasz/Dokumenty/git/scripts/window-full.sh"/>
+      <property name="&lt;Primary&gt;Right" type="string" value="/home/spasz/Dokumenty/git/scripts/window-right.sh">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
     </property>
   </property>
   <property name="xfwm4" type="empty">
