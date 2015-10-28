@@ -8,8 +8,7 @@ SCREEN_WIDTH=$(xwininfo -root | awk '$1=="Width:" {print $2}')
 SCREEN_HEIGHT=$(xwininfo -root | awk '$1=="Height:" {print $2}')
 
 # new width and height
-W=$(($SCREEN_WIDTH-$RIGHTMARGIN))
-W=$((W/2))
+W=$(($SCREEN_WIDTH/2))
 H=$(($SCREEN_HEIGHT-$TOPMARGIN))
 
 # X, change to move left or right:
@@ -22,4 +21,3 @@ X=$(( $SCREEN_WIDTH / 2 ))
 Y=$TOPMARGIN
 
 wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz && wmctrl -r :ACTIVE: -e 0,$X,$Y,$W,$H
-echo "$(date) $X, $Y, $H, $W, $RIGHTMARGIN g, $TOPMARGIN g, $SCREEN_WIDTH sw, $SCREEN_HEIGHT sh, " > /tmp/right
