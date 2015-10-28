@@ -1,11 +1,7 @@
 #!/bin/bash
 # resizes the window to full height and 50% width and moves into upper right corner
 
-#define the height in px of the top system-bar:
-TOPMARGIN=27
-
-#sum in px of all horizontal borders:
-RIGHTMARGIN=10
+source $scripts/.config/$(cat /etc/hostname)/variables.sh
 
 # get width of screen and height of screen
 SCREEN_WIDTH=$(xwininfo -root | awk '$1=="Width:" {print $2}')

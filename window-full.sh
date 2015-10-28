@@ -8,15 +8,15 @@ SCREEN_WIDTH=$(xwininfo -root | awk '$1=="Width:" {print $2}')
 SCREEN_HEIGHT=$(xwininfo -root | awk '$1=="Height:" {print $2}')
 
 # new width and height
-W=$(( $SCREEN_WIDTH / 2 - $RIGHTMARGIN ))
-H=$(( $SCREEN_HEIGHT - 2 * $TOPMARGIN ))
+W=$(( $SCREEN_WIDTH - $RIGHTMARGIN ))
+H=$(( $SCREEN_HEIGHT - $TOPMARGIN ))
 
 # X, change to move left or right:
 
 # moving to the right half of the screen:
-X=$(( $SCREEN_WIDTH / 2 ))
+#X=$(( $SCREEN_WIDTH / 2 ))
 # moving to the left:
-#X=0; 
+X=0; 
 
 Y=$TOPMARGIN
 
