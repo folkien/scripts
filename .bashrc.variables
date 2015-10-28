@@ -54,3 +54,6 @@ export bake="$gentoo_mnt/scripts"
 export SYSTEMVER=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
 export SYSTEM=`lsb_release -a | grep Rele | grep ".[0-9]\..*" -o`
 export TODAY=`date +"%d.%m.%Y"`
+
+# Zmienne dotyczące konfiguracji i instalacji srodowiska bashrc
+export BASHRC_INSTALLED=1
