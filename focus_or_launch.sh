@@ -37,14 +37,14 @@
 
 ############# GLOBVAR/PREP ###############
 
-Executable="$@"
-ExecutableBase="$(basename "$Executable")"
+App="$@"
+AppBasename="$(basename "$App")"
 Usage="\
 Usage: $(basename $0) command
 E.g.:  $(basename $0) google-chrome\
 "
-echo Exe : $Executable
-echo ExeBase : $ExecutableBase
+echo Exe : $App
+echo ExeBase : $AppBasename
 ############## USGCHECKS #################
 
 if [[ $# -lt 1 || "$1" =~ ^(-h|--help)$ ]]; then
@@ -54,17 +54,17 @@ fi
 
 ################ MAIN ####################
 
-MostRecentWID="$(xdotool search --class --name --classname "$ExecutableBase" | tail -1 2> /dev/null)"
+foundedWindows=$(xdotool search --class --name $AppBasename)
 
 if [[ -z "$MostRecentWID" ]]; then
-  echo "$ExecutableBase not found. Launching new window."
-  RUN=$($Executable)
+  echo "$AppBasename not found. Launching new window."
+  RUN=$($App)
   #> /dev/null 2>&1 &
   disown
 else
   #  "Dodać próby dopóki któreś ze zwróconych okien nie zadziała."
-  echo "Focusing existing instance of $ExecutableBase."
+  echo "Focusing existing instance of $AppBasename."
   # use brute-force approach if activating most recent WID doesn't work
   xdotool windowactivate "$MostRecentWID" 2>&1 | grep failed \
-  && xdotool search --class --name "$ExecutableBase" windowactivate %@
+  && xdotool search $AppBasename windowactivate %@
 fi
