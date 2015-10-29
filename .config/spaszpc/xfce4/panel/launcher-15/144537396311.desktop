@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Messenger
+Icon=messengerfordesktop
+Exec=focus_or_launch /opt/MessengerForDesktop/Messenger
+Comment=Messenger for Desktop
+Categories=Network;Chat;
+Terminal=false
+X-Desktop-File-Install-Version=0.22
+X-XFCE-Source=file:///usr/share/applications/messengerfordesktop.desktop
+Path=
+StartupNotify=false

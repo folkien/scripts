@@ -57,3 +57,8 @@ export TODAY=`date +"%d.%m.%Y"`
 
 # Zmienne dotyczące konfiguracji i instalacji srodowiska bashrc
 export BASHRC_INSTALLED=1
+
+# Wciagam zmienne lokalne dla danej maszyny
+if [ -f $scripts/.config/$(cat /etc/hostname)/variables.sh ]; then
+    source $scripts/.config/$(cat /etc/hostname)/variables.sh
+fi

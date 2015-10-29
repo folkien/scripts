@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Calculator
+Name[pl]=Kalkulator
+Comment=Perform arithmetic, scientific or financial calculations
+Comment[pl]=Wykonanie obliczeń arytmetycznych, naukowych lub finansowych
+Keywords=calculation;arithmetic;scientific;financial;
+Keywords[pl]=obliczenia;liczenie;arytmetyczne;naukowe;finansowe;
+Exec=gnome-calculator
+Icon=accessories-calculator
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Utility;Calculator;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-calculator
+X-GNOME-Bugzilla-Component=general
+X-XFCE-Source=file:///usr/share/applications/gnome-calculator.desktop

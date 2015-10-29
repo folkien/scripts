@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Terminator
+Comment=Terminal
+Exec=focus_or_launch terminator
+Icon=terminator
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Categories=Development;
+StartupNotify=true
+MimeType=application/x-cmakecache;
+X-XFCE-Source=file:///usr/share/applications/CMake.desktop
+Path=
