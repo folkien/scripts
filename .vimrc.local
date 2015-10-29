@@ -1,0 +1,15 @@
+set guifont=Consolas\ 12
+"color desert
+
+map <C-T> :tabnew<CR>
+map <F2> :tabp<CR>
+map <F3> :tabn<CR>
+map <C-W> :q <CR>
+map <C-S> :w<CR>
+map <C-Y> :s/^/%/<CR>
+nmap <F8> :TagbarToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
+nnoremap <F5> :UndotreeToggle<cr> 
+
+# Ustawianie bitbake filetype
+map <C-B> :set filetype=bitbake<CR>
