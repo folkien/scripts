@@ -43,9 +43,13 @@
         <value type="int" value="17"/>
         <value type="int" value="26"/>
         <value type="int" value="2"/>
+        <value type="int" value="6"/>
+        <value type="int" value="27"/>
+        <value type="int" value="10"/>
       </property>
       <property name="autohide" type="bool" value="false"/>
       <property name="position-locked" type="bool" value="true"/>
+      <property name="background-style" type="uint" value="0"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -122,6 +126,7 @@
     <property name="plugin-21" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="systray icon"/>
+        <value type="string" value="skype"/>
         <value type="string" value="aplet networkmanager"/>
         <value type="string" value="xchat"/>
         <value type="string" value="ibus panel"/>
@@ -151,6 +156,17 @@
     <property name="plugin-2" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="14447421241.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-6" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14453333811.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-10" type="string" value="xfce4-verve-plugin"/>
+    <property name="plugin-27" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="14455226681.desktop"/>
       </property>
     </property>
   </property>

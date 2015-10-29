@@ -1,9 +1,13 @@
 #autor Sławomir Paszko
-BASHRCVERSION="0.6"
+BASHRCVERSION="0.61"
+
+# Sekcja konfiguracji
+##################################################
+source /etc/bashrc.conf
 
 # Sekcja zmiennych
 ##################################################
-source /home/$USER/Dokumenty/git/scripts/.bashrc.variables
+source /home/$INSTALLUSER/Dokumenty/git/scripts/.bashrc.variables
 
 #Wciągamy zmienne, które zdefiniował sobie użytkownik
 if [ -f $user_variables ] ; then
@@ -24,7 +28,7 @@ fi
 # Sekcja aliasów
 ##################################################
 
-source /home/$USER/Dokumenty/git/scripts/.bashrc.aliases
+source /home/$INSTALLUSER/Dokumenty/git/scripts/.bashrc.aliases
 
 ##################################################
 
