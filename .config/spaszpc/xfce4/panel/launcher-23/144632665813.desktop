@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Development;Electronics;
+Comment=Design a printed circuit board
+Exec=kicad %f
+GenericName=EDA Suite
+Icon=kicad
+MimeType=application/x-kicad-project;
+Name=KiCad
+Type=Application
+X-XFCE-Source=file:///usr/share/applications/kicad.desktop

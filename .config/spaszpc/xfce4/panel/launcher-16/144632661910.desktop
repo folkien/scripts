@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Add/Remove Software
+Name[pl]=Dodanie/usuwanie oprogramowania
+Comment=Add or remove software installed on the system
+Comment[pl]=Instalowanie lub usuwanie oprogramowania zainstalowanego w systemie
+Icon=system-software-install
+Exec=pamac-manager
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;System;
+StartupNotify=true
+X-XFCE-Source=file:///usr/share/applications/pamac-manager.desktop
