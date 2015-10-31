@@ -9,7 +9,7 @@ SCREEN_HEIGHT=$(xwininfo -root | awk '$1=="Height:" {print $2}')
 
 # new width and height
 W=$(( $SCREEN_WIDTH - $RIGHTMARGIN ))
-H=$(( $SCREEN_HEIGHT - $TOPMARGIN ))
+H=$(( $SCREEN_HEIGHT - 2*$TOPMARGIN ))
 
 X=$RIGHTMARGIN;
 Y=$TOPMARGIN
