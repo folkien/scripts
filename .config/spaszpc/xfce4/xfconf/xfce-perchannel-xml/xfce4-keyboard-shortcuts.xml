@@ -27,7 +27,6 @@
       <property name="&lt;Alt&gt;F2" type="string" value="xfce4-appfinder --collapsed">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xflock4"/>
       <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
       <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;p" type="string" value="xfce4-display-settings --minimal"/>
@@ -35,13 +34,14 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;x" type="string" value="xkill"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;m" type="string" value="xfce4-taskmanager"/>
       <property name="XF86Calculator" type="string" value="galculator"/>
       <property name="Super_L" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;Up" type="string" value="/home/spasz/Dokumenty/git/scripts/window-full.sh"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;Left" type="string" value="/home/spasz/Dokumenty/git/scripts/window-left.sh"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;Right" type="string" value="/home/spasz/Dokumenty/git/scripts/window-right.sh"/>
+      <property name="&lt;Primary&gt;l" type="string" value="xflock4"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xfce4-taskmanager"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

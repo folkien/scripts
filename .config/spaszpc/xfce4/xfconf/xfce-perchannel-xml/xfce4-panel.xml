@@ -45,6 +45,7 @@
         <value type="int" value="2"/>
         <value type="int" value="21"/>
         <value type="int" value="23"/>
+        <value type="int" value="24"/>
       </property>
       <property name="length-adjust" type="bool" value="true"/>
       <property name="length" type="uint" value="95"/>
@@ -73,6 +74,7 @@
         <value type="string" value="skype"/>
         <value type="string" value="orage"/>
         <value type="string" value="shutter"/>
+        <value type="string" value="menedżer zadań"/>
         <value type="string" value="pamac-tray"/>
         <value type="string" value="blueman-applet"/>
         <value type="string" value="hexchat"/>
@@ -83,6 +85,7 @@
         <value type="string" value="xnoise"/>
         <value type="string" value="insync.py"/>
         <value type="string" value="scp-dbus-service.py"/>
+        <value type="string" value="terminal xfce"/>
         <value type="string" value="gnome-encfs-manager"/>
       </property>
     </property>
@@ -99,52 +102,42 @@
     <property name="plugin-9" type="string" value="weather"/>
     <property name="plugin-10" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14453720181.desktop"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14453732165.desktop"/>
       </property>
     </property>
     <property name="plugin-12" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14453737438.desktop"/>
       </property>
     </property>
     <property name="plugin-13" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14453738559.desktop"/>
       </property>
     </property>
     <property name="plugin-14" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="144537394110.desktop"/>
       </property>
     </property>
     <property name="plugin-15" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="144537396311.desktop"/>
       </property>
     </property>
     <property name="plugin-16" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="144537403612.desktop"/>
       </property>
     </property>
     <property name="plugin-17" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14454621091.desktop"/>
       </property>
     </property>
     <property name="plugin-18" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14454621192.desktop"/>
       </property>
     </property>
     <property name="plugin-2" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14455454021.desktop"/>
       </property>
     </property>
     <property name="plugin-19" type="string" value="separator">
@@ -156,17 +149,18 @@
     </property>
     <property name="plugin-21" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14456402031.desktop"/>
       </property>
     </property>
     <property name="plugin-22" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14457153231.desktop"/>
       </property>
     </property>
     <property name="plugin-23" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="14457765361.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-24" type="string" value="launcher">
+      <property name="items" type="array">
       </property>
     </property>
   </property>
