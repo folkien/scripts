@@ -1,5 +1,5 @@
 favorites=terminator.desktop,Thunar.desktop,palemoon.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,libreoffice-impress.desktop,spotify.desktop,gvim.desktop,pamac-manager.desktop,gnome-calculator.desktop,messengerfordesktop.desktop,shutter.desktop
-recent=xfce-keyboard-settings.desktop,messengerfordesktop.desktop,firefox.desktop,extras-calendar-indicator.desktop,xfce-xfcalendar-settings.desktop,manjaro-welcome.desktop,pamac-manager.desktop,gimp.desktop,system-config-printer.desktop,Thunar.desktop
+recent=sound-juicer.desktop,palemoon.desktop,xfce-keyboard-settings.desktop,xscreensaver-properties.desktop,lightdm-gtk-greeter-settings.desktop,xfce4-mixer.desktop,pavucontrol.desktop,firefox.desktop,messengerfordesktop.desktop,DockX.desktop
 button-title=Aplikacje
 button-icon=xfce4-whiskermenu
 button-single-row=false
@@ -17,8 +17,8 @@ display-recent-default=false
 position-search-alternate=false
 position-commands-alternate=false
 position-categories-alternate=false
-menu-width=610
-menu-height=508
+menu-width=459
+menu-height=515
 menu-opacity=100
 command-settings=xfce4-settings-manager
 show-command-settings=true

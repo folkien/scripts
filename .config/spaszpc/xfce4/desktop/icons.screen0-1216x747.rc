@@ -9,8 +9,16 @@ col=5
 row=0
 col=4
 
-[7324636a-7eb5-443b-97a0-b9709fae2eab]
+[Płyta CD-Audio]
 row=2
+col=0
+
+[7324636a-7eb5-443b-97a0-b9709fae2eab]
+row=0
+col=2
+
+[Android]
+row=3
 col=0
 
 [Kosz]

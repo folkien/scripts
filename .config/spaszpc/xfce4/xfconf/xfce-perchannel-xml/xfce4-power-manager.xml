@@ -10,8 +10,8 @@
     <property name="show-tray-icon" type="int" value="1"/>
     <property name="dpms-on-ac-off" type="uint" value="60"/>
     <property name="dpms-on-ac-sleep" type="uint" value="59"/>
-    <property name="brightness-level-on-ac" type="uint" value="20"/>
-    <property name="brightness-on-ac" type="uint" value="120"/>
+    <property name="brightness-level-on-ac" type="uint" value="56"/>
+    <property name="brightness-on-ac" type="uint" value="9"/>
     <property name="blank-on-ac" type="int" value="30"/>
   </property>
 </channel>

@@ -3,14 +3,14 @@
 
 [/home/spasz/Pulpit/system.todo]
 row=0
-col=5
+col=4
 
 [/home/spasz/Pulpit/pacman.todo]
 row=0
-col=4
+col=3
 
 [7324636a-7eb5-443b-97a0-b9709fae2eab]
-row=2
+row=0
 col=0
 
 [Kosz]
@@ -18,10 +18,10 @@ row=1
 col=0
 
 [/]
-row=0
+row=1
 col=1
 
 [/home/spasz]
 row=0
-col=0
+col=1
 

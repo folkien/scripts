@@ -35,7 +35,6 @@
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;x" type="string" value="xkill"/>
       <property name="XF86Calculator" type="string" value="galculator"/>
-      <property name="Super_L" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;Up" type="string" value="/home/spasz/Dokumenty/git/scripts/window-full.sh"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;Left" type="string" value="/home/spasz/Dokumenty/git/scripts/window-left.sh"/>
