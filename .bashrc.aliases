@@ -10,6 +10,7 @@ alias mv='mv -fv'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias yaourt='yaourt --noconfirm'
 
 #Aliasy
 alias du="ncdu"
