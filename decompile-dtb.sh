@@ -1,3 +1,4 @@
 #!/bin/bash
 DTBFILE=$@
-dtc -i $DTBFILE -I dtb -o $DTBFILE.dts -O dts
+dtc -I dtb -O dts  -o $DTBFILE.dts $DTBFILE
+
