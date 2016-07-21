@@ -1,4 +1,4 @@
-set guifont=Consolas\ 12
+set guifont=Inconsolata\ 13
 "color desert
 
 map <C-T> :tabnew<CR>
