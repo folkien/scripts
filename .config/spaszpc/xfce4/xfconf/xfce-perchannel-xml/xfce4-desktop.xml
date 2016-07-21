@@ -23,9 +23,15 @@
       </property>
       <property name="monitorLVDS-0" type="empty">
         <property name="workspace0" type="empty">
-          <property name="color-style" type="int" value="0"/>
-          <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/spasz/Dokumenty/folkus@gmail.com/Osobiste/Tapety/wallpaper.png"/>
+          <property name="color-style" type="int" value="1"/>
+          <property name="image-style" type="int" value="3"/>
+          <property name="last-image" type="string" value="/home/spasz/Dokumenty/WDF_1577426.jpg"/>
+          <property name="color1" type="array">
+            <value type="uint" value="65535"/>
+            <value type="uint" value="65535"/>
+            <value type="uint" value="65535"/>
+            <value type="uint" value="65535"/>
+          </property>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
@@ -43,14 +49,39 @@
           <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/manjaro.jpg"/>
         </property>
       </property>
+      <property name="monitorVGA-0" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-teal.jpg"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-teal.jpg"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-teal.jpg"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="color-style" type="int" value="0"/>
+          <property name="image-style" type="int" value="5"/>
+          <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-teal.jpg"/>
+        </property>
+      </property>
     </property>
   </property>
   <property name="desktop-icons" type="empty">
     <property name="style" type="int" value="2"/>
     <property name="file-icons" type="empty">
-      <property name="show-removable" type="bool" value="true"/>
+      <property name="show-removable" type="bool" value="false"/>
+      <property name="show-home" type="bool" value="false"/>
+      <property name="show-filesystem" type="bool" value="false"/>
+      <property name="show-trash" type="bool" value="false"/>
     </property>
-    <property name="icon-size" type="uint" value="52"/>
+    <property name="icon-size" type="uint" value="57"/>
     <property name="use-custom-font-size" type="bool" value="false"/>
     <property name="show-hidden-files" type="bool" value="false"/>
     <property name="single-click" type="bool" value="false"/>

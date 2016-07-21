@@ -20,4 +20,7 @@ ln -sf $DIR/filesize.sh filesize
 ln -sf $DIR/focus_or_launch.sh focus_or_launch
 ln -sf $DIR/zdjecia-na-strone.sh zdjecia-na-strone
 ln -sf $DIR/image-resize.sh image-resize
+ln -sf $DIR/decompile-dtb.sh decompile-dtb
+ln -sf $DIR/ddpv ddpv
+ln -sf $DIR/udevquery.sh udevquery
 

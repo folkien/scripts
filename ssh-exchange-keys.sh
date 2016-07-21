@@ -19,4 +19,3 @@ if [ -d /home/$USER/.ssh/ ]; then
 else
     echo "Local .ssh folder doesn't exists."
 fi
-DET

@@ -61,7 +61,7 @@ if [ $1 = "m" ] ; then
 
 		echo "Wchodzę do wnetrzna systemu.."
 		pyNotify -s "Chroot : Użytkownik $USER zalogował się w $MNTDIR."
-		chroot $MNTDIR
+		chroot $MNTDIR /bin/sh
 		pyNotify -s "Chroot : Użytkownik $USER opuścił $MNTDIR."
 elif [ $1 = "u" ] ; then
 		echo "Odmontowuje system."

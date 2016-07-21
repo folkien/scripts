@@ -42,6 +42,7 @@
       <property name="&lt;Primary&gt;l" type="string" value="xflock4"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xfce4-taskmanager"/>
       <property name="&lt;Primary&gt;g" type="string" value="ls"/>
+      <property name="Print" type="string" value="xfce4-screenshooter "/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

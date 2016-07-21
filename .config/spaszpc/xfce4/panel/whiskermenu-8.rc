@@ -1,5 +1,5 @@
-favorites=terminator.desktop,Thunar.desktop,palemoon.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,libreoffice-impress.desktop,spotify.desktop,gvim.desktop,pamac-manager.desktop,gnome-calculator.desktop,messengerfordesktop.desktop,shutter.desktop
-recent=sound-juicer.desktop,palemoon.desktop,xfce-keyboard-settings.desktop,xscreensaver-properties.desktop,lightdm-gtk-greeter-settings.desktop,xfce4-mixer.desktop,pavucontrol.desktop,firefox.desktop,messengerfordesktop.desktop,DockX.desktop
+favorites=terminator.desktop,Thunar.desktop,libreoffice-writer.desktop,libreoffice-calc.desktop,libreoffice-impress.desktop,spotify.desktop,gvim.desktop,pamac-manager.desktop,gnome-calculator.desktop,messengerfordesktop.desktop,shutter.desktop,firefox.desktop,chromium.desktop,wine-Programs-FORScan-FORScan.desktop
+recent=skype.desktop,shutter.desktop,chromium.desktop,Thunar.desktop,messengerfordesktop.desktop,firefox.desktop,gnome-calculator.desktop,libreoffice-calc.desktop,gnome-encfs-manager.desktop,gimp.desktop
 button-title=Aplikacje
 button-icon=xfce4-whiskermenu
 button-single-row=false

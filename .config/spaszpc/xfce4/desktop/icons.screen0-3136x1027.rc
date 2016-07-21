@@ -5,33 +5,29 @@
 row=2
 col=0
 
-[/home/spasz/Pulpit/BlackRedWhite.exe]
+[/home/spasz/Pulpit/system.todo]
 row=0
-col=2
+col=5
+
+[/home/spasz/Pulpit/Evernote.desktop]
+row=1
+col=1
 
 [/home/spasz/Pulpit/pacman.todo]
 row=0
 col=4
 
-[/home/spasz/Pulpit/Evernote.desktop]
-row=0
-col=1
-
-[E91E-79F9]
-row=2
-col=1
-
-[fe223fc1-70c3-43f0-a3b7-ec4b39516160]
-row=5
-col=0
-
-[Kosz]
+[F329-4E2C]
 row=3
 col=0
 
-[/]
+[Kosz]
 row=1
 col=0
+
+[/]
+row=0
+col=1
 
 [/home/spasz]
 row=0
