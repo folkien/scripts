@@ -1,5 +1,6 @@
 #instalacja skryptów w systemie
 DIR=`pwd`
+cp ./colors.sh /etc/
 cd /usr/bin/
 ln -sf $DIR/pushf.sh pushf
 ln -sf $DIR/popf.sh popf
