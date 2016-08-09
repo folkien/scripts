@@ -15,6 +15,7 @@ ln -sf $DIR/ysess.py ysess
 ln -sf $DIR/burnimage burnimage
 ln -sf $DIR/grep-email.sh  grep-email
 ln -sf $DIR/arm-chroot.sh arm-chroot
+ln -sf $DIR/arm-make.sh arm-make
 ln -sf $DIR/chroot.sh mount-chroot
 ln -sf $DIR/append.sh append
 ln -sf $DIR/filesize.sh filesize

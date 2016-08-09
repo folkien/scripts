@@ -1,1 +1,2 @@
-ARCH=arm CROSS_COMIPLE=/usr/bin/arm-linux-gnueabihf- $@
+make ARCH=arm CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- $@
+
