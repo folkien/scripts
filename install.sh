@@ -26,3 +26,15 @@ ln -sf $DIR/decompile-dtb.sh decompile-dtb
 ln -sf $DIR/ddpv ddpv
 ln -sf $DIR/udevquery.sh udevquery
 
+# Dependencies install
+lsb_release -i | grep Ubuntu
+if [ $? -eq 0 ]; then
+    PKG_MANAGER="apt-get install -yf "
+fi
+$PKG_MANAGER pv
+$PKG_MANAGER yakuake
+$PKG_MANAGER convert
+$PKG_MANAGER git
+$PKG_MANAGER make
+$PKG_MANAGER ncurses
+$PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
