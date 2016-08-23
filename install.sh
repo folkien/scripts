@@ -32,6 +32,7 @@ if [ $? -eq 0 ]; then
     PKG_MANAGER="apt-get install -yf "
 fi
 $PKG_MANAGER pv
+$PKG_MANAGER device-tree-compiler
 $PKG_MANAGER yakuake
 $PKG_MANAGER convert
 $PKG_MANAGER git
@@ -39,3 +40,4 @@ $PKG_MANAGER make
 $PKG_MANAGER ncurses
 $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
 $PKG_MANAGER u-boot-tools
+
