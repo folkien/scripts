@@ -37,7 +37,7 @@ $PKG_MANAGER yakuake
 $PKG_MANAGER convert
 $PKG_MANAGER git
 $PKG_MANAGER make
-$PKG_MANAGER ncurses
+$PKG_MANAGER ncurses libncurses-dev
 $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
 $PKG_MANAGER u-boot-tools
 
