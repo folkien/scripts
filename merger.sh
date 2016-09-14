@@ -1,11 +1,15 @@
-commit="fd982c3b33f9692388f53f78b158388947a27149"
+[ $# -eq 0 ] && echo "Please give commit hash." && exit 0
+commit="$@"
 ignorefiles=[]
 n=0
 
 echo "" > run_apply.log
 echo "" > run_ignored.log
+git log $commit.. --pretty=oneline > run_all.log
 
-for commithash in $(git log $commit.. | grep commit | cut -c 8-)
+commitsnumber=$(cat run_all.log | wc -l)
+echo "We have to work about $commitsnumber commits. Let's start."
+for commithash in $(git log $commit.. --pretty=oneline | tac | cut -c -40)
 do
 
     ignorecommit=0
