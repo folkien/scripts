@@ -33,8 +33,8 @@ do
         fi
         if [ $ignorefile -eq 0 ]; then
             commithashandtext=$(git log --pretty=oneline $commithash -1)
-            dialog --title "$commit_number / $commitsamount Commit ignore file? " \
-                    --yesno "$commithashandtext \n\nIgnore file:./$filename ?" 15 80
+            dialog --title "$commit_number / $commitsamount Commit ignore file? - Escape to exit." \
+                    --yesno "$commithashandtext \n\nIgnore file:./$filename ?\n\nPaths on ignorelist $n." 15 80
                 response=$?
                 case $response in
                     0)
@@ -45,6 +45,10 @@ do
                         echo "Added to ignore list."
                         ;;
                     1) ;;
+                    255)
+                        echo "Interrupted merge!"
+                        exit -1;
+                        ;;
                 esac
         fi
     done
