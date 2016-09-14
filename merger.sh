@@ -2,13 +2,14 @@
 commit="$@"
 ignorefiles=[]
 n=0
+commit_number=0
 
 echo "" > run_apply.log
 echo "" > run_ignored.log
 git log $commit.. --pretty=oneline > run_all.log
 
-commitsnumber=$(cat run_all.log | wc -l)
-echo "We have to work about $commitsnumber commits. Let's start."
+commitsamount=$(cat run_all.log | wc -l)
+echo "We have to work about $commitsamount commits. Let's start."
 for commithash in $(git log $commit.. --pretty=oneline | tac | cut -c -40)
 do
 
@@ -32,7 +33,7 @@ do
         fi
         if [ $ignorefile -eq 0 ]; then
             commithashandtext=$(git log --pretty=oneline $commithash -1)
-            dialog --title "Commit ignore file? " \
+            dialog --title "$commit_number / $commitsamount Commit ignore file? " \
                     --yesno "$commithashandtext \n\nIgnore file:./$filename ?" 15 80
                 response=$?
                 case $response in
@@ -54,5 +55,6 @@ do
         echo "Commit $commithash ignored."
         echo "Ignored $commithash" >> run_ignored.log
     fi
+    commit_number=$(($commit_number+1))
 done
 
