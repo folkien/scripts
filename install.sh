@@ -31,13 +31,21 @@ lsb_release -i | grep Ubuntu
 if [ $? -eq 0 ]; then
     PKG_MANAGER="apt-get install -yf "
 fi
-$PKG_MANAGER pv
+$PKG_MANAGER pv dialog
 $PKG_MANAGER device-tree-compiler
 $PKG_MANAGER yakuake
 $PKG_MANAGER convert
-$PKG_MANAGER git
+$PKG_MANAGER git gitg qgit
 $PKG_MANAGER make
 $PKG_MANAGER ncurses libncurses-dev
 $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
 $PKG_MANAGER u-boot-tools
+
+echo "Generating new ssh key. Please install it in github.com"
+ssh-keygen
+echo "Please install git certificate .ssh or add your own to github. Waiting."
+read
+
+cd $DIR
+./install-vim.sh
 
