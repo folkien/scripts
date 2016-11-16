@@ -150,9 +150,6 @@ sudo apt-get install -yf cscope
 sudo apt-get install -yf xchat
 sudo apt-get install mingetty -yf
 sudo apt-get install beep -yf
-sudo apt-get install sox -yf
-sudo apt-get install -yf libsox-fmt-mp3
-#sudo apt-get install mercurial -yf
 sudo apt-get install pv -yf 
 sudo apt-get install -yf minicom cutecom 
 sudo apt-get install -yf dconf-editor -yf 
@@ -160,8 +157,8 @@ sudo apt-get install -yf iperf
 sudo apt-get install -yf gpick
 sudo apt-get install -yf ttf-mscorefonts-installer
 sudo apt-get install -yf iotop
-sudo apt-get install ecryptfs-utils -yf 
+#sudo apt-get install ecryptfs-utils -yf 
 
-sh ./ssd_trim_patch.sh
+sh ./ubuntu-packages/ssd_trim_patch.sh
 
 echo "Zakończono instalacje."

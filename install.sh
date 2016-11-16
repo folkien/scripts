@@ -26,11 +26,20 @@ ln -sf $DIR/decompile-dtb.sh decompile-dtb
 ln -sf $DIR/ddpv ddpv
 ln -sf $DIR/udevquery.sh udevquery
 
-# Dependencies install
+#Package manager determining
 lsb_release -i | grep Ubuntu
 if [ $? -eq 0 ]; then
     PKG_MANAGER="apt-get install -yf "
 fi
+lsb_release -i | grep Manjaro
+if [ $? -eq 0 ]; then
+    PKG_MANAGER="pacman -S "
+fi
+lsb_release -i | grep Arch
+if [ $? -eq 0 ]; then
+    PKG_MANAGER="pacman -S "
+fi
+# Dependencies install
 $PKG_MANAGER pv dialog ncdu pydf
 $PKG_MANAGER device-tree-compiler
 $PKG_MANAGER yakuake
@@ -47,7 +56,7 @@ echo "Please install git certificate .ssh or add your own to github. Waiting."
 read
 
 cd $DIR
-./install-vim.sh
+sh ./install-vim.sh
 
 #Installation of mc
 echo "MC configuration files."
