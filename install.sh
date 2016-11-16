@@ -31,7 +31,7 @@ lsb_release -i | grep Ubuntu
 if [ $? -eq 0 ]; then
     PKG_MANAGER="apt-get install -yf "
 fi
-$PKG_MANAGER pv dialog
+$PKG_MANAGER pv dialog ncdu pydf
 $PKG_MANAGER device-tree-compiler
 $PKG_MANAGER yakuake
 $PKG_MANAGER convert
@@ -49,3 +49,17 @@ read
 cd $DIR
 ./install-vim.sh
 
+#Installation of mc
+DIR=`pwd`
+echo "MC configuration files."
+cp -rfv ~/.config/mc ~/.config/mc.old
+ln -sf $DIR/.config/mc/hotlist ~/.config/mc/hotlist
+ln -sf $DIR/.config/mc/hotlist.bak ~/.config/mc/hotlist.bak
+ln -sf $DIR/.config/mc/mc.ext ~/.config/mc/mc.ext
+ln -sf $DIR/.config/mc/mc.keymap ~/.config/mc/mc.keymap
+ln -sf $DIR/.config/mc/panels.ini ~/.config/mc/panels.ini
+ln -sf $DIR/.config/mc/ini ~/.config/mc/ini
+
+# Tworzenie najważniejszych katalogów
+source $DIR/.bashrc.variables
+mkdir -p $git $www $gdrive $boisko
