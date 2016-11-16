@@ -50,7 +50,6 @@ cd $DIR
 ./install-vim.sh
 
 #Installation of mc
-DIR=`pwd`
 echo "MC configuration files."
 cp -rfv ~/.config/mc ~/.config/mc.old
 ln -sf $DIR/.config/mc/hotlist ~/.config/mc/hotlist

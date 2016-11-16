@@ -62,3 +62,4 @@ export BASHRC_INSTALLED=1
 if [ -f $scripts/.config/$(cat /etc/hostname)/variables.sh ]; then
     source $scripts/.config/$(cat /etc/hostname)/variables.sh
 fi
+
