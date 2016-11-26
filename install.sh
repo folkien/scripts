@@ -44,7 +44,7 @@ $PKG_MANAGER pv dialog ncdu pydf
 $PKG_MANAGER device-tree-compiler
 $PKG_MANAGER yakuake
 $PKG_MANAGER convert
-$PKG_MANAGER git gitg qgit
+$PKG_MANAGER git gitg qgit git-svn 
 $PKG_MANAGER make
 $PKG_MANAGER ncurses libncurses-dev
 $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi

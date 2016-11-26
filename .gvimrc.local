@@ -1,2 +1,3 @@
 color desert
-set guifont=Fixed\ 11
+"set guifont=Fixed\ 11
+set guifont=Inconsolata\ 13

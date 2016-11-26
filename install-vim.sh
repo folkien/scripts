@@ -5,6 +5,7 @@ curl http://j.mp/spf13-vim3 -L -o - | sh
 ln -sf $scripts/.vimrc.local ~/.vimrc.local
 ln -sf $scripts/.gvimrc.local ~/.gvimrc.local
 ln -sf $scripts/.vimrc.bundles.local ~/.vimrc.bundles.local
+sudo apt-get -yf install fonts-inconsolata
 
 #bitbake scripts
 mkdir -p ~/.vim/bundle/bitbake/

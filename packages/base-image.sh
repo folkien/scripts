@@ -13,7 +13,7 @@ mkdir install/synchronize-settings
 #sudo apt-add-repository -y ppa:git-core/ppa
 #sudo apt-get update
 sudo apt-get -f -y install git
-sudo apt-get -f -y install git-email
+sudo apt-get -f -y install git-email git-svn
 
 
 # Dodawanie nowych repozytoriow
@@ -139,25 +139,13 @@ sudo sh ./ubuntu-packages/swappiness-chg.sh
 #-------------------------------------------------------------------------------
     
 #Wyłaczam autouruchamianie pendrive'a
-gsettings set org.gnome.desktop.media-handling automount-open false
+#gsettings set org.gnome.desktop.media-handling automount-open false
 
 #Wlaczanie 4 pulpitów
 #http://askubuntu.com/questions/459284/how-to-use-different-workspaces-on-ubuntu-14-04
-sudo apt-get install -yf exuberant-ctags
-sudo apt-get install -yf gpointing-device-settings
-sudo apt-get install -yf yad
-sudo apt-get install -yf cscope
-sudo apt-get install -yf xchat
-sudo apt-get install mingetty -yf
-sudo apt-get install beep -yf
-sudo apt-get install pv -yf 
-sudo apt-get install -yf minicom cutecom 
-sudo apt-get install -yf dconf-editor -yf 
-sudo apt-get install -yf iperf
-sudo apt-get install -yf gpick
-sudo apt-get install -yf ttf-mscorefonts-installer
-sudo apt-get install -yf iotop
-#sudo apt-get install ecryptfs-utils -yf 
+sudo apt-get install -yf  fonts-inconsolata exuberant-ctags yad \
+                          cscope mingetty beep -yf pv minicom cutecom dconf-editor iperf gpick ttf-mscorefonts-installer iotop \
+                          ecryptfs-utils
 
 sh ./ubuntu-packages/ssd_trim_patch.sh
 
