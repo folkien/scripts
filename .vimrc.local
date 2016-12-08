@@ -3,7 +3,7 @@
 map <C-T> :tabnew<CR>
 map <F2> :tabp<CR>
 map <F3> :tabn<CR>
-map <C-W> :q <CR>
+map <C-X> :q <CR>
 map <C-S> :w<CR>
 map <C-Y> :s/^/%/<CR>
 nmap <F8> :TagbarToggle<CR>
