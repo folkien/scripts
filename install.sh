@@ -25,6 +25,7 @@ ln -sf $DIR/image-resize.sh image-resize
 ln -sf $DIR/decompile-dtb.sh decompile-dtb
 ln -sf $DIR/ddpv ddpv
 ln -sf $DIR/udevquery.sh udevquery
+ln -sf $DIR/grepsed.sh grepsed
 
 #Package manager determining
 lsb_release -i | grep Ubuntu
