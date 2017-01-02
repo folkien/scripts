@@ -71,4 +71,5 @@ ln -sf $DIR/.config/mc/ini ~/.config/mc/ini
 
 # Tworzenie najważniejszych katalogów
 source $DIR/.bashrc.variables
-mkdir -p $git $www $gdrive $boisko
+mkdir -p $git $www $gdrive $boisko $software
+chown -R $USER.$USER $software

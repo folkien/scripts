@@ -8,6 +8,7 @@ fi
 # Stałe dotyczące katalogów użytkownika
 export git="/home/$USER/Dokumenty/git"
 export scripts="$git/scripts"
+export software="/opt/"
 export boisko="/home/$USER/Dokumenty/boisko"
 export user_variables="/home/$USER/variables.sh"
 export shell_colors="/etc/colors.sh"
