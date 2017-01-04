@@ -26,6 +26,7 @@ ln -sf $DIR/decompile-dtb.sh decompile-dtb
 ln -sf $DIR/ddpv ddpv
 ln -sf $DIR/udevquery.sh udevquery
 ln -sf $DIR/grepsed.sh grepsed
+ln -sf $DIR/stash2patch.sh stash2patch
 
 #Package manager determining
 lsb_release -i | grep Ubuntu
