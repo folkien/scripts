@@ -12,6 +12,7 @@ DESTINATION=$@
 if [ -d /home/$USER/.ssh/ ]; then
     echo "Wymieniam swój klucz."
     LOCALKEY=$(cat /home/$USER/.ssh/id_rsa.pub)
+    ssh $DESTINATION 'mkdir -p ~/.ssh/'
     ssh $DESTINATION 'echo '$LOCALKEY' >> ~/.ssh/authorized_keys'
     echo "Pobieram zdalny klucz."
     REMOTEKEY=$(ssh $DESTINATION 'cat ~/.ssh/id_rsa.pub')
