@@ -27,6 +27,7 @@ ln -sf $DIR/ddpv ddpv
 ln -sf $DIR/udevquery.sh udevquery
 ln -sf $DIR/grepsed.sh grepsed
 ln -sf $DIR/stash2patch.sh stash2patch
+ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
 
 #Package manager determining
 lsb_release -i | grep Ubuntu
