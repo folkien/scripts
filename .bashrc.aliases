@@ -31,4 +31,4 @@ alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -g \"$DESKTOPWIDTH\"x\"$DESKTO
 alias sshSonel="ssh -X spaszko@$MYSONELIP" 
 alias tohex="printf '%x\n' "
 alias todec="printf '%d\n' "
-
+alias tiubootcopy="sudo mkdir -p /media/boot/; sudo mount /dev/sdb1 /media/boot/;sudo  cp MLO /media/boot/ -rfv;sudo cp u-boot.img /media/boot/ -rfv; sudo umount /media/boot/; sudo rm -rf /media/boot"
