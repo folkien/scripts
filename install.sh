@@ -40,6 +40,7 @@ ln -sf $DIR/stash2patch.sh stash2patch
 ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
 ln -sf $DIR/buildkernel.sh buildkernel
 ln -sf $DIR/hex2ascii.sh hex2asci
+ln -sf $DIR/ascii2hex.sh ascii2hex
 
 if [ $NODEPENDENCIES -ne 1 ]; then
     echo "Dependencies installation..."
