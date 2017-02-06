@@ -1,0 +1,2 @@
+echo $@ | xxd -r
+echo ""
