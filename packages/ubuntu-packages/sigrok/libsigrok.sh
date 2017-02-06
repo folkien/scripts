@@ -1,5 +1,5 @@
 sudo apt-get install -yf git-core gcc g++ make autoconf autoconf-archive \
-  automake libtool pkg-config libglib2.0-dev libglibmm-2.4-dev libzip-dev \
+  automake libtool pkg-config libglib2.0-dev libglibmm-2.4-dev libzip-dev libzip4-dev \
   libusb-1.0-0-dev libftdi-dev check doxygen python-numpy\
   python-dev python-gi-dev python-setuptools swig default-jdk
 git clone git://sigrok.org/libsigrok
