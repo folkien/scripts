@@ -1,7 +1,11 @@
 #instalacja skryptów w systemie
 DIR=`pwd`
 
-if [ $@ = "scripts" ]; then
+if [ $# -ne 0 ]; then
+    if [ $@ = "scripts" ]; then
+        NODEPENDENCIES=1
+    fi
+else
     NODEPENDENCIES=1
 fi
 
