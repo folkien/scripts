@@ -1,4 +1,4 @@
-sudo apt-get install git-core gcc make autoconf automake libtool pkg-config libglib2.0-dev
+sudo apt-get install -yf git-core gcc make autoconf automake libtool pkg-config libglib2.0-dev
 mkdir -p /opt/sigrok/
 git clone git://sigrok.org/sigrok-cli
 if [ $? -eq 0 ]; then

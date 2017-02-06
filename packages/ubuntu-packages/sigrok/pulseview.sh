@@ -1,4 +1,4 @@
-sudo apt-get install git-core g++ make cmake libtool pkg-config \
+sudo apt-get install -yf git-core g++ make cmake libtool pkg-config \
   libglib2.0-dev libqt4-dev libboost-test-dev libboost-thread-dev\
   libboost-filesystem-dev libboost-system-dev libqt5svg5-dev
 git clone git://sigrok.org/pulseview

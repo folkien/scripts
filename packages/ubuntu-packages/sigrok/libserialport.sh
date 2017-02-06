@@ -1,4 +1,4 @@
-sudo apt-get install git-core gcc make autoconf automake libtool
+sudo apt-get install -yf git-core gcc make autoconf automake libtool
 git clone git://sigrok.org/libserialport
 mkdir -p /opt/sigrok/
 if [ $? -eq 0 ]; then

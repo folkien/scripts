@@ -1,4 +1,4 @@
-sudo apt-get install git-core gcc make autoconf automake libtool pkg-config libglib2.0-dev python3-dev
+sudo apt-get install -yf git-core gcc make autoconf automake libtool pkg-config libglib2.0-dev python3-dev
 git clone git://sigrok.org/libsigrokdecode
 mkdir -p /opt/sigrok/
 if [ $? -eq 0 ]; then
