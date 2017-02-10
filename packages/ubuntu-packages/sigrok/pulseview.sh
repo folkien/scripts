@@ -5,6 +5,7 @@ git clone git://sigrok.org/pulseview
 mkdir -p /opt/sigrok/
 if [ $? -eq 0 ]; then
     cd pulseview
+    git checkout pulseview-0.3.0
     LD_LIBRARY_PATH=/opt/sigrok/lib/ PKG_CONFIG_PATH=/opt/sigrok/lib/pkgconfig/ cmake . -DCMAKE_INSTALL_PREFIX:PATH=/opt/sigrok/
     make -j9
     sudo make install

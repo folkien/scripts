@@ -3,6 +3,7 @@ git clone git://sigrok.org/libsigrokdecode
 mkdir -p /opt/sigrok/
 if [ $? -eq 0 ]; then
     cd libsigrokdecode
+    git checkout libsigrokdecode-0.4.1
     ./autogen.sh
     LD_LIBRARY_PATH=/opt/sigrok/lib/ PKG_CONFIG_PATH=/opt/sigrok/lib/pkgconfig/   ./configure --prefix=/opt/sigrok/
     make

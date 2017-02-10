@@ -7,6 +7,7 @@ git clone git://sigrok.org/libsigrok
 mkdir -p /opt/sigrok/
 if [ $? -eq 0 ]; then
     cd libsigrok
+    git checkout libsigrok-0.4.0
     ./autogen.sh
     LD_LIBRARY_PATH=/opt/sigrok/lib/ PKG_CONFIG_PATH=/opt/sigrok/lib/pkgconfig/   ./configure --prefix=/opt/sigrok/ --enable-cxx --enable-all-drivers 
     make -j5
