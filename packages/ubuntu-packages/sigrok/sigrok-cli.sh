@@ -3,7 +3,7 @@ mkdir -p /opt/sigrok/
 git clone git://sigrok.org/sigrok-cli
 if [ $? -eq 0 ]; then
      cd sigrok-cli
-     g checkout sigrok-cli-0.6.0
+     git checkout sigrok-cli-0.6.0
     ./autogen.sh
     LD_LIBRARY_PATH=/opt/sigrok/lib/ PKG_CONFIG_PATH=/opt/sigrok/lib/pkgconfig/   ./configure --prefix=/opt/sigrok/
     make
