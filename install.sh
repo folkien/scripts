@@ -41,6 +41,7 @@ ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
 ln -sf $DIR/buildkernel.sh buildkernel
 ln -sf $DIR/hex2ascii.sh hex2asci
 ln -sf $DIR/ascii2hex.sh ascii2hex
+ln -sf $DIR/filelist.sh filelist
 
 if [ $NODEPENDENCIES -ne 1 ]; then
     echo "Dependencies installation..."
