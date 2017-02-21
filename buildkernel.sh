@@ -7,7 +7,7 @@ else
 fi
 
 if [ -f .imagetype ]; then
-    IMAGETYPE=$(cat .imagetype)
+    M_IMAGETYPE=$(cat .imagetype)
 else
     echo "Give me imagetype e.g. zImage, uImage :"
     read M_IMAGETYPE
