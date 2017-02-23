@@ -41,6 +41,9 @@ ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
 ln -sf $DIR/buildkernel.sh buildkernel
 ln -sf $DIR/hex2ascii.sh hex2asci
 ln -sf $DIR/ascii2hex.sh ascii2hex
+ln -sf $DIR/filelist.sh filelist
+ln -sf $DIR/kernelCopy2Disk.sh kernelCopy2Disk
+ln -sf $DIR/ubootCopy2Disk.sh ubootCopy2Disk
 
 if [ $NODEPENDENCIES -ne 1 ]; then
     echo "Dependencies installation..."

@@ -1,0 +1,5 @@
+packages/ubuntu-packages/sigrok/libserialport/
+packages/ubuntu-packages/sigrok/libsigrok/
+packages/ubuntu-packages/sigrok/libsigrokdecode/
+packages/ubuntu-packages/sigrok/pulseview/
+packages/ubuntu-packages/sigrok/sigrok-cli/
