@@ -38,6 +38,7 @@ ln -sf $DIR/ddpv ddpv
 ln -sf $DIR/udevquery.sh udevquery
 ln -sf $DIR/grepsed.sh grepsed
 ln -sf $DIR/stash2patch.sh stash2patch
+ln -sf $DIR/patch2stash.sh patch2stash
 ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
 ln -sf $DIR/buildkernel.sh buildkernel
 ln -sf $DIR/hex2ascii.sh hex2asci
