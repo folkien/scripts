@@ -10,7 +10,8 @@ else
 fi
 
 echo "Scripts installation..."
-cp ./colors.sh /etc/
+cp ./colors.sh      /etc/
+cp ./messages.sh    /etc/
 cd /usr/bin/
 ln -sf $DIR/pushf.sh pushf
 ln -sf $DIR/popf.sh popf
