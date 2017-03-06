@@ -1,3 +1,4 @@
+source /etc/messages.sh
 if [ -f .loadaddr  ]; then
     M_LOADADDR=$(cat .loadaddr)
 else
@@ -7,7 +8,7 @@ else
 fi
 
 if [ -f .imagetype ]; then
-    IMAGETYPE=$(cat .imagetype)
+    M_IMAGETYPE=$(cat .imagetype)
 else
     echo "Give me imagetype e.g. zImage, uImage :"
     read M_IMAGETYPE
@@ -19,5 +20,10 @@ arm-make -j9 dtbs && \
 arm-make -j9 modules && \
 arm-make -j9 modules_install && \
 arm-make -j9 tarbz2-pkg
-echo "Image size:"
-ls -lah ./arch/arm/boot/${M_IMAGETYPE}
+if [ $? -eq 0 ]; then
+    msuccess "Compilation completed!"
+    minfo "Image size:"
+    ls -lah ./arch/arm/boot/${M_IMAGETYPE}
+else
+    merror "Compilation failed!"
+fi
