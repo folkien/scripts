@@ -1,12 +1,42 @@
-#TODO change on deon.pl because it's better.
+# Pope katecheza downloader
+source /etc/messages.sh
 WEBSITE=http://papiez.wiara.pl/
-if [ -e Homilie  ]; then
-    rm -rf Homilie
-fi
-wget http://papiez.wiara.pl/Franciszek/Homilie
-#LinksAll=$(grep -z "class=\"pgr_top.*class=\"pgr" Homilie -o | grep -P "href.*doc\/.*?\"" -o | uniq | sort)
-link=$(grep -z "class=\"pgr_top.*class=\"pgr" Homilie -o | grep -P "href.*doc\/.*?\"" -o | uniq | sort | head -n 1 | cut -c 8- | rev | cut -c 2- | rev )
-echo ${WEBSITE}${link}
 
-wget ${WEBSITE}${link} -O Homilia
+mkdir -p ~/Dokumenty/katechezyPapieskie/
+# If there exists katechesis then backup it
+if [ -f  ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt ]; then
+    minfo "Backup of old katechesis and md5check."
+    md5Old=$(md5sum ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt)
+    cp ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.old.txt
+fi
+
+# Downloading all katechesis
+minfo "Downloading of all katechesis topics."
+wget http://papiez.wiara.pl/Franciszek/Katechezy -O Katechezy.html & >/dev/null && sleep 5
+link=$(cat -v Katechezy.html | grep -z "class=\"dl_sub cf attach.*class=\"pgr" -o | grep -P "href.*doc\/.*?\"" -o | uniq | head -n 1 | cut -c 8- | rev | cut -c 2- | rev )
+echo "Pobieram:"${WEBSITE}${link} 
+
+# Downloading the newest one
+minfo "Downloading newest one."
+wget ${WEBSITE}${link} -O wybranaKatecheza
+tekst=$(grep -z "cf txt.*txt__tags" wybranaKatecheza -o)
+echo $tekst > wyjscie.html
+lynx --dump wyjscie.html > ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
+
+#Cleaning
+minfo "Cleaning."
+rm Katechezy.html wyjscie.html
+
+#Check md5 and open if new
+minfo "Checking if there is any new katechesis."
+md5New=$(md5sum ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt)
+if [ "$md5New" == "$md5Old" ]; then
+    minfo "Nothing new."
+else
+    msuccess "New katechesis."
+    kwrite ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
+    echo $md5Old
+    echo $md5New
+fi
+
 
