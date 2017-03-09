@@ -64,7 +64,7 @@ if [ $NODEPENDENCIES -ne 1 ]; then
         PKG_MANAGER="pacman -S "
     fi
     # Dependencies install
-    $PKG_MANAGER pv dialog ncdu pydf
+    $PKG_MANAGER pv dialog ncdu pydf lynx
     $PKG_MANAGER device-tree-compiler
     $PKG_MANAGER yakuake
     $PKG_MANAGER convert

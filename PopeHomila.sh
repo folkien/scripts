@@ -34,7 +34,7 @@ if [ "$md5New" == "$md5Old" ]; then
     minfo "Nothing new."
 else
     msuccess "New katechesis."
-    kwrite ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
+    kate ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
     echo $md5Old
     echo $md5New
 fi
