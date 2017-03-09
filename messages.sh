@@ -4,7 +4,7 @@ source /etc/colors.sh
 # --------------------------------------------------------------------------------
 minfo()
 {
-    echo -e "${Blue}$@${Color_Off}"
+    echo -e "${Cyan}$@${Color_Off}"
 }
 
 mwarning()
@@ -29,7 +29,7 @@ msuccess()
 # --------------------------------------------------------------------------------
 kinfo()
 {
-    echo -e "${Blue}$@${Color_Off}"
+    echo -e "${Cyan}$@${Color_Off}"
 }
 
 kwarning()
