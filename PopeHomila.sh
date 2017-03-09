@@ -4,11 +4,11 @@ WEBSITE=http://papiez.wiara.pl/
 
 # Checks argument list
 if [ $# -ne 0 ]; then
-    if [ $@ = "show" ]; then
-        showAlways=1
+    if [ $@ = "show" ] && [ -f ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt ]; then
+        # Only show a document
+        kate ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
+        exit 0
     fi
-else
-    showAlways=0
 fi
 
 mkdir -p ~/Dokumenty/katechezyPapieskie/
@@ -41,9 +41,6 @@ minfo "Checking if there is any new katechesis."
 md5New=$(md5sum ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt)
 if [ "$md5New" == "$md5Old" ]; then
     merror "Nothing new."
-    if [ $showAlways -eq 1 ]; then
-        kate ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
-    fi
 else
     msuccess "New katechesis."
     kate ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
