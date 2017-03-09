@@ -47,6 +47,7 @@ ln -sf $DIR/filelist.sh filelist
 ln -sf $DIR/kernelCopy2Disk.sh kernelCopy2Disk
 ln -sf $DIR/kernelUnpack2Disk.sh kernelUnpack2Disk
 ln -sf $DIR/ubootCopy2Disk.sh ubootCopy2Disk
+ln -sf $DIR/PopeHomilia.sh PopeHomilia
 
 if [ $NODEPENDENCIES -ne 1 ]; then
     echo "Dependencies installation..."
