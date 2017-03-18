@@ -5,6 +5,12 @@ if [ $# -lt 1 ]; then
 fi
 DISK=$1
 
+# check existence of disk
+if [ ! -e ${DISK} ]; then
+    echo "This file doesn't exists."
+    exit 1
+fi
+
 if [ ! -e boards.cfg ]; then
     echo "This directory is not a uboot repository. Missing boards.cfg!"
     exit 1
