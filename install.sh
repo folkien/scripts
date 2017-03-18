@@ -10,8 +10,9 @@ else
 fi
 
 echo "Scripts installation..."
-cp ./colors.sh      /etc/
-cp ./messages.sh    /etc/
+ln -sf $DIR/colors.sh      /etc/colors.sh
+ln -sf $DIR/messages.sh    /etc/messages.sh
+
 cd /usr/bin/
 ln -sf $DIR/pushf.sh pushf
 ln -sf $DIR/popf.sh popf
@@ -47,6 +48,7 @@ ln -sf $DIR/filelist.sh filelist
 ln -sf $DIR/kernelCopy2Disk.sh kernelCopy2Disk
 ln -sf $DIR/kernelUnpack2Disk.sh kernelUnpack2Disk
 ln -sf $DIR/ubootCopy2Disk.sh ubootCopy2Disk
+ln -sf $DIR/PopeHomilia.sh PopeHomilia
 ln -sf $DIR/map2html.py map2html
 
 if [ $NODEPENDENCIES -ne 1 ]; then
@@ -65,7 +67,7 @@ if [ $NODEPENDENCIES -ne 1 ]; then
         PKG_MANAGER="pacman -S "
     fi
     # Dependencies install
-    $PKG_MANAGER pv dialog ncdu pydf
+    $PKG_MANAGER pv dialog ncdu pydf lynx
     $PKG_MANAGER device-tree-compiler
     $PKG_MANAGER yakuake
     $PKG_MANAGER convert

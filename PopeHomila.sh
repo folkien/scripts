@@ -2,6 +2,15 @@
 source /etc/messages.sh
 WEBSITE=http://papiez.wiara.pl/
 
+# Checks argument list
+if [ $# -ne 0 ]; then
+    if [ $@ = "show" ] && [ -f ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt ]; then
+        # Only show a document
+        kate ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
+        exit 0
+    fi
+fi
+
 mkdir -p ~/Dokumenty/katechezyPapieskie/
 # If there exists katechesis then backup it
 if [ -f  ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt ]; then
@@ -31,10 +40,10 @@ rm Katechezy.html wyjscie.html
 minfo "Checking if there is any new katechesis."
 md5New=$(md5sum ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt)
 if [ "$md5New" == "$md5Old" ]; then
-    minfo "Nothing new."
+    merror "Nothing new."
 else
     msuccess "New katechesis."
-    kwrite ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
+    kate ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
     echo $md5Old
     echo $md5New
 fi
