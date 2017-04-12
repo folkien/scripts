@@ -50,6 +50,7 @@ ln -sf $DIR/kernelUnpack2Disk.sh kernelUnpack2Disk
 ln -sf $DIR/ubootCopy2Disk.sh ubootCopy2Disk
 ln -sf $DIR/PopeHomilia.sh PopeHomilia
 ln -sf $DIR/map2html.py map2html
+ln -sf $DIR/mp4tomp3.sh mp4tomp3
 
 if [ $NODEPENDENCIES -ne 1 ]; then
     echo "Dependencies installation..."
