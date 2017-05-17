@@ -1,11 +1,13 @@
-source /etc/colors.sh
-FILE=$(ls $STASHDIRECTORY | sort -r | head -n 1)
-echo "Last patch file is ${FILE}. Applying."
+source /etc/messages.sh
+RepoName=$(basename `git rev-parse --show-toplevel`)
+
+FILE=$(ls $STASHDIRECTORY | grep ${RepoName} | sort -r | head -n 1)
+minfo "Last patch file is ${FILE}. Applying."
 cp ${STASHDIRECTORY}/${FILE} ./
 git apply ./${FILE}
 if [ $? -ne 0 ]; then
-    echo -e "${Red}Patch failed.${Color_Off}"
+    merror "Patch failed."
 else
-    echo -e "${Green}Patching completed!${Color_Off}"
+    msuccess "Patching completed!"
 fi
 
