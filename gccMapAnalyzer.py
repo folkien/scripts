@@ -9,13 +9,20 @@ sections = {}
 files = {}
 
 # Create virtual file system which could be easily visualized by fileLight
-def createVirtualFile(section, filePath, fileName, fileSize):
+def createVirtualFile(section, filePath, fileSize):
+    if len(filePath) == 0:
+        print 'Wrong filePath.'
+        return
     # remove '/' character
     if filePath[0] == '/':
         filePath = filePath[1:]
+    #format text
+    fileName = os.path.basename(filePath)
+    filePath = os.path.dirname(filePath)
     # create all directories
     path = "virtualFS/"+section+"/"+filePath
-    os.makedirs(path)
+    if not os.path.exists(path):
+        os.makedirs(path)
     # create file
     f = open(path+fileName, 'w')
     f.write('\0' * fileSize)
@@ -24,6 +31,8 @@ def createVirtualFile(section, filePath, fileName, fileSize):
 def storeElement( section, address, size, filePath ):
     # format section name
     section = section[1:len(section)-1]
+    # format file path
+    filePath = filePath[1:len(filePath)]
     # change size to decimal integer
     size = int(size,0)
     # store size
@@ -93,5 +102,13 @@ for index in range(len(content)):
                 storeElement(findSection.group(0), findAddress.group(0), findSize.group(0), fileName)
                 print "Line:", index, "Section :", findSection.group(0), "Address : ", findAddress.group(0), "Size : ", findSize.group(0), "File : ", fileName
 
+
+# Print sections informations
 print sections
-print files
+
+#Create virtual filesystem
+for fileKey in files:
+    sectionAndpath = fileKey.split(':')
+    createVirtualFile(sectionAndpath[0], sectionAndpath[1], files[fileKey]  )
+
+
