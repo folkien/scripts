@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 import os, random, argparse, time, sys, re
 
+# TODO create Tree with filesizes and directories
+
 #GLOBALS
 #dictionary with sections size
 sections = {}
@@ -10,9 +12,13 @@ files = {}
 
 # Create virtual file system which could be easily visualized by fileLight
 def createVirtualFile(section, filePath, fileSize):
+    # assert filepath
     if len(filePath) == 0:
-        print 'Wrong filePath.'
+        print 'createVirtualFile Wrong filePath.'
         return
+    # asser file size - create only files with size > 0
+    if fileSize == 0:
+        return;
     # remove '/' character
     if filePath[0] == '/':
         filePath = filePath[1:]
@@ -28,6 +34,7 @@ def createVirtualFile(section, filePath, fileSize):
     f.write('\0' * fileSize)
     f.close()
 
+# store element in sections dictionary and files dictionary
 def storeElement( section, address, size, filePath ):
     # format section name
     section = section[1:len(section)-1]
@@ -35,12 +42,14 @@ def storeElement( section, address, size, filePath ):
     filePath = filePath[1:len(filePath)]
     # change size to decimal integer
     size = int(size,0)
-    # store size
+
+    # store in sections dictionary
     if section in sections:
         sections[section] += size
     else:
         sections[section] = size
-    #Store file
+
+    #Store in files dictionary
     fileKey = section+":"+filePath
     if fileKey in files:
         files[fileKey] += size
@@ -104,7 +113,11 @@ for index in range(len(content)):
 
 
 # Print sections informations
-print sections
+print "# Code usage, sections."
+print "-----------------------"
+for section in sections:
+    print section,' : ', sections[section], ' bytes.'
+print "-----------------------"
 
 #Create virtual filesystem
 for fileKey in files:
