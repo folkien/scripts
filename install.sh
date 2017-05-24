@@ -43,6 +43,8 @@ ln -sf $DIR/patch2stash.sh patch2stash
 ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
 ln -sf $DIR/buildkernel.sh buildkernel
 ln -sf $DIR/hex2ascii.sh hex2asci
+ln -sf $DIR/hex2dec.sh hex2dec
+ln -sf $DIR/gccMapAnalyzer.py gccMapAnalyzer
 ln -sf $DIR/ascii2hex.sh ascii2hex
 ln -sf $DIR/filelist.sh filelist
 ln -sf $DIR/kernelCopy2Disk.sh kernelCopy2Disk
