@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import os, random, argparse, time, sys, re
 
-# TODO create Tree with filesizes and directories
 
 #GLOBALS
 #dictionary with sections size
@@ -26,7 +25,7 @@ def createVirtualFile(section, filePath, fileSize):
     fileName = os.path.basename(filePath)
     filePath = os.path.dirname(filePath)
     # create all directories
-    path = "virtualFS/"+section+"/"+filePath
+    path = "virtualFS/"+section+"/"+filePath+"/"
     if not os.path.exists(path):
         os.makedirs(path)
     # create file
