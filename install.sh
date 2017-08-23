@@ -53,7 +53,7 @@ ln -sf $DIR/ubootCopy2Disk.sh ubootCopy2Disk
 ln -sf $DIR/PopeHomilia.sh PopeHomilia
 ln -sf $DIR/map2html.py map2html
 ln -sf $DIR/mp4tomp3.sh mp4tomp3
-ln -sf $DIR/bssAnalyze.sh bssAnalyze
+ln -sf $DIR/bssAnalyze.py bssAnalyze
 
 if [ $NODEPENDENCIES -ne 1 ]; then
     echo "Dependencies installation..."
