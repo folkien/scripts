@@ -6,6 +6,6 @@ if [ $? -eq 0 ]; then
     git checkout libserialport-0.1.1
     ./autogen.sh
     LD_LIBRARY_PATH=/opt/sigrok/lib/ PKG_CONFIG_PATH=/opt/sigrok/lib/pkgconfig/   ./configure --prefix=/opt/sigrok/
-    make
+    make -j5
     sudo make install
 fi
