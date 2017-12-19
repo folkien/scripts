@@ -3,3 +3,4 @@ packages/ubuntu-packages/sigrok/libsigrok/
 packages/ubuntu-packages/sigrok/libsigrokdecode/
 packages/ubuntu-packages/sigrok/pulseview/
 packages/ubuntu-packages/sigrok/sigrok-cli/
+packages/ubuntu-packages/sigrok/sigrok-firmware-fx2lafw/
