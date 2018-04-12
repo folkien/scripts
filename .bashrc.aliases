@@ -36,3 +36,6 @@ alias pulseview_git="LD_LIBRARY_PATH=/opt/sigrok/lib/ PKG_CONFIG_PATH=/opt/sigro
 alias directorysize="/usr/bin/du -sh"
 alias filesize="/usr/bin/du -sh"
 alias size="/usr/bin/du -sh"
+alias gitlogtoday="git log --since=1am"
+alias gitlogthisweek="git log --since=\"7 days ago\""
+alias gitlogthismonth="git log --since=\"30 days ago\" --pretty=oneline"

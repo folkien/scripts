@@ -59,6 +59,9 @@ ln -sf $DIR/convertIncludeBackslashesToSlashes.sh convertIncludeBackslashesToSla
 ln -sf $DIR/prependTextBeforeClassMethod.sh prependTextBeforeClassMethod
 ln -sf $DIR/swap-clean.sh swap-clean
 
+# git modifications
+git config --global alias.today 'log --since=1am'
+
 # Settings 
 gsettings set org.gnome.meld detect-encodings "['UTF-8', 'WINDOWS-1252', 'ISO-8859-15', 'UTF-16', 'WINDOWS-1253', 'KOI8-R']"
 
