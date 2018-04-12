@@ -4,3 +4,5 @@ packages/ubuntu-packages/sigrok/libsigrokdecode/
 packages/ubuntu-packages/sigrok/pulseview/
 packages/ubuntu-packages/sigrok/sigrok-cli/
 packages/ubuntu-packages/sigrok/sigrok-firmware-fx2lafw/
+packages/axel-2.4
+packages/axel-2.4.tar.bz2
