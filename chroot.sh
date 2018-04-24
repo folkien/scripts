@@ -54,6 +54,7 @@ if [ $1 = "m" ] ; then
 		mount --bind /sys $MNTDIR/sys
 		mount --bind /dev $MNTDIR/dev
 		mount --bind /run $MNTDIR/run
+		mount --bind /tmp $MNTDIR/tmp
 
 		echo "Wchodzę do wnetrzna systemu.."
 		pyNotify -s "Chroot : Użytkownik $USER zalogował się w $MNTDIR."
@@ -66,6 +67,7 @@ elif [ $1 = "u" ] ; then
 		umount $MNTDIR/sys
 		umount $MNTDIR/dev
 		umount $MNTDIR/run
+		umount $MNTDIR/tmp
 		#Demontaż oraz usuwanie obrazu
 		umount $MNTDIR
 		pyNotify -s "Mount : Odmontowano $MNTDIR oraz proc,sys,dev."
