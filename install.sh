@@ -37,7 +37,7 @@ ln -sf $DIR/image-resize.sh image-resize
 ln -sf $DIR/decompile-dtb.sh decompile-dtb
 ln -sf $DIR/ddpv ddpv
 ln -sf $DIR/udevquery.sh udevquery
-ln -sf $DIR/grepsed.sh grepsed
+ln -sf $DIR/sed-on-directory.sh sed-on-directory
 ln -sf $DIR/stash2patch.sh stash2patch
 ln -sf $DIR/patch2stash.sh patch2stash
 ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
