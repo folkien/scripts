@@ -2,7 +2,7 @@
 source /etc/messages.sh
 while true; do
     merror "Please disable RAM consuming applications."
-    read -p "Applications disabled? y/n" yn
+    read -p "Applications disabled? [y/n] : " yn
     case $yn in
         [Yy]* ) break;;
         * ) echo "Please answer yes or no.";;
