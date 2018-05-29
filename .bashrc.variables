@@ -42,6 +42,10 @@ export kernel="$embedded/setup-scripts"
 export sdcards="$embedded/sd-cards"
 export sysroot="$sdcards/sysroot"
 
+#elzab s.a.
+export repos="~/repos/"
+export elzabos="~/repos/ElzabOS/trunk/"
+
 # Stałe dotyczace apache
 export www="/var/www/html"
 

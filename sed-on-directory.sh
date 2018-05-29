@@ -6,4 +6,4 @@ if [ $? == 0 ]; then
     exit -1
 fi
 # loop through all files inside directory and call sed with given parameters
-find ./ -type f -print0 | xargs -0 sed -i $@
+find ./ -type f -print0 | xargs -0 sed -i -E $@
