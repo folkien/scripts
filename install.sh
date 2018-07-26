@@ -58,6 +58,7 @@ ln -sf $DIR/cmd.sh cmd
 ln -sf $DIR/convertIncludeBackslashesToSlashes.sh convertIncludeBackslashesToSlashes
 ln -sf $DIR/prependTextBeforeClassMethod.sh prependTextBeforeClassMethod
 ln -sf $DIR/swap-clean.sh swap-clean
+ln -sf $DIR/git-edit.sh git-edit
 
 # git modifications
 git config --global alias.today 'log --since=1am'
