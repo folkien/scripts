@@ -1,10 +1,15 @@
 VERSION=$(date +%y%Vv%u)
 RepoName=$(basename `git rev-parse --show-toplevel`)
-Filepattern=${RepoName}${VERSION}
+FilePattern=${RepoName}${VERSION}
+FilePackage=${FilePattern}.tar.gz
+FileStash=${FilePattern}_stash.patch
+FilesUnpushedCommits=""
 
 # Clean all patches in current directory.
 mkdir -p .old.patches
-[ -e *.patch ] && mv ./*.patch .old.patches/
+if [ -e *.patch ]; then
+    mv ./*.patch .old.patches/
+fi
 
 #Checking if work is not stashed
 # check of not commited 
@@ -23,23 +28,28 @@ fi
 #format-patches from last git-svn commit to this moment
 echo "## Creating patch's from uncommited changes. ##"
 git format-patch git-svn
-cat *.patch > ${Filepattern}_patches.patch
-rm *-*.patch
+if [ -e *.patch ]; then
+    FilesUnpushedCommits=$(ls *.patch)
+fi
 
 # Append patch from current stash
 echo "## Appending current stash to patch file. ##"
-git stash show -p >> ${Filepattern}_stash.patch
+git stash show -p >> ${FileStash}
 
 #pack everything together
 echo "## Packing. ##"
-tar -cvf ${Filepattern}.tar.gz ${Filepattern}_patches.patch ${Filepattern}_stash.patch
+tar -cvf ${FilePackage} ${FilesUnpushedCommits} ${FileStash}
 
 #send to cloud
 if [ -z ${STASHDIRECTORY+x} ]; then
     echo "Stash directory is unset."
 else
-    cp -fv ${Filepattern}.tar.gz ${STASHDIRECTORY}/
+    cp -fv ${FilePackage} ${STASHDIRECTORY}/
 fi
+
+# Clean
+echo "## Cleaning ##"
+rm *.patch
 
 # End of work
 echo "## Everything Done! ##"
