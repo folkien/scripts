@@ -1,6 +1,10 @@
 #autor Sławomir Paszko
 BASHRCVERSION="0.61"
 
+# Sekcja git
+##################################################
+source /home/$INSTALLUSER/Dokumenty/git/scripts/git-completion.bash
+
 # Sekcja konfiguracji
 ##################################################
 source /etc/bashrc.conf
