@@ -4,23 +4,29 @@ RepoName=$(basename `git rev-parse --show-toplevel`)
 # find last modified file with repository name
 FILE=$(ls $STASHDIRECTORY | grep ${RepoName} | sort -r | head -n 1)
 
+# Clean all patches in current directory.
+mkdir -p .old.patches
+if [ -e *.patch ]; then
+    mv ./*.patch .old.patches/
+fi
+
 # Copy file to repository directory
 minfo "Last patch file is ${FILE}. Applying."
 cp ${STASHDIRECTORY}/${FILE} ./
 
-# TODO 
-# - check if tar.gz, then unpack
-# - Apply commits first,
-# - Apply stash secondly,
-CommitsFile=""
-StashFile=""
+#unpack file
+tar -xvf ${FILE}
 
-
-# Apply stash patch
-git apply ./${FILE}
+# Apply commits.
+git apply *.patch
 if [ $? -ne 0 ]; then
     merror "Patch failed."
 else
     msuccess "Patching completed!"
+
+    # Clean
+    echo "## Cleaning ##"
+    rm *.patch
 fi
+
 
