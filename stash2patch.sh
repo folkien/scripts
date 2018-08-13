@@ -28,9 +28,7 @@ fi
 #format-patches from last git-svn commit to this moment
 echo "## Creating patch's from uncommited changes. ##"
 git format-patch git-svn
-if [ -e *.patch ]; then
-    FilesUnpushedCommits=$(ls *.patch)
-fi
+FilesUnpushedCommits=$(ls *.patch)
 
 # Append patch from current stash
 echo "## Appending current stash to patch file. ##"
