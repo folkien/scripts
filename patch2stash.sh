@@ -9,6 +9,9 @@ mkdir -p .old.patches
 if [ -e *.patch ]; then
     mv ./*.patch .old.patches/
 fi
+if [ -e *.tar.gz ]; then
+    mv ./*.tar.gz .old.patches/
+fi
 
 # Copy file to repository directory
 minfo "Last patch file is ${FILE}. Applying."
