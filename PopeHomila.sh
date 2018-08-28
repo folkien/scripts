@@ -34,7 +34,7 @@ lynx --dump wyjscie.html > ~/Dokumenty/katechezyPapieskie/katechezaSrodowa.txt
 
 #Cleaning
 minfo "Cleaning."
-rm Katechezy.html wyjscie.html
+rm Katechezy.html wyjscie.html wybranaKatecheza
 
 #Check md5 and open if new
 minfo "Checking if there is any new katechesis."
