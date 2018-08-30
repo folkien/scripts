@@ -36,6 +36,8 @@ alias directorysize="/usr/bin/du -sh"
 alias filesize="/usr/bin/du -sh"
 alias size="/usr/bin/du -sh"
 
+alias system-start-time="date -d \"$(</proc/uptime awk '{print $1}') seconds ago\""
+
 # git upgrades
 alias g="git"
 alias gitlogtoday="git log --since=1am"

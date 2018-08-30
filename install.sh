@@ -93,6 +93,8 @@ if [ $NODEPENDENCIES -ne 1 ]; then
     $PKG_MANAGER ncurses libncurses-dev
     $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
     $PKG_MANAGER u-boot-tools
+    $PKG_MANAGER tuptime
+    $PKG_MANAGER procinfo
 
     echo "Generating new ssh key. Please install it in github.com"
     ssh-keygen
