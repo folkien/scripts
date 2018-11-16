@@ -89,12 +89,18 @@ if [ $NODEPENDENCIES -ne 1 ]; then
     $PKG_MANAGER yakuake
     $PKG_MANAGER convert
     $PKG_MANAGER git gitg qgit git-svn 
+    $PKG_MANAGER meld kdiff3
     $PKG_MANAGER make
     $PKG_MANAGER ncurses libncurses-dev
     $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
     $PKG_MANAGER u-boot-tools
     $PKG_MANAGER tuptime
     $PKG_MANAGER procinfo
+
+    git config --global merge.tool kdiff3
+    git config --global diff.tool meld
+    git config --global user.name "Sławomir Paszko"
+    git config --global user.email "folkus@gmail.com"
 
     echo "Generating new ssh key. Please install it in github.com"
     ssh-keygen
