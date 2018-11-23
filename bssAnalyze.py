@@ -27,7 +27,6 @@ def bssAnalyze(line):
                 #Size and filename
                 print resultAddress.group(0)[18:] + " - " + currentBssName
             else:
-                print "second line"
                 checkedLineNumber=1
     else:
         #if address and size are in second line
@@ -40,9 +39,8 @@ def bssAnalyze(line):
         checkedLineNumber=0
 #############################################
 
-
-
-
+#main
+#############################################
 with open(fname) as f:
     content = f.readlines()
 # you may also want to remove whitespace characters like `\n` at the end of each line
@@ -50,3 +48,4 @@ content = [x.strip() for x in content]
 
 for line in content :
     bssAnalyze(line)
+#############################################
