@@ -1,5 +1,6 @@
 #autor Sławomir Paszko
 BASHRCVERSION="0.61"
+source /etc/bashrc.conf
 
 # Sekcja git
 ##################################################
