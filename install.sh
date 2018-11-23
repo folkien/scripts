@@ -1,5 +1,6 @@
 #instalacja skryptów w systemie
 DIR=`pwd`
+NODEPENDENCIES=0
 
 if [ $# -ne 0 ]; then
     if [ $@ = "scripts" ]; then
@@ -92,7 +93,7 @@ if [ $NODEPENDENCIES -ne 1 ]; then
     $PKG_MANAGER meld kdiff3
     $PKG_MANAGER make
     $PKG_MANAGER ncurses libncurses-dev
-    $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
+#    $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
     $PKG_MANAGER u-boot-tools
     $PKG_MANAGER tuptime
     $PKG_MANAGER procinfo
