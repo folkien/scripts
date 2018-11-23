@@ -27,12 +27,12 @@ fi
 
 #format-patches from last git-svn commit to this moment
 echo "## Creating patch's from uncommited changes. ##"
-git format-patch git-svn
+git format-patch origin/master
 FilesUnpushedCommits=$(ls *.patch)
 
 # Append patch from current stash
 echo "## Appending current stash to patch file. ##"
-git stash show -p >> ${FileStash}
+git stash show -p > ${FileStash}
 
 #pack everything together
 echo "## Packing. ##"
