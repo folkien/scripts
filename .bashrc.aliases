@@ -45,5 +45,6 @@ alias gitlogthisweek="git log --since=\"7 days ago\""
 alias gitlogthismonth="git log --since=\"30 days ago\" --pretty=oneline"
 alias git-rebase-last="git-edit origin/master"
 alias git-svn-rebase-last="git-edit git-svn"
+alias git-am-patch="git am --signoff -3 --ignore-whitespace <"
 
 
