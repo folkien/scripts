@@ -22,7 +22,7 @@ tar -xvf ${FILE}
 
 # Apply commits.
 Commits=$(ls | grep "[0-9]*\-.*.patch")
-git am --signoff --ignore-whitespace -3 ${Commits}
+git am --signoff --ignore-whitespace -3 < ${Commits}
 if [ $? -ne 0 ]; then
     merror "Applying signoff patches failed."
     exit 1
