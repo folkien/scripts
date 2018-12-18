@@ -21,18 +21,19 @@ cp ${STASHDIRECTORY}/${FILE} ./
 tar -xvf ${FILE}
 
 # Apply commits.
-Commits=$(ls | grep "[0-9]*\-.*.patch")
-git am --signoff --ignore-whitespace -3 < ${Commits}
-if [ $? -ne 0 ]; then
-    merror "Applying signoff patches failed."
-    exit 1
-else
-    msuccess "Applying signoff patches completed!"
-    # Clean commits
-    echo "## Cleaning ##"
-    rm -rfv ${Commits}
-fi
-
+Commits=($(ls | grep "[0-9]*\-.*.patch"))
+for commit in "${Commits[@]}"	
+do
+	minfo "Git signoff ${commit}."
+	git am --signoff --ignore-whitespace -3 < ${commit}
+	if [ $? -ne 0 ]; then
+	    merror "Applying signoff patches failed."
+	    exit 1
+	else
+		msuccess "Applied"
+		rm -rfv ${commit}
+	fi
+done
 
 # Apply stash patch
 git apply --ignore-whitespace -3 *.patch
@@ -40,9 +41,7 @@ if [ $? -ne 0 ]; then
     merror "Stash Patch failed."
     exit 1
 else
-    msuccess "Stash Patching completed!"
-    # Clean stash
-    echo "## Cleaning ##"
+    msuccess "Stash applied!"
     rm -rfv *.patch
 fi
 
