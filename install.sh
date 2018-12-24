@@ -1,15 +1,40 @@
-#instalacja skryptów w systemie
+# instalacja skryptów w systemie
+#
+# @param Argument - all - wszystko
+#
+#
 DIR=`pwd`
-NODEPENDENCIES=0
+repositoryUrl="git@github.com:folkien/scripts.git"
+Argument=$@
 
-if [ $# -ne 0 ]; then
-    if [ $@ = "scripts" ]; then
-        NODEPENDENCIES=1
-    fi
-else
-    NODEPENDENCIES=1
+# Tworzenie najważniejszych katalogów
+# -------------------------------------
+source $DIR/.bashrc.variables
+mkdir -p $git $www $gdrive $boisko $software /opt
+chown -R $USER.$USER $software
+
+# Generation of .ssh keys
+if [ ! -e ~/.ssh/id_rsa.pub ]; then
+	echo "Generating new ssh key. Please install it in github.com"
+	ssh-keygen
+	sudo touch /etc/sshkeysgenerated
+	echo "Please install git certificate .ssh or add your own to github. Waiting."
+	read
 fi
 
+# Check location of scripts repository
+pwd | grep $git
+if [ $? -ne 0 ]; then
+	echo "Scripts installation from another location."
+	cd $git
+	git clone $repositoryUrl
+	cd scripts
+	./install.sh $@
+	exit 0
+fi
+
+# Scripts 
+# -------------------------------------
 echo "Scripts installation..."
 ln -sf $DIR/colors.sh      /etc/colors.sh
 ln -sf $DIR/messages.sh    /etc/messages.sh
@@ -63,6 +88,7 @@ ln -sf $DIR/git-edit.sh git-edit
 ln -sf $DIR/jlink-show.sh jlink-show
 
 # git modifications
+# -------------------------------------
 git config --global alias.today 'log --since=1am'
 git config --global alias.co checkout
 git config --global alias.br branch
@@ -71,13 +97,18 @@ git config --global alias.st status
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.graph "log --graph --all --decorate"
 git config --global alias.change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
+git config --global merge.tool kdiff3
+git config --global diff.tool meld
+git config --global user.name "Sławomir Paszko"
+git config --global user.email "folkus@gmail.com"
 
 # Settings 
+# -------------------------------------
 gsettings set org.gnome.meld detect-encodings "['UTF-8', 'WINDOWS-1252', 'ISO-8859-15', 'UTF-16', 'WINDOWS-1253', 'KOI8-R']"
 
-
-if [ $NODEPENDENCIES -ne 1 ]; then
-    echo "Dependencies installation..."
+# Packages
+# -------------------------------------
+if [ $Argument = "all" ]; then
     #Package manager determining
     lsb_release -i | grep Ubuntu
     if [ $? -eq 0 ]; then
@@ -91,29 +122,59 @@ if [ $NODEPENDENCIES -ne 1 ]; then
     if [ $? -eq 0 ]; then
         PKG_MANAGER="pacman -S "
     fi
+
+    cd $DIR
+    echo "Packages installation..."
+
     # Dependencies install
+    $PKG_MANAGER `check-language-support -l pl`    
     $PKG_MANAGER pv dialog ncdu pydf lynx
     $PKG_MANAGER device-tree-compiler
     $PKG_MANAGER yakuake
     $PKG_MANAGER convert
-    $PKG_MANAGER git gitg qgit git-svn 
+    $PKG_MANAGER git gitg qgit git-svn git-email 
+    $PKG_MANAGER rar unrar 
+    $PKG_MANAGER p7zip-full
     $PKG_MANAGER meld kdiff3
     $PKG_MANAGER make
     $PKG_MANAGER ncurses libncurses-dev
 #    $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
+    
     $PKG_MANAGER u-boot-tools
+
+    #Narzędzia dyskowe
+    $PKG_MANAGER gparted
+    $PKG_MANAGER baobab
+
+    #Narzędzia systemowe
     $PKG_MANAGER tuptime
     $PKG_MANAGER procinfo
+    $PKG_MANAGER finger
+    $PKG_MANAGER tree
+    $PKG_MANAGER curl
+    $PKG_MANAGER htop
+    $PKG_MANAGER iotop
+    $PKG_MANAGER fonts-inconsolata ttf-mscorefonts-installer
+    $PKG_MANAGER exuberant-ctags
+    $PKG_MANAGER beep
+    $PKG_MANAGER gnome-schedule
 
-    git config --global merge.tool kdiff3
-    git config --global diff.tool meld
-    git config --global user.name "Sławomir Paszko"
-    git config --global user.email "folkus@gmail.com"
+    #Narzędzia sieciowe
+    $PKG_MANAGER iperf
+    $PKG_MANAGER wireshark
+    $PKG_MANAGER filezilla
+    $PKG_MANAGER rdesktop
+    $PKG_MANAGER mingetty minicom cutecom 
 
-    echo "Generating new ssh key. Please install it in github.com"
-    ssh-keygen
-    echo "Please install git certificate .ssh or add your own to github. Waiting."
-    read
+    #Grafika
+    $PKG_MANAGER imagemagick
+    $PKG_MANAGER shutter
+    $PKG_MANAGER gimp
+    
+    # Filmy
+    $PKG_MANAGER vlc
+    $PKG_MANAGER browser-plugin-vlc
+    $PKG_MANAGER linux-firmware-nonfree
 
     cd $DIR
     sh ./install-vim.sh
@@ -127,9 +188,4 @@ if [ $NODEPENDENCIES -ne 1 ]; then
     ln -sf $DIR/.config/mc/mc.keymap ~/.config/mc/mc.keymap
     ln -sf $DIR/.config/mc/panels.ini ~/.config/mc/panels.ini
     ln -sf $DIR/.config/mc/ini ~/.config/mc/ini
-
-    # Tworzenie najważniejszych katalogów
-    source $DIR/.bashrc.variables
-    mkdir -p $git $www $gdrive $boisko $software
-    chown -R $USER.$USER $software
 fi
