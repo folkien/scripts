@@ -31,6 +31,7 @@ if [ ! -e ~/.ssh/id_rsa.pub ]; then
 fi
 
 # Check location of scripts repository
+# -------------------------------------
 pwd | grep $git
 if [ $? -ne 0 ]; then
 	echo "Scripts installation from another location."
@@ -40,6 +41,11 @@ if [ $? -ne 0 ]; then
 	./install.sh $@
 	exit 0
 fi
+
+# BASH
+# -------------------------------------
+./install-bashrc.sh
+
 
 # Python programs
 # -------------------------------------
