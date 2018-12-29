@@ -7,6 +7,13 @@ DIR=`pwd`
 repositoryUrl="git@github.com:folkien/scripts.git"
 Argument=$@
 
+# Root install prevention
+# -------------------------------------
+if [[ $EUID -eq 0 ]]; then
+   echo "Don't run this as root."
+   exit 1
+fi
+
 # Tworzenie najważniejszych katalogów
 # -------------------------------------
 source $DIR/.bashrc.variables
