@@ -7,6 +7,8 @@ DIR=`pwd`
 repositoryUrl="git@github.com:folkien/scripts.git"
 Argument=$@
 
+source $DIR/.bashrc.variables
+
 # Root install prevention
 # -------------------------------------
 if [[ $EUID -eq 0 ]]; then
@@ -16,9 +18,8 @@ fi
 
 # Tworzenie najważniejszych katalogów
 # -------------------------------------
-source $DIR/.bashrc.variables
-mkdir -p $git $www $gdrive $boisko $software /opt
-chown -R $USER.$USER $software
+sudo install -d -o $USER -g $USER $git $www $gdrive $boisko $software
+sudo chown -R $USER.$USER $software
 
 # Generation of .ssh keys
 if [ ! -e ~/.ssh/id_rsa.pub ]; then
