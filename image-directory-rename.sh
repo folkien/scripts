@@ -37,5 +37,21 @@ fi
 directoryName=${year}"."${month}"-"${directoryName}
 
 # Proposition
-echo "Change ${directory} to ${directoryName} ?"
+echo ""
+
+dialog --title "Change ${directory} to ${directoryName} ?" \
+        --yesno "Original name : ${directory}. \nNew name : ${directoryName}." 10 80
+response=$?
+case $response in
+    0)
+        # Yes
+        echo yes
+        ;;
+    1)  echo no
+        ;;
+    255)
+        echo "Interrupted merge!"
+        exit -1;
+        ;;
+esac
 
