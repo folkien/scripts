@@ -4,33 +4,33 @@ if [ $# -gt 0 ]; then
     directory="$@"
 fi
 
-if [ ! -d ${directory} ]; then
+if [ ! -d "${directory}" ]; then
     echo "Directory doesn't exists."
     exit 1
 fi
 
 # Find oldest file in directory.
-filename=$(file-oldest ${directory})
+filename=$(file-oldest "${directory}")
 echo "Oldest file is ${filename}."
 
 # Get Year and Month.
-year=$(date -r ${filename} "+%Y")
-month=$(date -r ${filename} "+%m")
+year=$(date -r "${filename}" "+%Y")
+month=$(date -r "${filename}" "+%m")
 echo "Year.Month = ${year}.${month}"
 
 # Check directory name
-directoryName=$(basename ${directory})
+directoryName=$(basename "${directory}")
 
 # If year exists then remove it
-echo ${directoryName} | grep ${year}
+echo "${directoryName}" | grep ${year}
 if [ $? -eq 0 ]; then
-    directoryName=$(echo ${directoryName} | sed "s/[0-9][0-9][0-9][0-9]//g")
+    directoryName=$(echo "${directoryName}" | sed "s/[0-9][0-9][0-9][0-9]//g")
 fi
 
 # If month exists then remove it
-echo ${directoryName} | grep ${month}
+echo "${directoryName}" | grep ${month}
 if [ $? -eq 0 ]; then
-    directoryName=$(echo ${directoryName} | sed "s/[0-9][0-9]//g")
+    directoryName=$(echo "${directoryName}" | sed "s/[0-9][0-9]//g")
 fi
 
 # Add Year/Month prefix
