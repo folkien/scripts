@@ -151,6 +151,7 @@ if [ $Argument = "all" ]; then
     echo "Packages installation..."
 
     # Dependencies install
+    $PKG_MANAGER lsb-core
     $PKG_MANAGER `check-language-support -l pl`    
     $PKG_MANAGER pv dialog ncdu pydf lynx
     $PKG_MANAGER device-tree-compiler
