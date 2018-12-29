@@ -43,7 +43,7 @@ fi
 
 # Python programs
 # -------------------------------------
-if [ ! -e $python ]; then
+if [ ! -d $python ]; then
     sudo install -d -o $USER -g $USER $python
 fi
 cd $python
@@ -120,7 +120,7 @@ git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.graph "log --graph --all --decorate"
-git config --global alias.change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
+#git config --global alias.change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
 git config --global merge.tool kdiff3
 git config --global diff.tool meld
 git config --global user.name "Sławomir Paszko"
@@ -132,7 +132,7 @@ gsettings set org.gnome.meld detect-encodings "['UTF-8', 'WINDOWS-1252', 'ISO-88
 
 # Packages
 # -------------------------------------
-if [ $Argument = "all" ]; then
+if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #Package manager determining
     lsb_release -i | grep Ubuntu
     if [ $? -eq 0 ]; then
