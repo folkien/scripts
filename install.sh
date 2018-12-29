@@ -43,56 +43,57 @@ fi
 # Scripts 
 # -------------------------------------
 echo "Scripts installation..."
-ln -sf $DIR/colors.sh      /etc/colors.sh
-ln -sf $DIR/messages.sh    /etc/messages.sh
+cd /etc/
+sudo ln -sf $DIR/colors.sh      colors.sh
+sudo ln -sf $DIR/messages.sh    messages.sh
 
 cd /usr/bin/
-ln -sf $DIR/pushf.sh pushf
-ln -sf $DIR/popf.sh popf
-ln -sf $DIR/cps.sh cps
-ln -sf $DIR/git-create-repository.sh git-create-repository
-ln -sf $DIR/tars.sh tars
-ln -sf $DIR/trim.py trim
-ln -sf $DIR/after.py after
-ln -sf $DIR/volumeup.sh volumeup
-ln -sf $DIR/volumedown.sh volumedown
-ln -sf $DIR/ysess.py ysess
-ln -sf $DIR/burnimage burnimage
-ln -sf $DIR/grep-email.sh  grep-email
-ln -sf $DIR/arm-chroot.sh arm-chroot
-ln -sf $DIR/arm-make.sh arm-make
-ln -sf $DIR/chroot.sh mount-chroot
-ln -sf $DIR/append.sh append
-ln -sf $DIR/filesize.sh filesize
-ln -sf $DIR/focus_or_launch.sh focus_or_launch
-ln -sf $DIR/zdjecia-na-strone.sh zdjecia-na-strone
-ln -sf $DIR/image-resize.sh image-resize
-ln -sf $DIR/decompile-dtb.sh decompile-dtb
-ln -sf $DIR/ddpv ddpv
-ln -sf $DIR/udevquery.sh udevquery
-ln -sf $DIR/sed-on-directory.sh sed-on-directory
-ln -sf $DIR/stash2patch.sh stash2patch
-ln -sf $DIR/patch2stash.sh patch2stash
-ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
-ln -sf $DIR/buildkernel.sh buildkernel
-ln -sf $DIR/hex2ascii.sh hex2asci
-ln -sf $DIR/hex2dec.sh hex2dec
-ln -sf $DIR/gccMapAnalyzer.py gccMapAnalyzer
-ln -sf $DIR/ascii2hex.sh ascii2hex
-ln -sf $DIR/filelist.sh filelist
-ln -sf $DIR/kernelCopy2Disk.sh kernelCopy2Disk
-ln -sf $DIR/kernelUnpack2Disk.sh kernelUnpack2Disk
-ln -sf $DIR/ubootCopy2Disk.sh ubootCopy2Disk
-ln -sf $DIR/PopeHomilia.sh PopeHomilia
-ln -sf $DIR/map2html.py map2html
-ln -sf $DIR/mp4tomp3.sh mp4tomp3
-ln -sf $DIR/bssAnalyze.py bssAnalyze
-ln -sf $DIR/cmd.sh cmd
-ln -sf $DIR/convertIncludeBackslashesToSlashes.sh convertIncludeBackslashesToSlashes
-ln -sf $DIR/prependTextBeforeClassMethod.sh prependTextBeforeClassMethod
-ln -sf $DIR/swap-clean.sh swap-clean
-ln -sf $DIR/git-edit.sh git-edit
-ln -sf $DIR/jlink-show.sh jlink-show
+sudo ln -sf $DIR/pushf.sh pushf
+sudo ln -sf $DIR/popf.sh popf
+sudo ln -sf $DIR/cps.sh cps
+sudo ln -sf $DIR/git-create-repository.sh git-create-repository
+sudo ln -sf $DIR/tars.sh tars
+sudo ln -sf $DIR/trim.py trim
+sudo ln -sf $DIR/after.py after
+sudo ln -sf $DIR/volumeup.sh volumeup
+sudo ln -sf $DIR/volumedown.sh volumedown
+sudo ln -sf $DIR/ysess.py ysess
+sudo ln -sf $DIR/burnimage burnimage
+sudo ln -sf $DIR/grep-email.sh  grep-email
+sudo ln -sf $DIR/arm-chroot.sh arm-chroot
+sudo ln -sf $DIR/arm-make.sh arm-make
+sudo ln -sf $DIR/chroot.sh mount-chroot
+sudo ln -sf $DIR/append.sh append
+sudo ln -sf $DIR/filesize.sh filesize
+sudo ln -sf $DIR/focus_or_launch.sh focus_or_launch
+sudo ln -sf $DIR/zdjecia-na-strone.sh zdjecia-na-strone
+sudo ln -sf $DIR/image-resize.sh image-resize
+sudo ln -sf $DIR/decompile-dtb.sh decompile-dtb
+sudo ln -sf $DIR/ddpv ddpv
+sudo ln -sf $DIR/udevquery.sh udevquery
+sudo ln -sf $DIR/sed-on-directory.sh sed-on-directory
+sudo ln -sf $DIR/stash2patch.sh stash2patch
+sudo ln -sf $DIR/patch2stash.sh patch2stash
+sudo ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
+sudo ln -sf $DIR/buildkernel.sh buildkernel
+sudo ln -sf $DIR/hex2ascii.sh hex2asci
+sudo ln -sf $DIR/hex2dec.sh hex2dec
+sudo ln -sf $DIR/gccMapAnalyzer.py gccMapAnalyzer
+sudo ln -sf $DIR/ascii2hex.sh ascii2hex
+sudo ln -sf $DIR/filelist.sh filelist
+sudo ln -sf $DIR/kernelCopy2Disk.sh kernelCopy2Disk
+sudo ln -sf $DIR/kernelUnpack2Disk.sh kernelUnpack2Disk
+sudo ln -sf $DIR/ubootCopy2Disk.sh ubootCopy2Disk
+sudo ln -sf $DIR/PopeHomilia.sh PopeHomilia
+sudo ln -sf $DIR/map2html.py map2html
+sudo ln -sf $DIR/mp4tomp3.sh mp4tomp3
+sudo ln -sf $DIR/bssAnalyze.py bssAnalyze
+sudo ln -sf $DIR/cmd.sh cmd
+sudo ln -sf $DIR/convertIncludeBackslashesToSlashes.sh convertIncludeBackslashesToSlashes
+sudo ln -sf $DIR/prependTextBeforeClassMethod.sh prependTextBeforeClassMethod
+sudo ln -sf $DIR/swap-clean.sh swap-clean
+sudo ln -sf $DIR/git-edit.sh git-edit
+sudo ln -sf $DIR/jlink-show.sh jlink-show
 
 # git modifications
 # -------------------------------------
