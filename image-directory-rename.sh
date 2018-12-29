@@ -37,15 +37,13 @@ fi
 directoryName=${year}"."${month}"-"${directoryName}
 
 # Proposition
-echo ""
-
 dialog --defaultno --title "Change ${directory} to ${directoryName} ?" \
         --yesno "Original name : ${directory}. \nNew name : ${directoryName}." 10 80 
 response=$?
 case $response in
     0)
         # Yes
-        mv -v ${directory} ${directoryName}
+        mv -v "${directory}" "${directoryName}"
         ;;
     1)  # No
         ;;
