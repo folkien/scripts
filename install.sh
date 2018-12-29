@@ -118,6 +118,7 @@ sudo ln -sf $DIR/git-edit.sh git-edit
 sudo ln -sf $DIR/jlink-show.sh jlink-show
 sudo ln -sf $DIR/file-newest.sh file-newest
 sudo ln -sf $DIR/file-oldest.sh file-oldest
+sudo ln -sf $DIR/image-directory-rename.sh image-directory-rename
 
 # git modifications
 # -------------------------------------
