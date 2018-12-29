@@ -116,6 +116,8 @@ sudo ln -sf $DIR/prependTextBeforeClassMethod.sh prependTextBeforeClassMethod
 sudo ln -sf $DIR/swap-clean.sh swap-clean
 sudo ln -sf $DIR/git-edit.sh git-edit
 sudo ln -sf $DIR/jlink-show.sh jlink-show
+sudo ln -sf $DIR/file-newest file-newest
+sudo ln -sf $DIR/file-oldest file-oldest
 
 # git modifications
 # -------------------------------------
