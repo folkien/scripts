@@ -41,6 +41,21 @@ if [ $? -ne 0 ]; then
 	exit 0
 fi
 
+# Python programs
+# -------------------------------------
+if [ ! -e $python ]; then
+    sudo install -d -o $USER -g $USER $python
+    cd $python
+    if [ ! -e $python/pyNotify ]; then
+        git clone git@github.com:folkien/pyNotify.git
+        sh $python/pyNotify/install.sh
+    fi
+    if [ ! -e $python/pypass ]; then
+        git clone git@github.com:folkien/pypass.git
+        sh $python/pypass/install.sh
+    fi
+fi
+
 # Scripts 
 # -------------------------------------
 echo "Scripts installation..."
