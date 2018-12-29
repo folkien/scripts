@@ -39,15 +39,15 @@ directoryName=${year}"."${month}"-"${directoryName}
 # Proposition
 echo ""
 
-dialog --title "Change ${directory} to ${directoryName} ?" \
-        --yesno "Original name : ${directory}. \nNew name : ${directoryName}." 10 80
+dialog --defaultno --title "Change ${directory} to ${directoryName} ?" \
+        --yesno "Original name : ${directory}. \nNew name : ${directoryName}." 10 80 
 response=$?
 case $response in
     0)
         # Yes
-        echo yes
+        mv -v ${directory} ${directoryName}
         ;;
-    1)  echo no
+    1)  # No
         ;;
     255)
         echo "Interrupted merge!"
