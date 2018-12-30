@@ -9,6 +9,7 @@ fi
 export git="/home/$USER/Dokumenty/git"
 export scripts="$git/scripts"
 export software="/opt/"
+export python="/home/$USER/python"
 export boisko="/home/$USER/Dokumenty/boisko"
 export user_variables="/home/$USER/variables.sh"
 export shell_colors="/etc/colors.sh"
