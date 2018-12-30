@@ -23,7 +23,7 @@ if [ ! -e ~/.ssh/id_rsa.pub ]; then
 fi
 
 # Check location of scripts repository
-pwd | grep $git
+pwd | grep "Dokumenty/git"
 if [ $? -ne 0 ]; then
 	echo "Scripts installation from another location."
 	cd $git
