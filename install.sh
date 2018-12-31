@@ -145,15 +145,15 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #Package manager determining
     lsb_release -i | grep Ubuntu
     if [ $? -eq 0 ]; then
-        PKG_MANAGER="apt-get install -yf "
+        PKG_MANAGER="sudo apt-get install -yf "
     fi
     lsb_release -i | grep Manjaro
     if [ $? -eq 0 ]; then
-        PKG_MANAGER="pacman -S "
+        PKG_MANAGER="sudo pacman -S "
     fi
     lsb_release -i | grep Arch
     if [ $? -eq 0 ]; then
-        PKG_MANAGER="pacman -S "
+        PKG_MANAGER="sudo pacman -S "
     fi
 
     cd $DIR
@@ -181,6 +181,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER baobab
 
     #Narzędzia systemowe
+    $PKG_MANAGER gnome-calculator
     $PKG_MANAGER tuptime
     $PKG_MANAGER procinfo
     $PKG_MANAGER finger
