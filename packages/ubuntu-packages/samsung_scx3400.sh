@@ -4,4 +4,7 @@ cd uld
 sudo sh install.sh
 sudo usermod -a -G lp $USER
 sudo usermod -a -G lpadmin $USER
+sudo chown root.root -R /opt/smfp-common/
+sudo chown root.root -R /opt/samsung/
+
 
