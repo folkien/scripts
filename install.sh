@@ -139,6 +139,7 @@ git config --global difftool.prompt false
 git config --global diff.tool meld
 git config --global user.name "Sławomir Paszko"
 git config --global user.email "folkus@gmail.com"
+git config --global core.autocrlf input
 
 # Settings 
 # -------------------------------------
