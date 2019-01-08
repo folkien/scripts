@@ -133,7 +133,9 @@ git config --global alias.st status
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.graph "log --graph --all --decorate"
 #git config --global alias.change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
+git config --global mergetool.prompt false
 git config --global merge.tool kdiff3
+git config --global difftool.prompt false
 git config --global diff.tool meld
 git config --global user.name "Sławomir Paszko"
 git config --global user.email "folkus@gmail.com"
