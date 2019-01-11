@@ -41,9 +41,11 @@ alias system-start-time="date -d \"$(</proc/uptime awk '{print $1}') seconds ago
 
 # git upgrades
 alias g="git"
-alias gitlogtoday="git log --since=1am"
-alias gitlogthisweek="git log --since=\"7 days ago\""
-alias gitlogthismonth="git log --since=\"30 days ago\" --pretty=oneline"
+alias git-log-today="git log --since=1am"
+alias git-log-thisweek="git log --since=\"7 days ago\""
+alias git-log-thismonth="git log --since=\"30 days ago\" --pretty=oneline"
+alias git-log-short="git log --pretty=oneline --decorate"
+alias git-log-origin="git log --pretty=oneline --decorate origin..HEAD"
 alias git-rebase-last="git-edit origin/master"
 alias git-svn-rebase-last="git-edit git-svn"
 alias git-am-patch="git am --signoff -3 --ignore-whitespace <"
