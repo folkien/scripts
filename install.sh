@@ -219,15 +219,24 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER linux-firmware-nonfree
 
     cd $DIR
-    sh ./install-vim.sh
+    # VIM bundles install if not exists
+    if [ ! -e ~/.vimrc.bundles ]; then
+	    sh ./install-vim.sh
+    else
+	    echo "VIM bundles installed before."
+    fi
 
     #Installation of mc
-    echo "MC configuration files."
-    cp -rfv ~/.config/mc ~/.config/mc.old
-    ln -sf $DIR/.config/mc/hotlist ~/.config/mc/hotlist
-    ln -sf $DIR/.config/mc/hotlist.bak ~/.config/mc/hotlist.bak
-    ln -sf $DIR/.config/mc/mc.ext ~/.config/mc/mc.ext
-    ln -sf $DIR/.config/mc/mc.keymap ~/.config/mc/mc.keymap
-    ln -sf $DIR/.config/mc/panels.ini ~/.config/mc/panels.ini
-    ln -sf $DIR/.config/mc/ini ~/.config/mc/ini
+    if [ ! -L ~/.config/mc/hotlist ]; then
+	    echo "MC configuration files."
+	    cp -rfv ~/.config/mc ~/.config/mc.old
+	    ln -sf $DIR/.config/mc/hotlist ~/.config/mc/hotlist
+	    ln -sf $DIR/.config/mc/hotlist.bak ~/.config/mc/hotlist.bak
+	    ln -sf $DIR/.config/mc/mc.ext ~/.config/mc/mc.ext
+	    ln -sf $DIR/.config/mc/mc.keymap ~/.config/mc/mc.keymap
+	    ln -sf $DIR/.config/mc/panels.ini ~/.config/mc/panels.ini
+	    ln -sf $DIR/.config/mc/ini ~/.config/mc/ini
+    else
+	    echo "MC configuration installed before."
+    fi
 fi
