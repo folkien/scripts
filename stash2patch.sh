@@ -4,6 +4,7 @@ FilePattern=${RepoName}${VERSION}
 FilePackage=${FilePattern}.tar.gz
 FileStash=${FilePattern}_stash.patch
 FilesUnpushedCommits=""
+BranchName=$(git branch | grep \* | cut -d ' ' -f2)
 
 # Clean all patches in current directory.
 mkdir -p .old.patches
@@ -27,7 +28,7 @@ fi
 
 #format-patches from last git-svn commit to this moment
 echo "## Creating patch's from uncommited changes. ##"
-git format-patch origin
+git format-patch origin/${BranchName}
 FilesUnpushedCommits=$(ls *.patch)
 
 # Append patch from current stash
