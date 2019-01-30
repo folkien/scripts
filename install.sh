@@ -177,6 +177,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER rar unrar 
     $PKG_MANAGER p7zip-full
     $PKG_MANAGER meld kdiff3
+    $PKG_MANAGER bless
     $PKG_MANAGER make
     $PKG_MANAGER ncurses libncurses-dev
 #    $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
