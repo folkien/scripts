@@ -45,7 +45,7 @@ export sysroot="$sdcards/sysroot"
 
 #elzab s.a.
 export repos="~/repos/"
-export elzabos="~/repos/ElzabOS/trunk/"
+export elzabOS="~/repos/ElzabOS/Sources/"
 
 # Stałe dotyczace apache
 export www="/var/www/html"
