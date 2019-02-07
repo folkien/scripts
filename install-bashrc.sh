@@ -1,8 +1,14 @@
 #!/bin/bash
+# if install is forced over current install
 DIR=$(pwd)
+isForce=0
+[ $# -ne 0  ] && [ $1 == "-f" ] && isForce=1 && echo "Installation forced!"
+
+# Check current install 
 grep "source.*bashrc.base" /home/$USER/.bashrc &> /dev/null
-if [ $? -eq 0 ] ; then
+if [ ${isForce} -ne 1 ] && [ $? -eq 0 ]; then
     echo "Bashrc jest już zainstalowany."
+    exit 1
 else
     echo "source $DIR/.bashrc.base" >> /home/$USER/.bashrc
 fi
