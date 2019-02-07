@@ -42,8 +42,6 @@ fi
 
 source /home/$INSTALLUSER/Dokumenty/git/scripts/.bashrc.aliases
 
-##################################################
-
 # Prompt systmowy
 # If id command returns zero, you’ve root access.
 if [ $(id -u) -eq 0 ];
@@ -52,3 +50,9 @@ then # you are root, set red colour prompt
 else # normal
 		export PS1="[\\[$IBlue\\] \\u@\\D{%d.%m.%Y} \\[$(tput sgr0)\\]\\[$IYellow\\] \\W \\[$(tput sgr0)\\]] $ "
 fi
+
+# Git prompt
+##################################################
+GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_END=" $ "
+source ~/Dokumenty/git/bash-git-prompt/gitprompt.sh

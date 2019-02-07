@@ -13,6 +13,9 @@ else
     echo "source $DIR/.bashrc.base" >> /home/$USER/.bashrc
 fi
 
+# install git prompt
+git clone https://github.com/magicmonty/bash-git-prompt.git ~/Dokumenty/git/bash-git-prompt --depth=1
+
 #Tworzymy pliki konfiguracyjny
 if [ -w /etc/bashrc.conf ] ; then
     echo "INSTALLUSER=$USER" > /etc/bashrc.conf
