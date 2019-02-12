@@ -10,6 +10,7 @@ BUS!="usb", ACTION!="add", SUBSYSTEM!=="usb_device", GOTO="saleae_logic_rules_en
 
 ATTR{idVendor}=="0925", ATTR{idProduct}=="3881", MODE="664", GROUP="plugdev"
 ATTR{idVendor}=="21a9", ATTR{idProduct}=="1004", MODE="664", GROUP="plugdev"
+ATTR{idVendor}=="21a9", ATTR{idProduct}=="1001", MODE="664", GROUP="plugdev"
 ATTR{idVendor}=="08a9", ATTR{idProduct}=="0005", MODE="664", GROUP="plugdev"
 
 # ZeroPlus analyzer

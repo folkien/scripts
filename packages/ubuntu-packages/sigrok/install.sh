@@ -9,3 +9,4 @@ sudo chown $USER.$USER -R /opt/sigrok
 ./pulseview.sh
 sudo chown $USER.$USER -R /opt/sigrok
 sudo cp -rfv 98-sigrok.rules /etc/udev/rules.d/
+sudo udevadm control --reload-rules
