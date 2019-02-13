@@ -61,6 +61,10 @@ if [ ! -e $python/pypass ]; then
     git clone git@github.com:folkien/pypass.git
     sh $python/pypass/install.sh
 fi
+if [ ! -e $python/pyIoCat ]; then
+    git clone git@github.com:folkien/pyIoCat.git
+    sh $python/pyIoCat/install.sh
+fi
 
 # Scripts 
 # -------------------------------------
