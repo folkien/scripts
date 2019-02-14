@@ -36,6 +36,8 @@ alias pulseview_git="LD_LIBRARY_PATH=/opt/sigrok/lib/ PKG_CONFIG_PATH=/opt/sigro
 alias directorysize="/usr/bin/du -sh"
 alias filesize="/usr/bin/du -sh"
 alias size="/usr/bin/du -sh"
+alias toUpper="awk '{print toupper($0)}'"
+alias toLower="awk '{print tolower($0)}'"
 
 alias system-start-time="date -d \"$(</proc/uptime awk '{print $1}') seconds ago\""
 
