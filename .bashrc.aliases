@@ -52,5 +52,6 @@ alias git-rebase-last="git-edit origin/master"
 alias git-svn-rebase-last="git-edit git-svn"
 alias git-am-patch="git am --signoff -3 --ignore-whitespace <"
 alias git-update-branch-list="git remote update origin --prune"
+alias git-branch-ancestor="git branch-ancestor"
 
 

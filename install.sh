@@ -145,6 +145,7 @@ git config --global diff.tool meld
 git config --global user.name "Sławomir Paszko"
 git config --global user.email "folkus@gmail.com"
 git config --global core.autocrlf input
+git config --global alias.branch-ancestor '!bash -c '\''diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne "s/^ //p" | head -1'\'' -'
 
 # Settings 
 # -------------------------------------
