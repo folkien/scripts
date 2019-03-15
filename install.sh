@@ -127,6 +127,7 @@ sudo ln -sf $DIR/file-remove-empty-lines.sh file-remove-empty-lines
 sudo ln -sf $DIR/file-convert-tabs-to-spaces.sh file-convert-tabs-to-spaces
 sudo ln -sf $DIR/file-convert-spaces-to-tabs.sh file-convert-spaces-to-tabs
 sudo ln -sf $DIR/image-directory-rename.sh image-directory-rename
+sudo ln -sf $DIR/find-files-fragment.sh find-files-fragment
 
 # git modifications
 # -------------------------------------
