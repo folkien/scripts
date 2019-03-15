@@ -3,16 +3,17 @@ if [ $# -lt 1 ]; then
     exit 1
 fi
 
-suffix="[XX]"
 argument="${1}"
 
 parseFile()
 {
+    suffix="[XX]"
     filePath=$1
+    echo "Found $filePath."
     cat ${filePath} | xargs -I % echo -n ${suffix} % > ${filePath}.parsed
     cat ${filePath}.parsed | grep "$argument.*\};" -o > ${filePath}.found
     return 0
 }
 
 export -f parseFile
-find ./ | grep hardware_conf | xargs -I {} bash -c 'parseFile "$@"' _ {}
+find ./ | grep "hardware_conf\.h$" | xargs -I {} bash -c 'parseFile "$@"' _ {}
