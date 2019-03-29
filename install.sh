@@ -203,6 +203,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER curl
     $PKG_MANAGER htop
     $PKG_MANAGER iotop
+    $PKG_MANAGER usbtop
     $PKG_MANAGER fonts-inconsolata ttf-mscorefonts-installer
     $PKG_MANAGER exuberant-ctags
     $PKG_MANAGER beep
