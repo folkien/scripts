@@ -4,14 +4,19 @@ if [ $# -lt 1 ]; then
 fi
 
 argument="${1}"
+argumentExpression="${argument}.*\};"
 
 parseFile()
 {
     suffix="[XX]"
     filePath=$1
-    echo "Found $filePath."
-    cat ${filePath} | xargs -I % echo -n ${suffix} % > ${filePath}.parsed
-    cat ${filePath}.parsed | grep "$argument.*\};" -o > ${filePath}.found
+    grep "${argumentExpression}" ${filePath} > /dev/null
+    if [ $? -eq 0 ]; then
+        echo "Found ${argumentExpression} in $filePath."
+        cat ${filePath} | xargs -I % echo -n ${suffix} % > ${filePath}.parsed
+        echo "grep -o -P ${argumentExpression} ${filePath}.parsed > ${filePath}.found"
+        grep -o -P ${argumentExpression} ${filePath}.parsed > ${filePath}.found
+    fi
     return 0
 }
 
