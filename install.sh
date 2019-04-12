@@ -197,6 +197,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #Narzędzia systemowe
     $PKG_MANAGER gnome-calculator
     $PKG_MANAGER tuptime
+    $PKG_MANAGER mc
     $PKG_MANAGER procinfo
     $PKG_MANAGER finger
     $PKG_MANAGER tree
@@ -208,6 +209,9 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER exuberant-ctags
     $PKG_MANAGER beep
     $PKG_MANAGER gnome-schedule
+
+    #edytory
+    $PKG_MANAGER vim-gtk
 
     #Narzędzia sieciowe
     $PKG_MANAGER iperf
