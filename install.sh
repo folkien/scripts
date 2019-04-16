@@ -223,7 +223,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #Grafika
     $PKG_MANAGER imagemagick
     $PKG_MANAGER shutter
-    $PKG_MANAGER gimp
+    sudo snap install gimp
+
+    #Muzyka
+    sudo snap install spotify
     
     # Filmy
     $PKG_MANAGER vlc
