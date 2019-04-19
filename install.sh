@@ -234,6 +234,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER browser-plugin-vlc
     $PKG_MANAGER linux-firmware-nonfree
 
+    # Komunikatory
+    sudo snap install skype --classic
+
+
     cd $DIR
     # VIM bundles install if not exists
     if [ ! -e ~/.vimrc.bundles ]; then
