@@ -6,7 +6,7 @@ isForce=0
 
 # Check current install 
 grep "source.*bashrc.base" /home/$USER/.bashrc &> /dev/null
-if [ ${isForce} -ne 1 ] && [ $? -eq 0 ]; then
+if [ $? -eq 0 ] && [ ${isForce} -ne 1 ]; then
     echo "Bashrc jest już zainstalowany."
     exit 1
 else
