@@ -128,6 +128,7 @@ sudo ln -sf $DIR/file-convert-tabs-to-spaces.sh file-convert-tabs-to-spaces
 sudo ln -sf $DIR/file-convert-spaces-to-tabs.sh file-convert-spaces-to-tabs
 sudo ln -sf $DIR/image-directory-rename.sh image-directory-rename
 sudo ln -sf $DIR/find-files-fragment.sh find-files-fragment
+sudo ln -sf $DIR/trace-last.sh trace-last
 
 # git modifications
 # -------------------------------------
@@ -206,6 +207,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER iotop
     $PKG_MANAGER usbtop
     $PKG_MANAGER usbview
+    $PKG_MANAGER vusb-analyzer
     $PKG_MANAGER fonts-inconsolata ttf-mscorefonts-installer
     $PKG_MANAGER exuberant-ctags
     $PKG_MANAGER beep
