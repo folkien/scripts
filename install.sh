@@ -211,6 +211,9 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER beep
     $PKG_MANAGER gnome-schedule
 
+    #Szyfrowanie
+    ./packages/ubuntu-packages/encfs.sh
+
     #edytory
     $PKG_MANAGER vim-gtk
 
