@@ -223,6 +223,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER filezilla
     $PKG_MANAGER rdesktop
     $PKG_MANAGER mingetty minicom cutecom 
+    $PKG_MANAGER openvpn
 
     #Grafika
     $PKG_MANAGER imagemagick
