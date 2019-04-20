@@ -235,6 +235,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
 
     #Muzyka
     sudo snap install spotify
+    $PKG_MANAGER radiotray
     
     # Filmy
     $PKG_MANAGER vlc
