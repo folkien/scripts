@@ -238,8 +238,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER radiotray
     
     # Filmy
-    $PKG_MANAGER vlc
-    $PKG_MANAGER browser-plugin-vlc
+    ./packages/ubuntu-packages/dvdcodedcs.sh
     $PKG_MANAGER linux-firmware-nonfree
 
     # Komunikatory
