@@ -238,6 +238,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER radiotray
     $PKG_MANAGER audacious
     $PKG_MANAGER audacity
+    $PKG_MANAGER ffmpeg
     
     # Filmy
     ./packages/ubuntu-packages/dvdcodedcs.sh
