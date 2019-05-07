@@ -1,3 +1,3 @@
-sudo add-apt-repository ppa:kilian/f.lux
+sudo add-apt-repository ppa:nathan-renniewaldock/flux
 sudo apt-get update
-sudo apt-get install fluxgui
+sudo apt-get install -yf fluxgui

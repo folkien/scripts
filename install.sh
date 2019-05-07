@@ -232,6 +232,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER imagemagick
     $PKG_MANAGER shutter
     sudo snap install gimp
+    ./packages/ubuntu-packages/flux.sh
 
     #Muzyka
     sudo snap install spotify
