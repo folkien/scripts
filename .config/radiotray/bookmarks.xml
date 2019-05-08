@@ -65,26 +65,5 @@
         <bookmark name="Groove Salad" url="http://somafm.com/groovesalad.pls"/>
         <bookmark name="Illinois Street Lounge" url="http://somafm.com/illstreet.pls"/>
     </group>
-    <group name="Country">
-        <bookmark name="SKY.fm Country" url="http://listen.sky.fm/public1/country.pls"/>
-        <bookmark name="Boot Liquor" url="http://somafm.com/bootliquor.pls"/>
-        <bookmark name="US 181" url="mmsh://wms-rly.181.fm/181-us181?MSWMExt=.asf"/>
-        <bookmark name="Real Country" url="mmsh://wms-rly.181.fm/181-realcountry?MSWMExt=.asf"/>
-        <bookmark name="Highway 181" url="mmsh://wms-rly.181.fm/181-highway?MSWMExt=.asf"/>
-        <bookmark name="Country 108" url="http://www.country108.com/listen.pls"/>
-    </group>
-    <group name="Techno / Electronic">
-        <bookmark name="Drone Zone" url="http://somafm.com/dronezone.pls"/>
-        <bookmark name="Space Station Soma" url="http://somafm.com/spacestation.pls"/>
-        <bookmark name="cliqhop idm" url="http://somafm.com/cliqhop.pls"/>
-        <bookmark name="Black Rock FM" url="http://somafm.com/brfm.pls"/>
-        <bookmark name="New Dance Radio" url="http://jbstream.net/tunein.php/blackoutworm/playlist.asx"/>
-	<bookmark name="DubStep Beyond" url="http://somafm.com/play/dubstep32"/>
-    </group>
-    <group name="Community">
-        <bookmark name="Jupiter Broadcast" url="http://jblive.fm/"/>
-        <bookmark name="WCRS LPFM Columbus" url="http://sh4.audio-stream.com/tunein.php/pleonard/playlist.pls"/>
-        <bookmark name="WBEZ" url="http://wbez.ic.llnwd.net/stream/wbez_91_5_fm.pls"/>
-    </group>
 </group>
 </bookmarks>
