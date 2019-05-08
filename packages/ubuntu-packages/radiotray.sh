@@ -1,3 +1,2 @@
-sudo add-apt-repository ppa:eugenesan/ppa 
-sudo apt-get update 
-sudo apt-get install radiotray python-xdg gir1.2-appindicator
+sudo apt-get install radiotray
+ln -sf ${scripts}/.config/radiotray/bookmarks.xml ~/.local/share/radiotray/bookmarks.xml

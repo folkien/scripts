@@ -236,10 +236,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
 
     #Muzyka
     sudo snap install spotify
-    $PKG_MANAGER radiotray
     $PKG_MANAGER audacious
     $PKG_MANAGER audacity
     $PKG_MANAGER ffmpeg
+    ./packages/ubuntu-packages/radiotray.sh
     
     # Filmy
     ./packages/ubuntu-packages/dvdcodedcs.sh
