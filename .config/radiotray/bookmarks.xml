@@ -7,11 +7,11 @@
         <bookmark name="Radio eM" url="https://stream2.radioem.pl/stream/"/>
     </group>
     <group name="Polska">
-        <bookmark name="RMF FM" url="http://195.150.20.4:8000/rmf_fm"/>
-        <bookmark name="Radio Zet" url="http://91.121.179.221:8050"/>
-        <bookmark name="Jedynka" url="http://stream.polskieradio.pl/program1"/>
-        <bookmark name="Dwojka" url="http://stream.polskieradio.pl/program2"/>
-        <bookmark name="Trojka" url="http://stream.polskieradio.pl/program3"/>
+        <bookmark name="RMF FM" url="http://www.rmfon.pl/n/rmffm.pls"/>
+        <bookmark name="Radio Zet" url="https://n-22-6.dcs.redcdn.pl/sc/o2/Eurozet/live/audio.livx"/>
+        <bookmark name="Jedynka" url="http://stream3.polskieradio.pl:8900/listen.pls"/>
+        <bookmark name="Dwojka" url="http://stream3.polskieradio.pl:8902/listen.pls"/>
+        <bookmark name="Trojka" url="http://stream3.polskieradio.pl:8904/listen.pls"/>
     </group>
     <bookmark name="[separator-1133cec6-a547-410e-b005-713508c05c6f]" url="[separator-1133cec6-a547-410e-b005-713508c05c6f]"/>
     <group name="Jazz">
