@@ -1,0 +1,8 @@
+[Unit]
+Description=Run everyday every 3 hours
+
+[Timer]
+OnCalendar=3h
+
+[Install]
+WantedBy=timers.target
