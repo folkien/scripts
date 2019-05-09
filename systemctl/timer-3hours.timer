@@ -2,7 +2,9 @@
 Description=Run everyday every 3 hours
 
 [Timer]
+OnBootSec=15m
 OnCalendar=3h
+Unit=Every3hours.service
 
 [Install]
 WantedBy=timers.target
