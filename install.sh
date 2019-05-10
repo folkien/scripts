@@ -196,9 +196,11 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     
     $PKG_MANAGER u-boot-tools
 
-    #Narzędzia dyskowe
+    #Narzędzia dyskowe i plikowe
     $PKG_MANAGER gparted
     $PKG_MANAGER baobab
+    $PKG_MANAGER rar unrar
+    $PKG_MANAGER p7zip-full
 
     #Narzędzia systemowe
     $PKG_MANAGER gnome-calculator
@@ -217,6 +219,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER exuberant-ctags
     $PKG_MANAGER beep
     $PKG_MANAGER gnome-schedule
+    $PKG_MANAGER synaptic
+    ./packages/ubuntu-packages/sysdig.sh
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
