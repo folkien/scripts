@@ -11,7 +11,7 @@ cp -rfv colors.sh /etc/
 # test czy posiadamy xdotool
 xdotool help
 if [ $? -eq 127 ] ; then
-    sudo apt-get install xdotool
+    sudo apt-get install -yf xdotool
 else
     echo "Posiadasz xdotool."
 fi
