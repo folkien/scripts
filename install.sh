@@ -156,6 +156,7 @@ gsettings set org.gnome.meld detect-encodings "['UTF-8', 'WINDOWS-1252', 'ISO-88
 
 # Systemd
 # -------------------------------------
+cd ${DIR}
 ./install-systemd.sh
 
 # Packages
