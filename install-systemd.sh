@@ -1,11 +1,13 @@
+ServicesDir=$(pwd)/systemctl
+
 # Script with installation of all systemd scripts.
-sudo cp -rfv ./systemctl/*.sh /usr/bin/
-sudo cp -rfv ./systemctl/*.service /etc/systemd/system/
+sudo ln -sfv ${ServicesDir}/*.sh /usr/bin/
+sudo ln -sfv ${ServicesDir}/*.service /etc/systemd/system/
 
 # Enable all timers
 for file in ./systemctl/*.timer; do
     name=$(basename ${file})
-    sudo cp -rfv ${file} /etc/systemd/system/
+    sudo ln -sfv ${ServicesDir}/${name} /etc/systemd/system/
     # If service exists then only copy
     if [ -e /etc/systemd/system/${name} ]; then
         echo "Exists. Updated ${name}!"
