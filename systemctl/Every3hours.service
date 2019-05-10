@@ -3,3 +3,4 @@ Description="Service called every three hours"
 
 [Service]
 ExecStart=/usr/bin/Every3hours.sh
+Environment="DISPLAY=:0"
