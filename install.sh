@@ -154,6 +154,10 @@ git config --global alias.branch-ancestor '!bash -c '\''diff -u <(git rev-list -
 # -------------------------------------
 gsettings set org.gnome.meld detect-encodings "['UTF-8', 'WINDOWS-1252', 'ISO-8859-15', 'UTF-16', 'WINDOWS-1253', 'KOI8-R']"
 
+# Systemd
+# -------------------------------------
+./install-systemd.sh
+
 # Packages
 # -------------------------------------
 if [ $# -gt 0 ] && [ $Argument = "all" ]; then
