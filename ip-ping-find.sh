@@ -1,2 +1,5 @@
 # Scan all ip's and find ping
-nmap -sP 192.168.11.1-255
+gatewayIP=$(route -n | grep UG | xargs -d " " -I {} echo {} | grep 0.0.0.0 -v | grep -E "([0-9]{1,3}[\.]){3}[0-9]{1,3}")
+ipArray=(${gatewayIP//./ })
+echo "Gateway IP - ${gatewayIP}"
+nmap -sP ${ipArray[0]}.${ipArray[1]}.${ipArray[2]}.1-255
