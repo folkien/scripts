@@ -1,4 +1,4 @@
-sudo apt-get install radiotray
+sudo apt-get  -yf install radiotray
 
 #Install for every user
 for D in /home/*; 
