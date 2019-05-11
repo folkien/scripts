@@ -236,6 +236,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER rdesktop
     $PKG_MANAGER mingetty minicom cutecom 
     $PKG_MANAGER openvpn
+    ./packages/ubuntu-packages/ssh-server.sh
 
     #Grafika
     $PKG_MANAGER imagemagick
