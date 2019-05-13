@@ -4,6 +4,10 @@ ServicesDir=$(pwd)/systemctl
 sudo ln -sfv ${ServicesDir}/*.sh /usr/bin/
 sudo ln -sfv ${ServicesDir}/*.service /etc/systemd/system/
 
+# Create and update environment file
+env > scripts.env
+sudo mv -fv scripts.env /etc/
+
 # Enable all timers
 for file in ./systemctl/*.timer; do
     name=$(basename ${file})

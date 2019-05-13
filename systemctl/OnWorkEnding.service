@@ -3,3 +3,4 @@ Description="Service called 15 minutes before work end"
 
 [Service]
 ExecStart=/usr/bin/OnWorkEnding.sh
+EnvironmentFile=/etc/scripts.env
