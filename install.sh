@@ -130,6 +130,7 @@ sudo ln -sf $DIR/image-directory-rename.sh image-directory-rename
 sudo ln -sf $DIR/find-files-fragment.sh find-files-fragment
 sudo ln -sf $DIR/trace-last.sh trace-last
 sudo ln -sf $DIR/trace-last-reset.sh trace-last-reset
+sudo ln -sf $DIR/notify-send-all.sh notify-send-all
 
 # git modifications
 # -------------------------------------
@@ -221,6 +222,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER beep
     $PKG_MANAGER gnome-schedule
     $PKG_MANAGER synaptic
+    $PKG_MANAGER libnotify-bin
     ./packages/ubuntu-packages/sysdig.sh
 
     #Szyfrowanie
