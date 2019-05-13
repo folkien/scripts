@@ -1,0 +1,6 @@
+[Unit]
+Description="Service called every 1h after boot"
+
+[Service]
+ExecStart=/usr/bin/OnHourFromBoot.sh
+EnvironmentFile=/etc/scripts.env

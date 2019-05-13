@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs every 1h after boot.
+
+[Timer]
+OnBootSec=1h
+OnUnitActiveSec=1h
+Unit=OnHourFromBoot.service
+
+[Install]
+WantedBy=timers.target
