@@ -1,0 +1,9 @@
+[Unit]
+Description=Run's 15 minutes before 8h ends.
+
+[Timer]
+OnBootSec=7h45m
+Unit=OnWorkEnding.service
+
+[Install]
+WantedBy=timers.target
