@@ -1,0 +1,9 @@
+[Unit]
+Description=Starts when there is a time to sleep and disable PC
+
+[Timer]
+OnCalendar=*-*-* 23:00:00
+Unit=OnTimeToSleep.service
+
+[Install]
+WantedBy=timers.target

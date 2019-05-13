@@ -1,0 +1,6 @@
+[Unit]
+Description="Service called when PC should be disabled."
+
+[Service]
+ExecStart=/usr/bin/OnTimeToSleep.sh
+EnvironmentFile=/etc/scripts.env
