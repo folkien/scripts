@@ -19,3 +19,4 @@ for file in ./systemctl/*.timer; do
     fi
 done
 
+systemctl daemon-reload
