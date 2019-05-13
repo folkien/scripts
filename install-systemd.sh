@@ -15,12 +15,13 @@ for file in ./systemctl/*.timer; do
     # If service exists then only copy
     if [ -e /etc/systemd/system/${name} ]; then
         echo "Exists. Updated ${name}!"
+        sudo systemctl enable $name
     #If not exists then start also
     else
         sudo systemctl enable $name
         sudo systemctl start $name
-        sudo systemctl status $name
     fi
+    sudo systemctl status $name
 done
 
 sudo systemctl daemon-reload
