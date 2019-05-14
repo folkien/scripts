@@ -1,7 +1,10 @@
-sudo snap remove vlc
-sudo apt purge -yf vlc vlc-bin vlc-plugin-access-extra browser-plugin-vlc
-sudo apt purge -yf libdvdnav4 libdvdread4 libdvd-pkg libdvdcss2 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
-sudo apt purge -yf ubuntu-restricted-extras
+#if Force
+if [ "$1" == "-f" ]; then
+    sudo snap remove vlc
+    sudo apt purge -yf vlc vlc-bin vlc-plugin-access-extra browser-plugin-vlc
+    sudo apt purge -yf libdvdnav4 libdvdread4 libdvd-pkg libdvdcss2 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
+    sudo apt purge -yf ubuntu-restricted-extras
+fi
 sudo apt install -yf libdvdnav4 libdvdread4 libdvd-pkg libdvdcss2 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly
 sudo dpkg-reconfigure -u libdvd-pkg
 sudo apt install -yf ubuntu-restricted-extras regionset
