@@ -282,4 +282,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     else
 	    echo "MC configuration installed before."
     fi
+
+    # Clean and upgrade
+    echo -ne "\n\nUpgrade and Clean packages?"
+    sudo apt upgrade
+    sudo apt autoremove
 fi
+
