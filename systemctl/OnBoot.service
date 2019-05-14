@@ -2,5 +2,5 @@
 Description="Service called 15 minutes after pc boot"
 
 [Service]
-ExecStart=/usr/bin/OnBoot.sh
+ExecStart=/usr/bin/asuser-run /usr/bin/OnBoot.sh
 EnvironmentFile=/etc/scripts.env
