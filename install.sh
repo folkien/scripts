@@ -130,6 +130,7 @@ sudo ln -sf $DIR/image-directory-rename.sh image-directory-rename
 sudo ln -sf $DIR/find-files-fragment.sh find-files-fragment
 sudo ln -sf $DIR/trace-last.sh trace-last
 sudo ln -sf $DIR/trace-last-reset.sh trace-last-reset
+sudo ln -sf $DIR/trace-last-edit.sh trace-last-edit
 sudo ln -sf $DIR/notify-send-all.sh notify-send-all
 
 # git modifications
