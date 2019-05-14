@@ -90,6 +90,7 @@ sudo ln -sf $DIR/arm-chroot.sh arm-chroot
 sudo ln -sf $DIR/arm-make.sh arm-make
 sudo ln -sf $DIR/chroot.sh mount-chroot
 sudo ln -sf $DIR/append.sh append
+sudo ln -sf $DIR/asuser-run.sh asuser-run
 sudo ln -sf $DIR/filesize.sh filesize
 sudo ln -sf $DIR/focus_or_launch.sh focus_or_launch
 sudo ln -sf $DIR/zdjecia-na-strone.sh zdjecia-na-strone
