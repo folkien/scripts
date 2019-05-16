@@ -14,14 +14,34 @@ fi
 # Update python repos
 for directory in /home/${USER}/python/*; do
     if [ -d ${directory} ]; then
-        echo "Update of ${directory}."
-        cd ${directory}
-        git pull --rebase
-        dirname=$(basename ${directory})
-        if [ $? -ne 0 ]; then
-            results="${results} ${dirname}=Error\n"
-        else
-            results="${results} ${dirname}=OK\n"
+        if [ -e ${directory}/.git ]; then
+            echo "Update of ${directory}."
+            cd ${directory}
+            # 1. Stash changes
+            git stash
+
+            # 2. Pull with rebase.
+            git pull --rebase
+            pullResult=$?
+            #  if failed then abort
+            if [ ${pullResult} -ne 0 ]; then
+                git rebase --abort
+            fi
+
+            # 3. Restore stash
+            git stash pop
+            #  if failed then create information file
+            if [ $? -ne 0 ]; then
+                touch StashPopFailed.todo
+            fi
+
+            # Create result message
+            dirname=$(basename ${directory})
+            if [ ${pullResult} -ne 0 ]; then
+                results="${results} ${dirname}=Error\n"
+            else
+                results="${results} ${dirname}=OK\n"
+            fi
         fi
     fi
 done
