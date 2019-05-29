@@ -236,6 +236,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #Narzędzia sieciowe
     $PKG_MANAGER iperf
     $PKG_MANAGER net-tools
+    $PKG_MANAGER nmap
     $PKG_MANAGER wireshark
     $PKG_MANAGER filezilla
     $PKG_MANAGER rdesktop
