@@ -5,6 +5,7 @@ GROUP "Personalne"
   ENTRY "GoogleDrive" URL "/home/spasz/Dokumenty/folkus@gmail.com"
 ENDGROUP
 GROUP "Embedded"
+  ENTRY "Meta-Sonel" URL "/media/linux/embedded-linux/setup-scripts/sources/meta-sonel"
   ENTRY "bitbakeSRC" URL "/home/spasz/gits/setup-scripts"
 ENDGROUP
 GROUP "Konfiguracja"

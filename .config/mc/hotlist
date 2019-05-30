@@ -12,3 +12,7 @@ GROUP "Konfiguracja"
   ENTRY "MidnightCommander" URL "/home/spasz/.config/mc"
   ENTRY "/home/spasz/.config" URL "/home/spasz/.config"
 ENDGROUP
+ENTRY "Pobrane" URL "/home/spasz/Pobrane"
+ENTRY "Praca" URL "/home/spasz/Dokumenty/Praca"
+ENTRY "repos" URL "/media/repos"
+ENTRY "/ElzabOS" URL "/media/repos/ElzabOS/Sources"
