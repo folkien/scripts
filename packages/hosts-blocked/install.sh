@@ -1,5 +1,5 @@
 # Use previous version
-if [-e used.txt]; then
+if [ -e used.txt ]; then
     while true; do
         read -p "Use used txt? y/n" yn
         case $yn in
@@ -12,8 +12,18 @@ fi
 
 # Create new version
 [ ! -e hosts.original ] && cp -v /etc/hosts ./hosts.original
+# Clean used.txt
+echo "" > used.txt
 
 for host in $(cat ./all.csv)
 do
-    echo ${host}
+    read -p "Block ${host}? y/n : " yn
+    case $yn in
+        [Yy]* )
+                echo "0.0.0.0 ${host}" >> used.txt
+                echo "0.0.0.0 www.${host}" >> used.txt
+            ;;
+        [Nn]* ) ;;
+        * ) echo "Please answer yes or no.";;
+    esac
 done
