@@ -207,6 +207,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER baobab
     $PKG_MANAGER rar unrar
     $PKG_MANAGER p7zip-full
+    $PKG_MANAGER pdftk
 
     #Narzędzia systemowe
     $PKG_MANAGER gnome-calculator
