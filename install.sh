@@ -248,6 +248,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/ssh-server.sh
 
     #Grafika
+    $PKG_MANAGER arandr
     $PKG_MANAGER imagemagick
     $PKG_MANAGER shutter
     sudo snap install gimp
