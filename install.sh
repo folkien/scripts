@@ -135,6 +135,7 @@ sudo ln -sf $DIR/trace-last.sh trace-last
 sudo ln -sf $DIR/trace-last-reset.sh trace-last-reset
 sudo ln -sf $DIR/trace-last-edit.sh trace-last-edit
 sudo ln -sf $DIR/notify-send-all.sh notify-send-all
+sudo ln -sf $DIR/wireshark-usbmon.sh wireshark-usbmon
 
 # git modifications
 # -------------------------------------
