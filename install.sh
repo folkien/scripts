@@ -98,6 +98,9 @@ sudo ln -sf $DIR/image-resize.sh image-resize
 sudo ln -sf $DIR/decompile-dtb.sh decompile-dtb
 sudo ln -sf $DIR/ddpv ddpv
 sudo ln -sf $DIR/udevquery.sh udevquery
+sudo ln -sf $DIR/usb_mass_storage_devices.sh usb-list-drives
+sudo ln -sf $DIR/usb-select-drive.sh usb-select-drive
+sudo ln -sf $DIR/usb-mount-drive.sh usb-mount-drive
 sudo ln -sf $DIR/sed-on-directory.sh sed-on-directory
 sudo ln -sf $DIR/stash2patch.sh stash2patch
 sudo ln -sf $DIR/patch2stash.sh patch2stash
