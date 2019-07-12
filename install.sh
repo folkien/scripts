@@ -108,6 +108,7 @@ sudo ln -sf $DIR/ssh-exchange-keys.sh ssh-exchange-keys
 sudo ln -sf $DIR/buildkernel.sh buildkernel
 sudo ln -sf $DIR/hex2ascii.sh hex2asci
 sudo ln -sf $DIR/hex2dec.sh hex2dec
+sudo ln -sf $DIR/dec2hex.sh dec2hex
 sudo ln -sf $DIR/ip-ping-find.sh ip-ping-find
 sudo ln -sf $DIR/gccMapAnalyzer.py gccMapAnalyzer
 sudo ln -sf $DIR/ascii2hex.sh ascii2hex
