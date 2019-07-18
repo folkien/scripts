@@ -9,4 +9,5 @@ mkdir -p store/${hash}.${path}
 cp -rfv ${path}/*.map store/${hash}.${path}/
 cp -rfv ${path}/*.hex store/${hash}.${path}/
 cp -rfv ${path}/*.bin store/${hash}.${path}/
+cp -rfv ${path}/*.elf store/${hash}.${path}/
 
