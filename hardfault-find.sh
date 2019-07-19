@@ -14,17 +14,20 @@ grep -o "href=\"\/hf\/.*\"" index.html | cut -c 7- | rev | cut -c 2- | rev | whi
 do
     # Get device website
     wget "${url}${deviceUrl}" -O tmpDevice.html &> /dev/null
+    hfAmount=$(grep "tr id.*" tmpDevice.html | wc -l)
+    emptyCommentAmount=$(grep "id=\"comment\"" tmpDevice.html | grep value=\"\" | wc -l)
+    commentAmount=$(($hfAmount-$emptyCommentAmount))
     grep -o "href=\"/hf\/.*\"" tmpDevice.html | cut -c 7- | rev | cut -c 2- | rev | while read -r hfUrl ;
     do
         # Get HF website
         wget "${url}${hfUrl}" -O tmpHf.html &> /dev/null
         grep "${hashToFind}" tmpHf.html &> /dev/null
         if [ $? -eq 0 ]; then
-            echo "Findh ${hashToFind} in ${hfUrl}."
+            echo "${url}${hfUrl} (${commentAmount}/${hfAmount}) find ${hashToFind}."
         fi
     done
 done
 
-rm -rfv index.html tmpDevice.html tmpHf.html
+rm -rf index.html tmpDevice.html tmpHf.html
 
 
