@@ -7,7 +7,8 @@ fi
 
 url=$1
 hashToFind=$2
-
+[ $# -ge 3 ] && showGrepResult=1 || showGrepResult=0
+[ $# -ge 4 ] && grepSurrounding=$4 || grepSurrounding=0
 # Get index URL
 wget ${url} -O index.html &> /dev/null
 grep -o "href=\"\/hf\/.*\"" index.html | cut -c 7- | rev | cut -c 2- | rev | while read -r deviceUrl ;
@@ -21,7 +22,7 @@ do
     do
         # Get HF website
         wget "${url}${hfUrl}" -O tmpHf.html &> /dev/null
-        grep "${hashToFind}" tmpHf.html &> /dev/null
+        [ ${showGrepResult} -eq 1 ] && grep -C ${grepSurrounding} "${hashToFind}" tmpHf.html || grep "${hashToFind}" tmpHf.html &> /dev/null
         if [ $? -eq 0 ]; then
             echo "${url}${hfUrl} (${commentAmount}/${hfAmount}) find ${hashToFind}."
         fi
