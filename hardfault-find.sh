@@ -5,6 +5,8 @@ if [ $# -lt 2 ]; then
     exit 1
 fi
 
+rm -rf HF.log
+
 url=$1
 hashToFind=$2
 [ $# -ge 3 ] && showGrepResult=1 || showGrepResult=0
@@ -26,9 +28,16 @@ do
         [ ${showGrepResult} -eq 1 ] && grep -a -C ${grepSurrounding} "${hashToFind}" tmpHf.html || grep -a "${hashToFind}" tmpHf.html &> /dev/null
         if [ $? -eq 0 ]; then
             hfUrl=${hfUrl// /%20}
-            echo "# \"${url}${hfUrl}\" (${commentAmount}/${hfAmount}) find ${hashToFind}." | tee HF.log
+            echo "# \"${url}${hfUrl}\" (${commentAmount}/${hfAmount}) find ${hashToFind}." | tee -a HF.log
+            touch isFound.log
         fi
     done
+    # If found then show comments
+    if [ -e isFound.log ]; then
+        comments=$(grep -a "id=\"comment\"" tmpDevice.html | grep -P "value\=\".*?\" " -o)
+        echo "${comments}"
+        rm -rf isFound.log
+    fi
 done
 
 rm -rf index.html tmpDevice.html tmpHf.html
