@@ -136,6 +136,7 @@ sudo ln -sf $DIR/file-convert-tabs-to-spaces.sh file-convert-tabs-to-spaces
 sudo ln -sf $DIR/file-convert-spaces-to-tabs.sh file-convert-spaces-to-tabs
 sudo ln -sf $DIR/image-directory-rename.sh image-directory-rename
 sudo ln -sf $DIR/find-files-fragment.sh find-files-fragment
+sudo ln -sf $DIR/find-and-copy.sh find-and-copy
 sudo ln -sf $DIR/trace-last.sh trace-last
 sudo ln -sf $DIR/trace-last-reset.sh trace-last-reset
 sudo ln -sf $DIR/trace-last-edit.sh trace-last-edit
