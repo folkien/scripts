@@ -1,1 +1,2 @@
-sudo echo "file $@ +p" > cat /sys/kernel/debug/dynamic_debug/control
+echo "file $@ +p > /sys/kernel/debug/dynamic_debug/control "
+sudo echo "file $@ +p" > /sys/kernel/debug/dynamic_debug/control
