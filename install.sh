@@ -117,6 +117,12 @@ sudo ln -sf $DIR/ascii2hex.sh ascii2hex
 sudo ln -sf $DIR/filelist.sh filelist
 sudo ln -sf $DIR/kernelCopy2Disk.sh kernelCopy2Disk
 sudo ln -sf $DIR/kernelUnpack2Disk.sh kernelUnpack2Disk
+sudo ln -sf $DIR/kernel-debugfs-devdbg-addfile.sh kernel-debugfs-devdbg-addfile
+sudo ln -sf $DIR/kernel-debugfs-devdbg-list.sh kernel-debugfs-devdbg-list
+sudo ln -sf $DIR/kernel-debugfs-devdbg-usb.sh kernel-debugfs-devdbg-usb
+sudo ln -sf $DIR/kernel-loglevel-set.sh kernel-loglevel-set
+sudo ln -sf $DIR/kernel-loglevel.sh kernel-loglevel.sh
+sudo ln -sf $DIR/kernel-mount-debugfs.sh kernel-mount-debugfs
 sudo ln -sf $DIR/ubootCopy2Disk.sh ubootCopy2Disk
 sudo ln -sf $DIR/PopeHomilia.sh PopeHomilia
 sudo ln -sf $DIR/map2html.py map2html
