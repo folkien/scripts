@@ -242,6 +242,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER usbtop
     $PKG_MANAGER usbview
     $PKG_MANAGER vusb-analyzer
+    $PKG_MANAGER python-gnome2
     $PKG_MANAGER fonts-inconsolata ttf-mscorefonts-installer
     $PKG_MANAGER exuberant-ctags
     $PKG_MANAGER beep
