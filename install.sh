@@ -247,6 +247,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER gnome-schedule
     $PKG_MANAGER synaptic
     $PKG_MANAGER libnotify-bin
+    $PKG_MANAGER wine winetricks
     ./packages/ubuntu-packages/sysdig.sh
 
     #Szyfrowanie
