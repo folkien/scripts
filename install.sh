@@ -231,6 +231,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER gnome-calculator
     $PKG_MANAGER tuptime
     $PKG_MANAGER mc
+    $PKG_MANAGER dos2unix
     $PKG_MANAGER procinfo
     $PKG_MANAGER finger
     $PKG_MANAGER tree
