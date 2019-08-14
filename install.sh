@@ -132,6 +132,7 @@ sudo ln -sf $DIR/bssAnalyze.py bssAnalyze
 sudo ln -sf $DIR/cmd.sh cmd
 sudo ln -sf $DIR/convertIncludeBackslashesToSlashes.sh convertIncludeBackslashesToSlashes
 sudo ln -sf $DIR/prependTextBeforeClassMethod.sh prependTextBeforeClassMethod
+sudo ln -sf $DIR/csv-add-percent-column.sh csv-add-percent-column
 sudo ln -sf $DIR/swap-clean.sh swap-clean
 sudo ln -sf $DIR/git-edit.sh git-edit
 sudo ln -sf $DIR/git-cherry-pick-to.sh git-cherry-pick-to
