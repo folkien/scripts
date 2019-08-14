@@ -20,6 +20,8 @@ isNewDocument=0
 # Loop download of all katechesis
 number=1
 isDocumentInProgress=1
+tryNextCounter=3
+lastDocument=""
 while [ ${isDocumentInProgress} -eq 1 ]; do
     WEBSITE="https://www.deon.pl/religia/serwis-papieski/dokumenty/katechezy-audiencje/art,${number}.html"
     outFilePath="${outDirectory}/Katecheza${number}.txt"
@@ -31,13 +33,20 @@ while [ ${isDocumentInProgress} -eq 1 ]; do
             # Page exists, we can parse it
             xidel current.html -e "<div class='tresc'>{.}</div>*" > ${outFilePath}
             isNewDocument=1
+            lastDocument=${outFilePath}
         else
             # 404 Error
-            isDocumentInProgress=0
+            tryNextCounter=$((${tryNextCounter}-1))
+            [ ${tryNextCounter} -eq 0 ] && isDocumentInProgress=0
         fi
     fi
     number=$((${number} + 1))
 done
 
 rm current.html
+
+# If there is new document then show it
+if [ ${isNewDocument} ]; then
+    kate ${lastDocument} &
+fi
 exit 0
