@@ -22,6 +22,7 @@ if [ -e ${drive} ]; then
         fsinfoFile="${prefix}_part${partitionNumber}_fsinfo.txt"
         sudo dd if=${drive} of=${partitionFile} count=${dumpSize} skip=${startPartition}
         hexdump -C ${partitionFile}  > ${partitionFile}.txt
+        # Filesystem info
         case "${partitionType}" in
             "FAT32") 
                 # FATCAT info
@@ -29,6 +30,7 @@ if [ -e ${drive} ]; then
                 FATSectorsSize=$(cat ${fsinfoFile} | grep "Sectors per FAT" | grep -E "[0-9]+" -o)
                 FATsize=$(cat ${fsinfoFile} | grep "Fat size" | grep -E "[0-9]+ " -o)
                 ReservedSectors=$(cat ${fsinfoFile} | grep "Reserved sectors" | grep -E "[0-9]+" -o)
+                clusterSize=$(cat ${fsinfoFile} | grep "Sectors per cluster" | grep -E "[0-9]+" -o )
                 echo "Reserved sectors ${ReservedSectors}."
                 echo "Fat size ${FATSectorsSize} (${FATsize})."
                 # BPB Boot part
@@ -49,14 +51,26 @@ if [ -e ${drive} ]; then
                 #FAT 1
                 FAT1File="${prefix}_part${partitionNumber}_FAT1.bin"
                 startFAT1=$((${startPartition}+${ReservedSectors}))
+                echo "FAT1 at ${startFAT1} sec."
                 sudo dd if=${drive} of=${FAT1File} count=${FATSectorsSize} skip=${startFAT1}
                 hexdump -C ${FAT1File} > ${FAT1File}.txt
                 #FAT 1
                 FAT2File="${prefix}_part${partitionNumber}_FAT2.bin"
                 startFAT2=$((${startFAT1}+${FATSectorsSize}))
+                echo "FAT2 at ${startFAT2} sec. "
                 sudo dd if=${drive} of=${FAT2File} count=${FATSectorsSize} skip=${startFAT2}
                 hexdump -C ${FAT2File} > ${FAT2File}.txt
-
+                # DATA
+                startDATA=$((${startFAT2}+${FATSectorsSize}))
+                echo "Data address ${startDATA}."
+                # Cluster's 0..9
+                for i in {0..9}
+                do
+                    file="${prefix}_part${partitionNumber}_cluster${i}.bin"
+                    clusterAddress=$((${startDATA} + ${i}*${clusterSize}))
+                    sudo dd if=${drive} of=${file} count=${clusterSize} skip=${clusterAddress}
+                    hexdump -C ${file} > ${file}.txt
+                done
                 ;;
             *) ;;
         esac
