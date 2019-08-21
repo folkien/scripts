@@ -23,7 +23,15 @@ if [ -e ${drive} ]; then
         sudo dd if=${drive} of=${partitionFile} count=${dumpSize} skip=${startPartition}
         hexdump -C ${partitionFile}  > ${partitionFile}.txt
         case "${partitionType}" in
-            "FAT32") fatcat ${partitionFile} -i > ${fsinfoFile};;
+            "FAT32") 
+                # FATCAT info
+                fatcat ${partitionFile} -i > ${fsinfoFile}
+                # BPB Boot part
+                bpbFile="${prefix}_part${partitionNumber}_bpb.bin"
+                startBpb=$((${startPartition}))
+                sudo dd if=${drive} of=${bpbFile} count=1 skip=${startBpb}
+                hexdump -C ${bpbFile} > ${bpbFile}.txt
+                ;;
             *) ;;
         esac
     done
