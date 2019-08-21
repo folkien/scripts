@@ -31,6 +31,11 @@ if [ -e ${drive} ]; then
                 startBpb=$((${startPartition}))
                 sudo dd if=${drive} of=${bpbFile} count=1 skip=${startBpb}
                 hexdump -C ${bpbFile} > ${bpbFile}.txt
+                # BPB Backup Boot part
+                bpbBkFile="${prefix}_part${partitionNumber}_bpbbackup.bin"
+                startBpbBk=$((${startPartition} + 6))
+                sudo dd if=${drive} of=${bpbBkFile} count=1 skip=${startBpbBk}
+                hexdump -C ${bpbBkFile} > ${bpbBkFile}.txt
                 ;;
             *) ;;
         esac
