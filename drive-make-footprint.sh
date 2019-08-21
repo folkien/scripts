@@ -40,5 +40,7 @@ if [ -e ${drive} ]; then
         sudo dd if=${drive} of=${filePattern} bs=1MB count=1 skip=${i}
         hexdump -C ${filePattern} > ${filePattern}.txt
     done
+    # package
+    tar -cJvf ${prefix}_driveinfo.tar.xz ./${prefix}*
 fi
 
