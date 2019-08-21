@@ -26,6 +26,11 @@ if [ -e ${drive} ]; then
             "FAT32") 
                 # FATCAT info
                 fatcat ${partitionFile} -i > ${fsinfoFile}
+                FATSectorsSize=$(cat ${fsinfoFile} | grep "Sectors per FAT" | grep -E "[0-9]+" -o)
+                FATsize=$(cat ${fsinfoFile} | grep "Fat size" | grep -E "[0-9]+ " -o)
+                ReservedSectors=$(cat ${fsinfoFile} | grep "Reserved sectors" | grep -E "[0-9]+" -o)
+                echo "Reserved sectors ${ReservedSectors}."
+                echo "Fat size ${FATSectorsSize} (${FATsize})."
                 # BPB Boot part
                 bpbFile="${prefix}_part${partitionNumber}_bpb.bin"
                 startBpb=$((${startPartition}))
@@ -41,6 +46,17 @@ if [ -e ${drive} ]; then
                 startFssec=$((${startPartition}+1))
                 sudo dd if=${drive} of=${fssecFile} count=1 skip=${startFssec}
                 hexdump -C ${fssecFile} > ${fssecFile}.txt
+                #FAT 1
+                FAT1File="${prefix}_part${partitionNumber}_FAT1.bin"
+                startFAT1=$((${startPartition}+${ReservedSectors}))
+                sudo dd if=${drive} of=${FAT1File} count=${FATSectorsSize} skip=${startFAT1}
+                hexdump -C ${FAT1File} > ${FAT1File}.txt
+                #FAT 1
+                FAT2File="${prefix}_part${partitionNumber}_FAT2.bin"
+                startFAT2=$((${startFAT1}+${FATSectorsSize}))
+                sudo dd if=${drive} of=${FAT2File} count=${FATSectorsSize} skip=${startFAT2}
+                hexdump -C ${FAT2File} > ${FAT2File}.txt
+
                 ;;
             *) ;;
         esac
