@@ -1,3 +1,4 @@
+source /etc/messages.sh
 [ $# -eq 0 ] && echo "Missing prefix" && exit -1
 
 prefix="${1}"
@@ -12,11 +13,19 @@ if [ -e ${drive} ]; then
         sectorSize=$(cat /sys/block/${driveName}/queue/hw_sector_size)
         dumpSize=$((1024*1024/${sectorSize}))
         partition=$(echo ${line} | grep "${drive}[0-9]" -o)
+        partitionNumber=$(echo ${partition} | grep "[0-9]" -o)
+        partitionType=$( echo ${line} | grep -oE '[^ ]+$' )
         startPartition=$(echo ${line} | cut -c 10- | grep -o -E '[0-9]+' | head -1)
         startPartByteAddress=$((${startPartition} * ${sectorSize}))
-        echo "Found partition ${partition} starts ${startPartition} (${startPartByteAddress})."
-        sudo dd if=${drive} of=${prefix}_partinfo.bin count=${dumpSize} skip=${startPartition}
-        hexdump -C ${prefix}_partinfo.bin > ${prefix}_partinfo.bin.txt
+        minfo "Found partition ${partition} starts ${startPartition} (${startPartByteAddress}) Type ${partitionType}."
+        partitionFile="${prefix}_part${partitionNumber}.bin"
+        fsinfoFile="${prefix}_part${partitionNumber}_fsinfo.txt"
+        sudo dd if=${drive} of=${partitionFile} count=${dumpSize} skip=${startPartition}
+        hexdump -C ${partitionFile}  > ${partitionFile}.txt
+        case "${partitionType}" in
+            "FAT32") fatcat ${partitionFile} -i > ${fsinfoFile};;
+            *) ;;
+        esac
     done
     # binary dumps
     sudo dd if=${drive} of=${prefix}_512B.bin bs=512 count=1
