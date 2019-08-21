@@ -36,6 +36,11 @@ if [ -e ${drive} ]; then
                 startBpbBk=$((${startPartition} + 6))
                 sudo dd if=${drive} of=${bpbBkFile} count=1 skip=${startBpbBk}
                 hexdump -C ${bpbBkFile} > ${bpbBkFile}.txt
+                # FS information sector
+                fssecFile="${prefix}_part${partitionNumber}_fsinfosector.bin"
+                startFssec=$((${startPartition}+1))
+                sudo dd if=${drive} of=${fssecFile} count=1 skip=${startFssec}
+                hexdump -C ${fssecFile} > ${fssecFile}.txt
                 ;;
             *) ;;
         esac
