@@ -280,6 +280,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER arandr
     $PKG_MANAGER imagemagick
     $PKG_MANAGER shutter
+    $PKG_MANAGER xsane
     $PKG_MANAGER gnuplot-qt
     sudo snap install gimp
     ./packages/ubuntu-packages/flux.sh
