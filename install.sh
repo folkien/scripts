@@ -298,6 +298,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
 
     # Komunikatory
     sudo snap install skype --classic
+    sudo snap install caprine
     ./packages/ubuntu-packages/kdeconnect-indicator.sh
 
 
