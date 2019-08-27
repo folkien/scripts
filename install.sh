@@ -80,6 +80,7 @@ sudo ln -sf $DIR/cps.sh cps
 sudo ln -sf $DIR/git-create-repository.sh git-create-repository
 sudo ln -sf $DIR/git-show-tree git-show-tree
 sudo ln -sf $DIR/git-summary git-summary
+sudo ln -sf $DIR/git-readme-update.sh git-readme-update
 sudo ln -sf $DIR/tars.sh tars
 sudo ln -sf $DIR/trim.py trim
 sudo ln -sf $DIR/after.py after
