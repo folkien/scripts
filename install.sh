@@ -65,6 +65,14 @@ if [ ! -e $python/pyIoCat ]; then
     git clone git@github.com:folkien/pyIoCat.git
     sh $python/pyIoCat/install.sh
 fi
+if [ ! -e $python/pyStock ]; then
+    git clone git@github.com:folkien/pyStock.git
+    sh $python/pyStock/install.sh
+fi
+if [ ! -e $python/pySocket ]; then
+    git clone git@github.com:folkien/pySocket.git
+    sh $python/pySocket/install.sh
+fi
 
 # Scripts 
 # -------------------------------------
