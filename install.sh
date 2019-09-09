@@ -202,6 +202,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     lsb_release -i | grep Ubuntu
     if [ $? -eq 0 ]; then
         PKG_MANAGER="sudo apt-get install -yf "
+        PKG_REMOVE="sudo apt-get remove -yf"
     fi
     lsb_release -i | grep Manjaro
     if [ $? -eq 0 ]; then
@@ -285,6 +286,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER mingetty minicom cutecom 
     $PKG_MANAGER openvpn
     $PKG_MANAGER traceroute
+    ./packages/ubuntu-packages/mail-server.sh
     ./packages/ubuntu-packages/ssh-server.sh
 
     #Grafika
