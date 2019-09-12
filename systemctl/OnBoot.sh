@@ -1,7 +1,9 @@
 #!/bin/bash
-results=""
 
 # Update scripts
+# -------------------------------------------------------
+results=""
+
 echo "Update of scripts."
 cd ${scripts}
 git pull --rebase
@@ -47,3 +49,14 @@ for directory in /home/${USER}/python/*; do
 done
 
 notify-send-all "Update repozytoriów!\n \n${results}"
+# -------------------------------------------------------
+
+# Stock
+# -------------------------------------------------------
+stock-alarms -c
+# -------------------------------------------------------
+
+# Katechezy papieskie
+# -------------------------------------------------------
+Katechezy
+# -------------------------------------------------------

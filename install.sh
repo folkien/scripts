@@ -165,6 +165,7 @@ sudo ln -sf $DIR/notify-send-all.sh notify-send-all
 sudo ln -sf $DIR/wireshark-usbmon.sh wireshark-usbmon
 sudo ln -sf $DIR/hardfault-parser.sh hardfault-parser
 sudo ln -sf $DIR/hardfault-find.sh hardfault-find
+sudo ln -sf $DIR/Katechezy.sy Katechezy
 
 
 # git modifications
