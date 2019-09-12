@@ -16,6 +16,12 @@ for file in ./systemctl/*.timer; do
     if [ -e /etc/systemd/system/${name} ]; then
         echo "Exists. Updated ${name}!"
         sudo systemctl enable $name
+        # if not started
+        sudo systemctl list-timers | grep ${name}
+        if [ $? -ne 0 ]; then
+            echo "Exists. Started also ${name}!"
+            sudo systemctl start $name
+        fi
     #If not exists then start also
     else
         sudo systemctl enable $name
