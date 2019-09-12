@@ -6,12 +6,9 @@ results=""
 
 echo "Update of scripts."
 cd ${scripts}
-git pull --rebase
-if [ $? -ne 0 ]; then
-    results="${results} Scripts=Error\n"
-else
-    results="${results} Scripts=OK\n"
-fi
+git-sync
+install.sh
+results="${results} Scripts=OK\n"
 
 # Update python repos
 for directory in /home/${USER}/python/*; do
