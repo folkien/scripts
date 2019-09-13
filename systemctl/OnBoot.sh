@@ -7,7 +7,7 @@ results=""
 echo "Update of scripts."
 cd ${scripts}
 git-sync
-install.sh
+./install.sh
 results="${results} Scripts=OK\n"
 
 # Update python repos
