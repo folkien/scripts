@@ -1,5 +1,5 @@
 #! /bin/bash
-notify-send-all(){
+bnotify-send-all(){
     text="${@}"
     for p in $(pgrep gconf-helper); do
         dbus=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$p/environ | sed 's/DBUS_SESSION_BUS_ADDRESS=//')
@@ -9,4 +9,4 @@ notify-send-all(){
     done
 }
 
-notify-send-all $@ &> /dev/null
+bnotify-send-all $@ &> /dev/null
