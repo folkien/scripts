@@ -7,9 +7,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias cp='cp -rf'
 alias rm='rm -rf'
 alias mv='mv -fv'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alF --color=auto'
+alias la='ls -A --color=auto'
+alias l='ls -CF --color=auto'
 alias llist='ls -1'
 alias yaourt='yaourt --noconfirm'
 
