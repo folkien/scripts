@@ -26,7 +26,12 @@ if [ -e ${drive} ]; then
         case "${partitionType}" in
             "FAT32") 
                 # FATCAT info
+                echo "FAT32 found"
                 fatcat ${partitionFile} -i > ${fsinfoFile}
+                if [ $? -ne 0 ]; then
+                    echo "Missing fatcat program!"
+                    exit 1
+                fi
                 FATSectorsSize=$(cat ${fsinfoFile} | grep "Sectors per FAT" | grep -E "[0-9]+" -o)
                 FATsize=$(cat ${fsinfoFile} | grep "Fat size" | grep -E "[0-9]+ " -o)
                 ReservedSectors=$(cat ${fsinfoFile} | grep "Reserved sectors" | grep -E "[0-9]+" -o)
