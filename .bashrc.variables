@@ -5,6 +5,9 @@ if [ -f /home/$USER/variables.sh ] ; then
     source /home/$USER/variables.sh
 fi
 
+# Platformio install
+export PATH=$PATH:~/.platformio/penv/bin
+
 # Stałe dotyczące katalogów użytkownika
 export git="/home/$USER/Dokumenty/git"
 export scripts="$git/scripts"
