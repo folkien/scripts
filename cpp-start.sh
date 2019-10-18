@@ -40,13 +40,17 @@ LIBS =
 
 TARGET =	program
 
-$(TARGET):	$(OBJS)
-	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
+\$(TARGET):	\$(OBJS)
+	\$(CXX) -o \$(TARGET) \$(OBJS) \$(LIBS)
 
-all:	$(TARGET)
+all:	\$(TARGET)
 
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f \$(OBJS) \$(TARGET)
 run:
-	gdbgui $(TARGET)
+	gdbgui \$(TARGET)
 EOF
+
+gvim main.cpp &
+bash 
+
