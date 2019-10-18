@@ -167,6 +167,7 @@ sudo ln -sf $DIR/hardfault-parser.sh hardfault-parser
 sudo ln -sf $DIR/hardfault-find.sh hardfault-find
 sudo ln -sf $DIR/Katechezy.sy Katechezy
 sudo ln -sf $DIR/packages/ubuntu-packages/jlink-program.sh jlink-program
+sudo ln -sf $DIR/cpp-start.sh cpp-start
 
 
 # git modifications
