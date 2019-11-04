@@ -168,6 +168,8 @@ sudo ln -sf $DIR/hardfault-find.sh hardfault-find
 sudo ln -sf $DIR/Katechezy.sh Katechezy
 sudo ln -sf $DIR/packages/ubuntu-packages/jlink-program.sh jlink-program
 sudo ln -sf $DIR/cpp-start.sh cpp-start
+sudo ln -sf $DIR/git-branch-diff-from-master.sh git-branch-diff-from-master
+sudo ln -sf $DIR/git-branch-diff-to-master.sh git-branch-diff-to-master
 
 
 # git modifications
