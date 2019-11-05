@@ -272,7 +272,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER libnotify-bin
     $PKG_MANAGER wine winetricks
     $PKG_MANAGER golang-go
-    $PKG_MANAGER golang-go
+    ./packages/ubuntu-packages/pyocd.sh
     ./packages/ubuntu-packages/xidel.sh
     ./packages/ubuntu-packages/sysdig.sh
 
