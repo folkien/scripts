@@ -237,6 +237,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER make
     $PKG_MANAGER cmake
     $PKG_MANAGER ncurses libncurses-dev
+    ./packages/ubuntu-packages/hg-export.sh
 #    $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
     
     $PKG_MANAGER u-boot-tools
