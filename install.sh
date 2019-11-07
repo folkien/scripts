@@ -230,6 +230,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER yakuake
     $PKG_MANAGER convert
     $PKG_MANAGER git gitg qgit git-svn git-email 
+    $PKG_MANAGER hg
     $PKG_MANAGER rar unrar 
     $PKG_MANAGER p7zip-full
     $PKG_MANAGER meld kdiff3
