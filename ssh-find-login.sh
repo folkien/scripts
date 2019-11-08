@@ -13,5 +13,5 @@ echo "Gateway IP - ${ipArray[0]}.${ipArray[1]}.${ipArray[2]}.${ipArray[3]}."
 nmap -sS -p 22 ${ipArray[0]}.${ipArray[1]}.${ipArray[2]}.1-255 | grep report | grep -o "${ipArray[0]}.${ipArray[1]}.${ipArray[2]}.*" | while read ipHost
 do
     echo "Try ${login}@${ipHost}."
-    sshpass -p "${password}" ssh ${login}@${ipHost}
+    sshpass -p "${password}" ssh -oStrictHostKeyChecking=no ${login}@${ipHost}
 done
