@@ -297,6 +297,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER mingetty minicom cutecom 
     $PKG_MANAGER openvpn
     $PKG_MANAGER traceroute
+    $PKG_MANAGER sshpass
     ./packages/ubuntu-packages/mail-server.sh
     ./packages/ubuntu-packages/ssh-server.sh
 
