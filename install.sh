@@ -295,6 +295,9 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #edytory
     $PKG_MANAGER vim-gtk
 
+    # gry
+    ./packages/ubuntu-packages/nes.sh
+
     #Narzędzia sieciowe
     $PKG_MANAGER iperf
     $PKG_MANAGER net-tools
