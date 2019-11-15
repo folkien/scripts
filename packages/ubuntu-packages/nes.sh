@@ -1,1 +1,1 @@
-sudo apt install -yf fceux
+sudo apt install -yf higan
