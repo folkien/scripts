@@ -278,9 +278,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/xidel.sh
     ./packages/ubuntu-packages/sysdig.sh
     
-    # Programowanie, Debugowanie
+    # Programowanie, Debugowanie i praca
     ./packages/ubuntu-packages/pyocd.sh
     ./packages/ubuntu-packages/mbed.sh
+    ./packages/ubuntu-packages/octave.sh
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh

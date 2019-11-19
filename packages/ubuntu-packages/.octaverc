@@ -1,0 +1,16 @@
+graphics_toolkit("gnuplot")
+
+## pretty prompt
+PS1 ("\\[\\033[01;31m\\]\\s:\\#> \\[\\033[0m\\]");
+## no > for multi-line input
+PS2 ("");
+
+EDITOR ("gvim");
+edit ("mode", "sync");
+
+## default image size to take the right half of the monitor
+set (0,
+  "DefaultFigurePosition",
+    [get(0, "screensize")(3)/2    1 ...
+     get(0, "screensize")(3)/2    get(0, "screensize")(4)]
+);
