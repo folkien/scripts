@@ -1,4 +1,4 @@
-graphics_toolkit("gnuplot")
+#graphics_toolkit("gnuplot")
 
 ## pretty prompt
 PS1 ("\\[\\033[01;31m\\]\\s:\\#> \\[\\033[0m\\]");

@@ -11,4 +11,5 @@ PKG_MANAGER="sudo apt-get install -yf "
 
 $PKG_MANAGER octave
 $PKG_MANAGER octave-signal
-cp -rfv ${DIR}/.octaverc ~/
+$PKG_MANAGER octave-data-smoothing
+ln -sf ${DIR}/.octaverc ~/.octaverc
