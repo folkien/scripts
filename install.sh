@@ -282,6 +282,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/pyocd.sh
     ./packages/ubuntu-packages/mbed.sh
     ./packages/ubuntu-packages/octave.sh
+    ./packages/ubuntu-packages/markdown.sh
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
