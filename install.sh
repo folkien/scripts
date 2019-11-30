@@ -283,6 +283,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/mbed.sh
     ./packages/ubuntu-packages/octave.sh
     ./packages/ubuntu-packages/markdown.sh
+    ./packages/ubuntu-packages/esptool.sh
+    ./packages/ubuntu-packages/biosppy.sh
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
