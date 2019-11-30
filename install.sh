@@ -306,9 +306,6 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/mail-server.sh
     ./packages/ubuntu-packages/ssh-server.sh
 
-    # PIP for python
-    pip install biosppy
-
     #Grafika
     $PKG_MANAGER arandr
     $PKG_MANAGER imagemagick
