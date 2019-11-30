@@ -286,6 +286,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/markdown.sh
     ./packages/ubuntu-packages/esptool.sh
     ./packages/ubuntu-packages/biosppy.sh
+    ./packages/ubuntu-packages/supla.sh
+    ./packages/ubuntu-packages/sonoff.sh
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
