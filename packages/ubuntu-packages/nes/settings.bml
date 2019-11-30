@@ -1,10 +1,10 @@
 UserInterface
   ShowStatusBar:true
 Library
-  Location:/home/spasz/Emulation/
+  Location:/home/spasz/Dokumenty/git/scripts/packages/ubuntu-packages/nes/
   IgnoreManifests:true
 Video
-  Driver:XShm
+  Driver:OpenGL
   Synchronize:false
   Shader:Blur
   BlurEmulation:true
@@ -20,7 +20,7 @@ Video
     AspectCorrection:true
     IntegralScaling:true
     Adaptive:true
-    Scale:Small
+    Scale:Medium
       Small:640x480
       Medium:960x720
       Large:1280x960
