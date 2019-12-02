@@ -41,6 +41,7 @@ alias toUpper="awk '{print toupper($0)}'"
 alias toLower="awk '{print tolower($0)}'"
 
 alias system-start-time="date -d \"$(</proc/uptime awk '{print $1}') seconds ago\""
+alias udev-reload="sudo udevadm control --reload-rules && sudo udevadm trigger"
 
 # Tar versions
 alias tar-gz-pack="tar -czvf"
