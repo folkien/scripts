@@ -1,9 +1,8 @@
-
-while true; do
-    read -p "Overwrite eclipse oxygen ini file?" yn
-    case $yn in
-        [Yy]* ) cp -rfv eclipse/eclipse-oxygen.ini /opt/eclipse/eclipse.ini; break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
 done
+DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+ln -sfv ${DIR}/reclipse/eclipse-oxygen.ini /opt/eclipse/eclipse.ini
