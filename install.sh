@@ -170,6 +170,8 @@ sudo ln -sf $DIR/packages/ubuntu-packages/jlink-program.sh jlink-program
 sudo ln -sf $DIR/cpp-start.sh cpp-start
 sudo ln -sf $DIR/git-branch-diff-from-master.sh git-branch-diff-from-master
 sudo ln -sf $DIR/git-branch-diff-to-master.sh git-branch-diff-to-master
+sudo ln -sf $DIR/udev-query.sh udev-query
+sudo ln -sf $DIR/udev-check.sh udev-check
 
 
 # git modifications
