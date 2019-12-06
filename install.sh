@@ -283,6 +283,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/sysdig.sh
     
     # Programowanie, Debugowanie i praca
+    ./packages/ubuntu-packages/bluepy.sh
     ./packages/ubuntu-packages/eclipse-oxygen.sh
     ./packages/ubuntu-packages/pyocd.sh
     ./packages/ubuntu-packages/mbed.sh
