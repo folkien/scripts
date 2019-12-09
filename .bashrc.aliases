@@ -51,6 +51,9 @@ alias tar-gz-unpack="tar -xzvf"
 alias tar-bz-unpack="tar -xjvf"
 alias tar-xz-unpack="tar -xJvf"
 
+# Bluetooth commands
+alias ble-get-device="gatttool --char-desc -b"
+
 # git upgrades
 alias g="git"
 alias git-log-today="git log --since=1am"
