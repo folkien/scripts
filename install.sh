@@ -249,6 +249,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #Narzędzia dyskowe i plikowe
     $PKG_MANAGER gparted
     $PKG_MANAGER baobab
+    sudo ln -sf /usr/bin/baobab /usr/bin/filelight
     $PKG_MANAGER rar unrar
     $PKG_MANAGER p7zip-full
     $PKG_MANAGER pdftk
