@@ -41,6 +41,6 @@ do
     esac
 done
 
-# Update hosts
-cp -rfv hosts.original /etc/hosts
-cat used.txt >> /etc/hosts
+# Update /etc/
+sudo cp -rfv hosts.original /etc/hosts
+sudo cat used.txt | sudo tee -a /etc/hosts
