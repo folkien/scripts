@@ -52,6 +52,8 @@ alias tar-bz-unpack="tar -xjvf"
 alias tar-xz-unpack="tar -xJvf"
 
 # Bluetooth commands
+alias ble-adapter="hcitool dev"
+alias ble-scan="sudo hcitool lescan"
 alias ble-get-device="gatttool --char-desc -b"
 
 # git upgrades
