@@ -73,6 +73,10 @@ if [ ! -e $python/pySocket ]; then
     git clone git@github.com:folkien/pySocket.git
     sh $python/pySocket/install.sh
 fi
+if [ ! -e $python/pyBleCat ]; then
+    git clone git@github.com:folkien/pyBleCat.git
+    sh $python/pyBleCat/install.sh
+fi
 
 # Scripts 
 # -------------------------------------
