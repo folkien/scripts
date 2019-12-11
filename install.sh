@@ -19,8 +19,8 @@ fi
 # Tworzenie najważniejszych katalogów
 # -------------------------------------
 sudo install -d -o $USER -g $USER $git $www $gdrive $boisko $software
-if [ $(stat -c %U $software) != $USER ]; then
-    sudo chown -R $USER.$USER $software
+if [ $(stat -c %U $software) != "$USER" ]; then
+    sudo chown -vR $USER.$USER $software
 fi
 
 # Generation of .ssh keys
