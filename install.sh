@@ -19,7 +19,9 @@ fi
 # Tworzenie najważniejszych katalogów
 # -------------------------------------
 sudo install -d -o $USER -g $USER $git $www $gdrive $boisko $software
-sudo chown -R $USER.$USER $software
+if [ $(stat -c %U $software) != $USER ]; then
+    sudo chown -R $USER.$USER $software
+fi
 
 # Generation of .ssh keys
 if [ ! -e ~/.ssh/id_rsa.pub ]; then
@@ -287,6 +289,9 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER python3-pip
     ./packages/ubuntu-packages/xidel.sh
     ./packages/ubuntu-packages/sysdig.sh
+
+    # Drivery
+    ./packages/ubuntu-packages/samsung_scx3400.sh
     
     # Programowanie, Debugowanie i praca
     ./packages/ubuntu-packages/bluepy.sh
