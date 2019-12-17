@@ -304,6 +304,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/biosppy.sh
     ./packages/ubuntu-packages/supla.sh
     ./packages/ubuntu-packages/sonoff.sh
+    ./packages/ubuntu-packages/QtProject.sh
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
