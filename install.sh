@@ -314,6 +314,9 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/sonoff.sh
     ./packages/ubuntu-packages/QtProject.sh
 
+    # Python packages
+    pip install blockdiag
+
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
 
