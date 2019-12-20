@@ -184,9 +184,13 @@ sudo ln -sf $DIR/git-set-author.sh git-set-author
 # git modifications
 # -------------------------------------
 git config --global alias.today 'log --since=1am'
+git config --global alias.ll log
+git config --global alias.aa add
+git config --global alias.pp push
+git config --global alias.pl push
 git config --global alias.co checkout
 git config --global alias.br branch
-git config --global alias.ci commit
+git config --global alias.cm commit
 git config --global alias.st status
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.graph "log --graph --all --decorate"
