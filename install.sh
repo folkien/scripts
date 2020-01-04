@@ -293,6 +293,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER python3-pip
     ./packages/ubuntu-packages/xidel.sh
     ./packages/ubuntu-packages/sysdig.sh
+    ./packages/ubuntu-packages/ssmtp-gmail.sh
 
     # Drivery
     ./packages/ubuntu-packages/samsung_scx3400.sh
