@@ -301,6 +301,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER valgrind
     $PKG_MANAGER kcachegrind
     $PKG_MANAGER libgl-dev
+    ./packages/ubuntu-packages/arduino.sh
     ./packages/ubuntu-packages/firacode.sh
     ./packages/ubuntu-packages/bluepy.sh
     ./packages/ubuntu-packages/eclipse-oxygen.sh
