@@ -1,4 +1,5 @@
 sudo apt-get install ssmtp
+sudo apt-get install mutt
 sudo mv /etc/ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf.bak
 cat >> ssmtp.conf << EOF 
 root=<gmail-user>@gmail.com
