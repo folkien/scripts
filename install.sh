@@ -116,7 +116,8 @@ sudo ln -sf $DIR/image-resize.sh image-resize
 sudo ln -sf $DIR/decompile-dtb.sh decompile-dtb
 sudo ln -sf $DIR/ddpv ddpv
 sudo ln -sf $DIR/drive-make-footprint.sh drive-make-footprint
-sudo ln -sf $DIR/udevquery.sh udevquery
+sudo ln -sf $DIR/udev-query.sh udev-query
+sudo ln -sf $DIR/udev-check.sh udev-check
 sudo ln -sf $DIR/usb_mass_storage_devices.sh usb-list-drives
 sudo ln -sf $DIR/usb-select-drive.sh usb-select-drive
 sudo ln -sf $DIR/usb-mount-drive.sh usb-mount-drive
