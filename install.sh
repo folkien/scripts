@@ -292,6 +292,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER golang-go
     $PKG_MANAGER rename
     $PKG_MANAGER python3-pip
+    ./packages/ubuntu-packages/udev.sh
     ./packages/ubuntu-packages/xidel.sh
     ./packages/ubuntu-packages/sysdig.sh
     ./packages/ubuntu-packages/ssmtp-gmail.sh
