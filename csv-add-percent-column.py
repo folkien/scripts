@@ -13,7 +13,7 @@ if len(sys.argv)<2:
 
 
 filepath=sys.argv[1]
-outputFile="percent"+filepath
+outputFile=filepath+".percent"
 lineNumber=1
 lineCount=file_len(filepath)
 
