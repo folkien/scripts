@@ -21,7 +21,7 @@ fwrite=open(outputFile,'w+')
 with open(filepath,'r+') as fp:
    line = fp.readline()
    while line:
-    fwrite.write("%2.2f %s" % (float(lineNumber*100)/lineCount,line))
+    fwrite.write("%2.4f %s" % (float(lineNumber*100)/lineCount,line))
     lineNumber+=1
     line = fp.readline()
 
