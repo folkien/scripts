@@ -1,3 +1,7 @@
+if [ $# -lt 1 ]; then
+    echo "Called on current directory. Give only sed argument"
+    exit -1
+fi
 #
 # assertion to not modify git repository hidden files
 ls .git &> /dev/null
