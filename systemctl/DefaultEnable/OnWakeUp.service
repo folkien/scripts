@@ -1,0 +1,10 @@
+[Unit]
+Description="Run script after every wake up (OnBoot.sh)"
+After=suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+ExecStart=/usr/bin/asuser-run /usr/bin/OnBoot.sh
+EnvironmentFile=/etc/scripts.env
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target

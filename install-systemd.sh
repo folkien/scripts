@@ -3,6 +3,7 @@ ServicesDir=$(pwd)/systemctl
 # Script with installation of all systemd scripts.
 sudo ln -sfv ${ServicesDir}/*.sh /usr/bin/
 sudo ln -sfv ${ServicesDir}/*.service /etc/systemd/system/
+sudo ln -sfv ${ServicesDir}/DefaultEnable/*.service /etc/systemd/system/
 
 # Create and update environment file
 env > scripts.env
@@ -27,6 +28,13 @@ for file in ./systemctl/*.timer; do
         sudo systemctl enable $name
         sudo systemctl start $name
     fi
+    sudo systemctl status $name
+done
+
+# Enable all default services
+for file in ${ServicesDir}/DefaultEnable/*.service; do
+    name=$(basename ${file})
+    sudo systemctl enable $name
     sudo systemctl status $name
 done
 
