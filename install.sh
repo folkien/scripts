@@ -250,6 +250,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER p7zip-full
     $PKG_MANAGER meld kdiff3
     $PKG_MANAGER bless
+    $PKG_MANAGER wxhexeditor
     $PKG_MANAGER make
     $PKG_MANAGER cmake
     $PKG_MANAGER ncurses libncurses-dev
