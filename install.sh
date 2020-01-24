@@ -182,6 +182,7 @@ sudo ln -sf $DIR/udev-query.sh udev-query
 sudo ln -sf $DIR/udev-check.sh udev-check
 sudo ln -sf $DIR/git-set-author.sh git-set-author
 sudo ln -sf $DIR/grep-errors.sh grep-errors
+sudo ln -sf $DIR/git-diff-blame.sh git-diff-blame
 
 
 # git modifications
