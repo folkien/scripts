@@ -11,6 +11,8 @@ else
     filepath="$1"
 fi
 
+# TODO :
+# - change to use three files, two are difftooled and second is only blame commits for revioson file
 git blame ${filepath} > "local.blame"
 git blame ${revision} -- ${filepath} > "remote.blame"
 ${difftool} "local.blame" "remote.blame"
