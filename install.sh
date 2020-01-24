@@ -181,6 +181,7 @@ sudo ln -sf $DIR/git-branch-diff-to-master.sh git-branch-diff-to-master
 sudo ln -sf $DIR/udev-query.sh udev-query
 sudo ln -sf $DIR/udev-check.sh udev-check
 sudo ln -sf $DIR/git-set-author.sh git-set-author
+sudo ln -sf $DIR/grep-errors.sh grep-errors
 
 
 # git modifications
