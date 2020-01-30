@@ -17,4 +17,9 @@ git pull --rebase
 git push 
 [ ${localChanges} -eq 1 ] && echo "Applying stash!" && git stash apply > /dev/null
 
+minfo "Pushed changes:"
+#TODO
+minfo "Pulled changes"
+# TODO
+
 minfo 'Updated log :' && git log --pretty=oneline | head -n 5
