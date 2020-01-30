@@ -13,7 +13,7 @@ diffrence=$(git log --oneline origin/${branch}..${branch} | wc -l)
 localTop=$(git rev-parse HEAD)
 # last pushed top commit
 pushedTop=$(git rev-parse origin/${branch})
-git fetch origin ${branch}
+git fetch origin ${branch} > /dev/null
 # last origin top commit
 originTop=$(git rev-parse origin/${branch})
 
