@@ -2,9 +2,9 @@
 # Git edycja N commitow na dotyłu gdzie N to pierwszy argument.
 source /etc/messages.sh
 NumberOfCommits=$1
-localChanges=0
 
-# Check if localc changes occured and have t ostage
+# Check if local changes occured and have t ostage
+localChanges=0
 git status | grep "Changes not staged" > /dev/null
 if [ $? -eq 0 ]; then
     localChanges=1
