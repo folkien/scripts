@@ -1,2 +1,2 @@
 # scripts
-Skrypty linuxowe ułatwiające mi życie.
+Linux scripts and Ubuntu installers for diffrent things.
