@@ -19,14 +19,13 @@ originTop=$(git rev-parse origin/${branch})
 
 
 
-[ ${localChanges} -eq 1 ] && git stash
+[ ${localChanges} -eq 1 ] && mwarning "Stashed." && git stash
 # Synchronize data
 git pull --rebase
 git push 
-[ ${localChanges} -eq 1 ] && echo "Applying stash!" && git stash apply > /dev/null
+[ ${localChanges} -eq 1 ] && mwarning "Applying stash..." && git stash apply > /dev/null
 
 minfo "Pushed changes:"
 git log --pretty=oneline ${originTop}..${localTop}
 minfo "Pulled changes"
-git log --pretty=oneline ${pushedTop}..${originTop}
-minfo 'Updated log :' && git log --pretty=oneline | head -n 5
+git log --pretty=oneline ${pushedTop}^..${originTop}
