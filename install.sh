@@ -184,6 +184,7 @@ sudo ln -sf $DIR/git-set-author.sh git-set-author
 sudo ln -sf $DIR/grep-errors.sh grep-errors
 sudo ln -sf $DIR/git-diff-blame.sh git-diff-blame
 sudo ln -sf $DIR/git-are-changes.sh git-are-changes
+sudo ln -sf $DIR/git-is-repository.sh git-is-repository
 
 
 # git modifications
