@@ -33,7 +33,7 @@ git push
 minfo "Pushed changes:"
 git log --pretty=oneline ${originTop}..${localTop}
 minfo "Pulled changes"
-git log --pretty=oneline ${pushedTop}^..${originTop}
+git log --pretty=oneline ${pushedTop}..${originTop}
 
 # Debuging messages
 if [ ${parameter} = "debug" ]; then
