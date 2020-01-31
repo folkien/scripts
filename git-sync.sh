@@ -27,8 +27,10 @@ originTop=$(git rev-parse origin/${branch})
 [ ${localChanges} -eq 1 ] && mwarning "Stashed." && git stash
 # Synchronize data
 git pull --rebase
+resultPullRebase="$?"
 git push 
 [ ${localChanges} -eq 1 ] && mwarning "Applying stash..." && git stash pop > /dev/null
+resultStashPop="$?"
 
 minfo "Pushed changes:"
 git log --pretty=oneline ${originTop}..${localTop}
@@ -41,3 +43,11 @@ if [ "${parameter}" = "debug" ]; then
     echo "last pushed top ${pushedTop}"
     echo "origin top ${originTop}"
 fi
+
+# Result code 0 - if everything happend well
+if [ ${stashPopResult} -eq 0 ] && [ ${resultPullRebase} -eq 0 ]; then
+    msuccess "0"
+    exit 0
+fi
+merror "-1"
+exit -1
