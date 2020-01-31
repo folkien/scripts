@@ -2,50 +2,40 @@
 
 # Update scripts
 # -------------------------------------------------------
-results=""
+results_str=""
 
 echo "Update of scripts."
 cd ${scripts}
 git-sync
 ./install.sh
-results="${results} Scripts=OK\n"
+results_str="${results_str} Scripts=OK\n"
 
 # Update python repos
-for directory in /home/${USER}/python/*; do
-    if [ -d ${directory} ]; then
-        if [ -e ${directory}/.git ]; then
-            echo "Update of ${directory}."
-            cd ${directory}
-            # 1. Stash changes
-            git stash
+for path in /home/${USER}/python/*; do
+    # If path is directory
+    if [ -d ${path} ]; then
+        # if directory has .git repository inside
+        if [ -e ${path}/.git ]; then
+            # Get directory name
+            dirname=$(basename ${path})
 
-            # 2. Pull with rebase.
-            git pull --rebase
-            pullResult=$?
-            #  if failed then abort
-            if [ ${pullResult} -ne 0 ]; then
-                git rebase --abort
-            fi
-
-            # 3. Restore stash
-            git stash pop
-            #  if failed then create information file
-            if [ $? -ne 0 ]; then
-                touch StashPopFailed.todo
-            fi
+            # Update git repository
+            echo "Update of ${path}."
+            cd ${path}
+            git-sync
+            result=$?
 
             # Create result message
-            dirname=$(basename ${directory})
-            if [ ${pullResult} -ne 0 ]; then
-                results="${results} ${dirname}=Error\n"
+            if [ ${result} -ne 0 ]; then
+                results_str="${results_str} ${dirname}=Error\n"
             else
-                results="${results} ${dirname}=OK\n"
+                results_str="${results_str} ${dirname}=OK\n"
             fi
         fi
     fi
 done
 
-notify-send-all "Update repozytoriów!\n \n${results}"
+notify-send-all "Update repozytoriów!\n \n${results_str}"
 # -------------------------------------------------------
 
 # Stock
