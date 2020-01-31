@@ -45,7 +45,7 @@ if [ "${parameter}" = "debug" ]; then
 fi
 
 # Result code 0 - if everything happend well
-if [ ${stashPopResult} -eq 0 ] && [ ${resultPullRebase} -eq 0 ]; then
+if [ ${resultPullRebase} -eq 0 ] && [ ${resultStashPop} -eq 0 ]; then
     msuccess "0"
     exit 0
 fi
