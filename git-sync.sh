@@ -54,7 +54,7 @@ fi
 
 # Result code 0 - if everything happend well
 if [ ${resultPullRebase} -eq 0 ] && [ ${resultStashPop} -eq 0 ]; then
-    msuccess "Succes!"
+    msuccess "Success!"
     exit 0
 fi
 merror "Failed!"
