@@ -8,6 +8,9 @@ fi
 # Exit if not git repository
 [ $(git-is-repository) -eq 0 ] && echo "Not git repository!" && exit -1
 
+# Default operations results
+resultPullRebase=0
+resultStashPop=0
 # Get branch name
 branch=$(git rev-parse --abbrev-ref HEAD)
 # Get if there are local changes
@@ -24,13 +27,18 @@ originTop=$(git rev-parse origin/${branch})
 
 
 
+# Stash - hide
 [ ${localChanges} -eq 1 ] && mwarning "Stashed." && git stash
 # Synchronize data
 git pull --rebase
 resultPullRebase="$?"
-git push 
-[ ${localChanges} -eq 1 ] && mwarning "Applying stash..." && git stash pop > /dev/null
-resultStashPop="$?"
+git push
+# Stash - apply
+if [ ${localChanges} -eq 1 ]; then
+    mwarning "Applying stash..." 
+    git stash pop > /dev/null
+    resultStashPop="$?"
+fi
 
 minfo "Pushed changes:"
 git log --pretty=oneline ${originTop}..${localTop}
