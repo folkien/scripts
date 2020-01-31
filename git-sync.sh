@@ -36,7 +36,7 @@ minfo "Pulled changes"
 git log --pretty=oneline ${pushedTop}..${originTop}
 
 # Debuging messages
-if [ ${parameter} = "debug" ]; then
+if [ "${parameter}" = "debug" ]; then
     echo "local top ${localTop}"
     echo "last pushed top ${pushedTop}"
     echo "origin top ${originTop}"
