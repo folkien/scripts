@@ -1,8 +1,8 @@
 [Unit]
-Description=Runs 15 minutes after boot.
+Description=Runs after boot.
 
 [Timer]
-OnBootSec=15m
+OnBootSec=5m
 Unit=OnBoot.service
 
 [Install]
