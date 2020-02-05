@@ -186,6 +186,7 @@ sudo ln -sf $DIR/git-diff-blame.sh git-diff-blame
 sudo ln -sf $DIR/git-are-changes.sh git-are-changes
 sudo ln -sf $DIR/git-is-repository.sh git-is-repository
 sudo ln -sf $DIR/git-fix.sh git-fix
+sudo ln -sf $DIR/git-cm-update.sh git-cm-update
 
 
 # git modifications

@@ -8,5 +8,5 @@ do
     filename=$(basename ${file})
     files="${files}, ${filename}"
 done
-git commit -m "Fix of ${files}."
+git commit -m "Update of ${files}."
 git-edit 3
