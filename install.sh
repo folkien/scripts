@@ -188,6 +188,7 @@ sudo ln -sf $DIR/git-is-repository.sh git-is-repository
 sudo ln -sf $DIR/git-fix.sh git-fix
 sudo ln -sf $DIR/git-cm-update.sh git-cm-update
 sudo ln -sf $DIR/memory-get-used.sh memory-get-used.sh
+sudo ln -sf $DIR/plot.sh plot
 
 
 # git modifications
