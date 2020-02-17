@@ -20,4 +20,8 @@ ${command} -e Erro
 ${command} -e erro
 ${command} -e Timeout
 ${command} -e timeout
+${command} -e wrong
+${command} -e Wrong
+${command} -e unknown
+${command} -e Unknown
 echo "Done."
