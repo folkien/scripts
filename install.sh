@@ -318,6 +318,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER libgl-dev
     $PKG_MANAGER openocd
     $PKG_MANAGER colordiff
+    ./packages/ubuntu-packages/diff-so-fancy.sh
     ./packages/ubuntu-packages/arduino.sh
     ./packages/ubuntu-packages/firacode.sh
     ./packages/ubuntu-packages/bluepy.sh
