@@ -186,6 +186,8 @@ sudo ln -sf $DIR/git-diff-blame.sh git-diff-blame
 sudo ln -sf $DIR/git-are-changes.sh git-are-changes
 sudo ln -sf $DIR/git-is-repository.sh git-is-repository
 sudo ln -sf $DIR/git-fix.sh git-fix
+sudo ln -sf $DIR/git-merge-diff.sh git-merge-diff
+sudo ln -sf $DIR/git-branch-current.sh git-branch-current
 sudo ln -sf $DIR/git-cm-update.sh git-cm-update
 sudo ln -sf $DIR/memory-get-used.sh memory-get-used.sh
 sudo ln -sf $DIR/plot.sh plot
@@ -315,6 +317,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER kcachegrind
     $PKG_MANAGER libgl-dev
     $PKG_MANAGER openocd
+    $PKG_MANAGER colordiff
     ./packages/ubuntu-packages/arduino.sh
     ./packages/ubuntu-packages/firacode.sh
     ./packages/ubuntu-packages/bluepy.sh
