@@ -8,6 +8,9 @@ fi
 # Exit if not git repository
 [ $(git-is-repository) -eq 0 ] && echo "Not git repository!" && exit -1
 
+# Wait till is online
+wait-till-online
+
 # Default operations results
 resultPull=-1
 resultPush=-1
