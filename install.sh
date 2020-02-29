@@ -48,6 +48,14 @@ fi
 # -------------------------------------
 ./install-bashrc.sh
 
+# Repositories
+# -------------------------------------
+cd ${git}
+if [ ! -e ${git}/config ]; then
+    git clone git@bitbucket.org:spaszko/config.git
+    cd ${git}/config
+    ./install.sh
+fi
 
 # Python programs
 # -------------------------------------
