@@ -199,7 +199,8 @@ sudo ln -sf $DIR/git-branch-current.sh git-branch-current
 sudo ln -sf $DIR/git-cm-update.sh git-cm-update
 sudo ln -sf $DIR/memory-get-used.sh memory-get-used.sh
 sudo ln -sf $DIR/plot.sh plot
-
+sudo ln -sf $DIR/is-online.sh is-online
+sudo ln -sf $DIR/wait-till-online.sh wait-till-online
 
 # git modifications
 # -------------------------------------
