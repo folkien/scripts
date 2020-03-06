@@ -272,6 +272,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER wxhexeditor
     $PKG_MANAGER make
     $PKG_MANAGER cmake
+    $PKG_MANAGER pavucontrol
     $PKG_MANAGER ncurses libncurses-dev
     $PKG_MANAGER libncurses5-dev libncursesw5-dev
     ./packages/ubuntu-packages/hg-export.sh
