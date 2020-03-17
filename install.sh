@@ -376,6 +376,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER xsane
     $PKG_MANAGER gnuplot-qt
     $PKG_MANAGER kst
+    $PKG_MANAGER v4l-utils
+    $PKG_MANAGER guvcview
     sudo snap install gimp
     ./packages/ubuntu-packages/flux.sh
     ./packages/ubuntu-packages/obs-studio.sh
