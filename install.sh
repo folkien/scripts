@@ -378,6 +378,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER kst
     sudo snap install gimp
     ./packages/ubuntu-packages/flux.sh
+    ./packages/ubuntu-packages/obs-studio.sh
 
     #Muzyka
     sudo snap install spotify
