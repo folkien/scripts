@@ -59,6 +59,9 @@ alias ble-adapter="hcitool dev"
 alias ble-scan="sudo hcitool lescan"
 alias ble-get-device="gatttool --char-desc -b"
 
+# JLink
+alias trace-live="echo STM32F767ZI | JLinkSWOViewer"
+
 # git upgrades
 alias g="git"
 alias git-log-today="git log --since=1am"
