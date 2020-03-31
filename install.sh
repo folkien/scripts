@@ -387,11 +387,15 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER audacious
     $PKG_MANAGER audacity
     $PKG_MANAGER ffmpeg
+    $PKG_MANAGER alsa-tools-gui
+    $PKG_MANAGER pavucontrol
     ./packages/ubuntu-packages/radiotray.sh
     
     # Filmy
     ./packages/ubuntu-packages/dvdcodedcs.sh
     $PKG_MANAGER linux-firmware-nonfree
+    $PKG_MANAGER v4l-utils
+    $PKG_MANAGER streamer
 
     # Komunikatory
     sudo snap install skype --classic
