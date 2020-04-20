@@ -1,6 +1,13 @@
 # Usb debuging enabled- for cases when debug is needed
 
 # Enable module for usb monitoring
+# Creates binary entries for every host controloler
+# /dev/usbmonX
+# - use tcpdump to read this and wireshark to analyze
+# Creates text entries for every host controloler
+# /sys/kernel/debug/usb/usbmon/${port}u 
+# - use cat and vusb-analyzer to parse this
+
 sudo modprobe usbmon
 
 if [ ! -e /proc/bus/usb/devices ]; then
