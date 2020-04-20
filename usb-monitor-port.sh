@@ -1,14 +1,24 @@
-dateTime=$(date +%y%V%M)
+# Usb debuging enabled- for cases when debug is needed
 
+# Enable module for usb monitoring
+sudo modprobe usbmon
+
+if [ ! -e /proc/bus/usb/devices ]; then
+    sudo mkdir /proc/bus/usb/
+    sudo mount -t usbfs none /proc/bus/usb
+fi
 
 # 1 - input port
 port=0
 if [ $? -ge 1 ]; then
     port=${1}
 fi
+usbPortPath="/sys/kernel/debug/usb/usbmon/${port}u"
+echo "Selected USB port to debug is ${usbPortPath}."
 
 # 2 - output file
-file="logp${port}_${dateTime}.mon"
+dateTime=$(date +%y%V%M)
+file="logUsbP${port}_${dateTime}.mon"
 if [ $? -ge 2 ]; then
     file=${2}
 fi
