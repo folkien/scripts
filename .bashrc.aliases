@@ -12,6 +12,7 @@ alias la='ls -A --color=auto'
 alias l='ls -CF --color=auto'
 alias llist='ls -1'
 alias yaourt='yaourt --noconfirm'
+alias grep='grep -n --color'
 
 #Aliasy
 alias du="ncdu"
