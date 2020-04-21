@@ -42,7 +42,7 @@ alias toUpper="awk '{print toupper($0)}'"
 alias toLower="awk '{print tolower($0)}'"
 
 alias system-start-time="date -d \"$(</proc/uptime awk '{print $1}') seconds ago\""
-alias udev-reload="sudo udevadm --debug control --reload-rules && sudo --debug udevadm trigger && echo 'Rules reloaded!'"
+alias udev-reload="sudo udevadm --debug control --reload-rules && sudo udevadm --debug trigger && echo 'Rules reloaded!'"
 
 # Getters
 alias get-owner="stat -c %U"
