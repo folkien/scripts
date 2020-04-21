@@ -1,0 +1,11 @@
+[Unit]
+Description="PPP server"
+
+[Service]
+ExecStart=/usr/sbin/pppd /dev/ttyECRPPP
+#EnvironmentFile=/etc/scripts.env
+Restart=on-failure
+RestartSec=15s
+
+[Install]
+WantedBy=multi-user.target

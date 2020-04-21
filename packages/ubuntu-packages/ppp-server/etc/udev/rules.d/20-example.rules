@@ -1,0 +1,9 @@
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="c1ca", ATTRS{idProduct}=="ba70", MODE="0766"
+
+SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}!="00", GOTO="end_ppp"
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="c1ca", ATTRS{idProduct}=="ba70", SYMLINK+="ttyPPP"
+LABEL="end_ppp"
+
+SUBSYSTEMS=="usb", ATTRS{bInterfaceNumber}!="02", GOTO="end_ecr"
+ACTION=="add", SUBSYSTEM=="tty", ATTRS{idVendor}=="c1ca", ATTRS{idProduct}=="ba70", SYMLINK+="ttyCom"
+LABEL="end_ecr"
