@@ -328,6 +328,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER libgl-dev
     $PKG_MANAGER openocd
     $PKG_MANAGER colordiff
+    $PKG_MANAGER cppcheck
+    $PKG_MANAGER clang-format
     ./packages/ubuntu-packages/diff-so-fancy.sh
     ./packages/ubuntu-packages/arduino.sh
     ./packages/ubuntu-packages/firacode.sh
@@ -344,7 +346,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/QtProject.sh
 
     # Python packages
-    pip install blockdiag
+    pip3 install blockdiag
+    pip3 install cpplint
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
