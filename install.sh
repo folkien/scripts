@@ -330,6 +330,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER colordiff
     $PKG_MANAGER cppcheck
     $PKG_MANAGER clang-format
+    $PKG_MANAGER clang-tidy
+    $PKG_MANAGER clang-tools
     ./packages/ubuntu-packages/diff-so-fancy.sh
     ./packages/ubuntu-packages/arduino.sh
     ./packages/ubuntu-packages/firacode.sh
@@ -346,8 +348,12 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/QtProject.sh
 
     # Python packages
+    pip3 install pre-commit
     pip3 install blockdiag
     pip3 install cpplint
+    pip3 install autopep8
+    pip3 install flake8
+    pip3 install jupyterlab
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
