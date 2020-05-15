@@ -201,6 +201,7 @@ sudo ln -sf $DIR/memory-get-used.sh memory-get-used.sh
 sudo ln -sf $DIR/plot.sh plot
 sudo ln -sf $DIR/is-online.sh is-online
 sudo ln -sf $DIR/wait-till-online.sh wait-till-online
+sudo ln -sf $DIR/email-images.sh email-images
 
 # git modifications
 # -------------------------------------
@@ -375,6 +376,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER openvpn
     $PKG_MANAGER traceroute
     $PKG_MANAGER sshpass
+    $PKG_MANAGER mutt
     ./packages/ubuntu-packages/mail-server.sh
     ./packages/ubuntu-packages/ssh-server.sh
 
