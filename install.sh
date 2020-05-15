@@ -201,7 +201,7 @@ sudo ln -sf $DIR/memory-get-used.sh memory-get-used.sh
 sudo ln -sf $DIR/plot.sh plot
 sudo ln -sf $DIR/is-online.sh is-online
 sudo ln -sf $DIR/wait-till-online.sh wait-till-online
-sudo ln -sf $DIR/email-images.sh email-images
+sudo ln -sf $DIR/email-html.sh email-html
 
 # git modifications
 # -------------------------------------
