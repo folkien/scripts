@@ -377,6 +377,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER traceroute
     $PKG_MANAGER sshpass
     $PKG_MANAGER mutt
+    $PKG_MANAGER wkhtmltopdf
     ./packages/ubuntu-packages/mail-server.sh
     ./packages/ubuntu-packages/ssh-server.sh
 
