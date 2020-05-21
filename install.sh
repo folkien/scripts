@@ -347,6 +347,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/supla.sh
     ./packages/ubuntu-packages/sonoff.sh
     ./packages/ubuntu-packages/QtProject.sh
+    
+    # Biological
+    $PKG_MANAGER pymca
+    $PKG_MANAGER edfbrowser
 
     # Python packages
     pip3 install pre-commit
