@@ -10,6 +10,12 @@ git-sync
 ./install.sh
 results_str="${results_str} Scripts=OK\n"
 
+echo "Update of configs."
+cd ${git}/config
+git-sync
+results_str="${results_str} Config=OK\n"
+
+
 # Update python repos
 for path in /home/${USER}/python/*; do
     # If path is directory
