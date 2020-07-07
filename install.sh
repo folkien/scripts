@@ -365,6 +365,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
 
     #edytory
     $PKG_MANAGER vim-gtk
+    ./packages/ubuntu-packages/typora.sh
 
     # gry
     ./packages/ubuntu-packages/nes.sh
