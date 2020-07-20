@@ -359,6 +359,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     pip3 install autopep8
     pip3 install flake8
     pip3 install jupyterlab
+    pip3 install csvkit
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
