@@ -45,7 +45,7 @@ alias system-start-time="date -d \"$(</proc/uptime awk '{print $1}') seconds ago
 alias udev-reload="sudo udevadm --debug control --reload-rules && sudo udevadm --debug trigger && echo 'Rules reloaded!'"
 
 # video
-alias video-from-images="fmpeg -framerate 25 -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p vidimages.mp4 -i "
+alias video-from-images="ffmpeg -framerate 25 -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p vidimages.mp4 -i "
 
 # Getters
 alias get-owner="stat -c %U"
