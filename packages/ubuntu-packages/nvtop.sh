@@ -6,5 +6,5 @@ cmake ..
 # try the following command instead, otherwise skip to the build with make.
 cmake .. -DNVML_RETRIEVE_HEADER_ONLINE=True
 
-make
+make -j9
 sudo make install # You may need sufficient permission for that (root)

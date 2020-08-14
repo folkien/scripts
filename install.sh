@@ -399,6 +399,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     sudo snap install gimp
     ./packages/ubuntu-packages/flux.sh
     ./packages/ubuntu-packages/obs-studio.sh
+    ./packages/ubuntu-packages/nvtop.sh
 
     #Muzyka
     sudo snap install spotify
