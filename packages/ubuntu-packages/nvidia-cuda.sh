@@ -14,6 +14,7 @@ sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-lea
 
 sudo apt-get update
 sudo apt-get install cuda
+sudo apt install libcudnn8
 
 cat <<EOF >> ~/.profile
 if [ -d "/usr/local/cuda-11.0/bin/" ]; then
