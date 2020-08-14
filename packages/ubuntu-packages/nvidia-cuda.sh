@@ -14,3 +14,10 @@ sudo bash -c 'echo "deb http://developer.download.nvidia.com/compute/machine-lea
 
 sudo apt-get update
 sudo apt-get install cuda
+
+cat <<EOF >> ~/.profile
+if [ -d "/usr/local/cuda-11.0/bin/" ]; then
+    export PATH=/usr/local/cuda-11.0/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
+EOF
