@@ -88,7 +88,7 @@ if [ ! -e $python/pyBleCat ]; then
     sh $python/pyBleCat/install.sh
 fi
 
-# Scripts 
+# Scripts
 # -------------------------------------
 echo "Scripts installation..."
 cd /etc/
@@ -227,7 +227,7 @@ git config --global core.autocrlf input
 git config --global alias.branch-ancestor '!bash -c '\''diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne "s/^ //p" | head -1'\'' -'
 git config --global branch.sort -committerdate
 
-# Settings 
+# Settings
 # -------------------------------------
 gsettings set org.gnome.meld detect-encodings "['UTF-8', 'WINDOWS-1252', 'ISO-8859-15', 'UTF-16', 'WINDOWS-1253', 'KOI8-R']"
 
@@ -259,14 +259,14 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
 
     # Dependencies install
     $PKG_MANAGER lsb-core
-    $PKG_MANAGER `check-language-support -l pl`    
+    $PKG_MANAGER `check-language-support -l pl`
     $PKG_MANAGER pv dialog ncdu pydf lynx
     $PKG_MANAGER device-tree-compiler
     $PKG_MANAGER yakuake
     $PKG_MANAGER convert
-    $PKG_MANAGER git gitg qgit git-svn git-email 
+    $PKG_MANAGER git gitg qgit git-svn git-email
     $PKG_MANAGER hg
-    $PKG_MANAGER rar unrar 
+    $PKG_MANAGER rar unrar
     $PKG_MANAGER p7zip-full
     $PKG_MANAGER meld kdiff3
     $PKG_MANAGER bless
@@ -277,8 +277,9 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER ncurses libncurses-dev
     $PKG_MANAGER libncurses5-dev libncursesw5-dev
     ./packages/ubuntu-packages/hg-export.sh
+    ./packages/ubuntu-packages/cmake.sh
 #    $PKG_MANAGER gcc-arm-linux-gnueabihf gcc-arm-linux-gnueabi
-    
+
     $PKG_MANAGER u-boot-tools
 
     #Narzędzia dyskowe i plikowe
@@ -322,7 +323,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
 
     # Drivery
     ./packages/ubuntu-packages/samsung_scx3400.sh
-    
+
     # Programowanie, Debugowanie i praca
     $PKG_MANAGER valgrind
     $PKG_MANAGER kcachegrind
@@ -347,7 +348,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/supla.sh
     ./packages/ubuntu-packages/sonoff.sh
     ./packages/ubuntu-packages/QtProject.sh
-    
+
     # Biological
     $PKG_MANAGER pymca
     $PKG_MANAGER edfbrowser
@@ -378,7 +379,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER wireshark
     $PKG_MANAGER filezilla
     $PKG_MANAGER rdesktop
-    $PKG_MANAGER mingetty minicom cutecom 
+    $PKG_MANAGER mingetty minicom cutecom
     $PKG_MANAGER openvpn
     $PKG_MANAGER traceroute
     $PKG_MANAGER sshpass
@@ -410,7 +411,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER alsa-tools-gui
     $PKG_MANAGER pavucontrol
     ./packages/ubuntu-packages/radiotray.sh
-    
+
     # Filmy
     ./packages/ubuntu-packages/dvdcodedcs.sh
     $PKG_MANAGER linux-firmware-nonfree
@@ -451,4 +452,3 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     sudo apt upgrade
     sudo apt autoremove
 fi
-
