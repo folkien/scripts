@@ -30,7 +30,7 @@ alias ssh_detect_local="sudo nmap -p 22 --open -sV 192.168.0.0/24"
 
 alias PulpitSonel="rdesktop $SWIDNICAIP -u $SWIDNICAUSER -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
 alias PulpitWroclaw="rdesktop $WROCLAWIP -u spasz -g \"$DESKTOPWIDTH\"x\"$DESKTOPHEIGHT\" -r clipboard:CLIPBOARD -r disk:Spaszko=\home\spasz\ "
-alias sshSonel="ssh -X spaszko@$MYSONELIP" 
+alias sshSonel="ssh -X spaszko@$MYSONELIP"
 alias tohex="printf '%x\n' "
 alias todec="printf '%d\n' "
 alias tiubootcopy="sudo mkdir -p /media/boot/; sudo mount /dev/sdb1 /media/boot/;sudo  cp MLO /media/boot/ -rfv;sudo cp u-boot.img /media/boot/ -rfv; sudo umount /media/boot/; sudo rm -rf /media/boot"
@@ -45,7 +45,7 @@ alias system-start-time="date -d \"$(</proc/uptime awk '{print $1}') seconds ago
 alias udev-reload="sudo udevadm --debug control --reload-rules && sudo udevadm --debug trigger && echo 'Rules reloaded!'"
 
 # video
-alias video-from-images="ffmpeg -framerate 25 -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p vidimages.mp4 -i "
+alias video-from-images="ffmpeg -framerate 25 -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p vidimages.mp4 -start_number_range 200 -i "
 
 # Getters
 alias get-owner="stat -c %U"
@@ -79,5 +79,3 @@ alias git-am-patch="git am --signoff -3 --ignore-whitespace <"
 alias git-update-branch-list="git remote update origin --prune"
 alias git-branch-ancestor="git branch-ancestor"
 alias git-branch-sort="git for-each-ref --sort=-committerdate refs/heads/ --format='%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))'"
-
-
