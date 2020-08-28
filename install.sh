@@ -391,7 +391,6 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #Grafika
     $PKG_MANAGER arandr
     $PKG_MANAGER imagemagick
-    $PKG_MANAGER shutter
     $PKG_MANAGER xsane
     $PKG_MANAGER gnuplot-qt
     $PKG_MANAGER kst
@@ -399,6 +398,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER guvcview
     $PKG_MANAGER libopencv-dev
     sudo snap install gimp
+    ./packages/ubuntu-packages/shutter.sh
     ./packages/ubuntu-packages/flux.sh
     ./packages/ubuntu-packages/obs-studio.sh
     ./packages/ubuntu-packages/nvtop.sh
