@@ -334,6 +334,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER clang-format
     $PKG_MANAGER clang-tidy
     $PKG_MANAGER clang-tools
+    $PKG_MANAGER qemu-user-static
     ./packages/ubuntu-packages/diff-so-fancy.sh
     ./packages/ubuntu-packages/arduino.sh
     ./packages/ubuntu-packages/firacode.sh
