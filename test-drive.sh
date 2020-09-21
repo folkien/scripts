@@ -3,7 +3,12 @@
 
 testDirectory="."
 testNumber=1
-while [ 1 ]; do
+timeout=60*60 # 1 hour
+startTime=$(date +%s)
+endTime=$((${startTime}+${timeout}))
+echo "Start time : ${startTime}s."
+echo "Expected End time : ${startTime}s."
+while [ ${startTime} -lt ${endTime} ]; do
     # Write test
     # 10 x 10MB creation
     echo "Writing!"
