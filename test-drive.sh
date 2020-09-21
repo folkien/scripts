@@ -6,7 +6,8 @@ testNumber=1
 while [ 1 ]; do
     # Write test
     # 10 x 10MB creation
-    for i in 1 2 3 4 5 .. 10; do
+    echo "Writing!"
+    for i in {0..9}; do
         dd if=/dev/urandom of=${testDirectory}/file${testNumber}_${i}.bin bs=1MB count=10
         # Check results
         if [ $? -ne 0  ]; then
@@ -20,7 +21,8 @@ while [ 1 ]; do
     
     # Read test
     # 10 x 10MB creation
-    for i in 1 2 3 4 5 .. 10; do
+    echo "Reading!"
+    for i in {0..9}; do
         dd if=${testDirectory}/file${testNumber}_${i}.bin of=/dev/null bs=1MB count=10
         # Check results
         if [ $? -ne 0  ]; then
@@ -30,7 +32,7 @@ while [ 1 ]; do
     done
 
     # 10 x 10MB removal
-    for i in 1 2 3 4 5 .. 10; do
+    for i in {0..9}; do
         rm -rfv ${testDirectory}/file${testNumber}_${i}.bin
         # Check results
         if [ $? -ne 0  ]; then
