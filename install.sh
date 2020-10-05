@@ -289,6 +289,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER rar unrar
     $PKG_MANAGER p7zip-full
     $PKG_MANAGER pdftk
+    $PKG_MANAGER autojump
     ./packages/ubuntu-packages/fatcat.sh
 
     #Narzędzia systemowe
