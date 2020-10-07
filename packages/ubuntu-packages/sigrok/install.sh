@@ -6,6 +6,7 @@ sudo chown $USER.$USER -R /opt/sigrok
 ./sigrok-cli.sh
 ./sigrok-firmware.sh
 ./sigrok-firmware-fx2lafw.sh
+./sigrok-util.sh
 ./pulseview.sh
 sudo chown $USER.$USER -R /opt/sigrok
 sudo cp -rfv 98-sigrok.rules /etc/udev/rules.d/
