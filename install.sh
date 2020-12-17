@@ -400,6 +400,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER v4l-utils
     $PKG_MANAGER guvcview
     $PKG_MANAGER libopencv-dev
+    $PKG_MANAGER flameshot
     sudo snap install gimp
     ./packages/ubuntu-packages/shutter.sh
     ./packages/ubuntu-packages/flux.sh
