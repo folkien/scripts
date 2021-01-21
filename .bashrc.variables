@@ -23,6 +23,9 @@ export bashrc_native="/home/$USER/.bashrc"
 export bashrc_aliases="$scripts/.bashrc.aliases"
 export bashrc_variables="$scripts/.bashrc.variables"
 
+# python
+export PYTHONDONTWRITEBYTECODE=1
+
 
 # stałe dotyczące dysku google
 export gdrive="/home/$USER/Dokumenty/folkus@gmail.com/"
@@ -74,4 +77,3 @@ export BASHRC_INSTALLED=1
 if [ -f $scripts/.config/$(cat /etc/hostname)/variables.sh ]; then
     source $scripts/.config/$(cat /etc/hostname)/variables.sh
 fi
-
