@@ -1,1 +1,1 @@
-docker pull datalust/seq
+sudo docker pull datalust/seq
