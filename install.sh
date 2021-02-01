@@ -202,6 +202,7 @@ sudo ln -sf $DIR/plot.sh plot
 sudo ln -sf $DIR/is-online.sh is-online
 sudo ln -sf $DIR/wait-till-online.sh wait-till-online
 sudo ln -sf $DIR/email-html.sh email-html
+sudo ln -sf $DIR/picklePlot.py pickle-plot
 
 # git modifications
 # -------------------------------------
