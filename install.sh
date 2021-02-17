@@ -353,6 +353,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/sonoff.sh
     ./packages/ubuntu-packages/QtProject.sh
     ./packages/ubuntu-packages/googletest.sh
+    sudo snap install pycharm-community --classic
 
     # Biological
     $PKG_MANAGER pymca
