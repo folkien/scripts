@@ -319,6 +319,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER golang-go
     $PKG_MANAGER rename
     $PKG_MANAGER python3-pip
+    sudo snap install powerstat
     ./packages/ubuntu-packages/udev.sh
     ./packages/ubuntu-packages/xidel.sh
     ./packages/ubuntu-packages/sysdig.sh
@@ -367,6 +368,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     pip3 install flake8
     pip3 install jupyterlab
     pip3 install csvkit
+    pip3 install s-tui --user
+
 
     #Szyfrowanie
     ./packages/ubuntu-packages/encfs.sh
