@@ -413,6 +413,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/obs-studio.sh
     ./packages/ubuntu-packages/nvtop.sh
 
+    # Książki
+    $PKG_MANAGER calibre
+
+
     #Muzyka
     sudo snap install spotify
     $PKG_MANAGER audacious
