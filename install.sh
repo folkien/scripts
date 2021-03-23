@@ -292,6 +292,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER p7zip-full
     $PKG_MANAGER pdftk
     $PKG_MANAGER autojump
+    $PKG_MANAGER exfat-fuse exfat-utils
     ./packages/ubuntu-packages/fatcat.sh
 
     #Narzędzia systemowe
