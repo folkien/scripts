@@ -96,8 +96,6 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     pip3 install cpplint
     pip3 install autopep8
     pip3 install flake8
-    pip3 install jupyterlab
-    pip3 install csvkit
     pip3 install s-tui --user
 
 
@@ -124,11 +122,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/xrdp.sh
 
     #Grafika
-    $PKG_MANAGER arandr
     $PKG_MANAGER imagemagick
     $PKG_MANAGER libopencv-dev
     $PKG_MANAGER zbar-tools
-    ./packages/ubuntu-packages/flux.sh
+    ./packages/ubuntu-packages/nvidia-purge.sh
     ./packages/ubuntu-packages/nvidia.sh
     ./packages/ubuntu-packages/nvidia-cuda.sh
     ./packages/ubuntu-packages/nvtop.sh
