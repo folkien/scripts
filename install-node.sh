@@ -79,8 +79,6 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/sysdig.sh
 
     # Programowanie, Debugowanie i praca
-    $PKG_MANAGER valgrind
-    $PKG_MANAGER kcachegrind
     $PKG_MANAGER openocd
     $PKG_MANAGER colordiff
     $PKG_MANAGER cppcheck
@@ -115,8 +113,6 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER net-tools
     $PKG_MANAGER nmap
     $PKG_MANAGER wireshark
-    $PKG_MANAGER filezilla
-    $PKG_MANAGER rdesktop
     $PKG_MANAGER mingetty minicom cutecom
     $PKG_MANAGER openvpn
     $PKG_MANAGER traceroute
@@ -125,12 +121,11 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER wkhtmltopdf
     # Zdalny dostep
     ./packages/ubuntu-packages/ssh-server.sh
+    ./packages/ubuntu-packages/xrdp.sh
 
     #Grafika
     $PKG_MANAGER arandr
     $PKG_MANAGER imagemagick
-    $PKG_MANAGER gnuplot-qt
-    $PKG_MANAGER kst
     $PKG_MANAGER libopencv-dev
     $PKG_MANAGER zbar-tools
     ./packages/ubuntu-packages/flux.sh
