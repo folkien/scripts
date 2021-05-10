@@ -117,6 +117,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER sshpass
     $PKG_MANAGER mutt
     $PKG_MANAGER wkhtmltopdf
+    $PKG_MANAGER docker.io
     # Zdalny dostep
     ./packages/ubuntu-packages/ssh-server.sh
     ./packages/ubuntu-packages/xrdp.sh
