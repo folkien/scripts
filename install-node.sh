@@ -85,6 +85,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER clang-format
     $PKG_MANAGER clang-tidy
     $PKG_MANAGER clang-tools
+    sudo snap install typora
     ./packages/ubuntu-packages/diff-so-fancy.sh
     ./packages/ubuntu-packages/firacode.sh
     ./packages/ubuntu-packages/pyocd.sh
