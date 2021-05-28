@@ -120,6 +120,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER wkhtmltopdf
     $PKG_MANAGER docker.io
     $PKG_MANAGER docker
+    ./packages/ubuntu-packages/nvidia-docker.sh
     # Zdalny dostep
     ./packages/ubuntu-packages/ssh-server.sh
     ./packages/ubuntu-packages/xrdp.sh
