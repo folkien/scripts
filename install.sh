@@ -300,6 +300,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     #Narzędzia systemowe
     $PKG_MANAGER gnome-calculator
     $PKG_MANAGER tuptime
+    $PKG_MANAGER rename
     $PKG_MANAGER mc
     $PKG_MANAGER dos2unix
     $PKG_MANAGER procinfo
