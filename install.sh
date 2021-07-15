@@ -334,6 +334,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     ./packages/ubuntu-packages/samsung_scx3400.sh
 
     # Programowanie, Debugowanie i praca
+    $PKG_MANAGER rpl
     $PKG_MANAGER valgrind
     $PKG_MANAGER kcachegrind
     $PKG_MANAGER libgl-dev
