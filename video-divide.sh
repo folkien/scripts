@@ -9,6 +9,6 @@ partSize=$(\
 )
 
 echo "Divide ${file} to parts of ${partSize} time."
-##ffmpeg -ss ${from} -i "${file}" -t ${to} -vcodec copy -acodec copy Cuted${file}
-ffmpeg -i ${file} -c copy -map 0 -segment_time ${partSize} -f segment video_part%03d.mp4
+##ffmpeg -ss ${from} -i "${file}" -t ${to}  Cuted${file}
+ffmpeg -i ${file} -vcodec copy -acodec copy  -reset_timestamps 1 -segment_time ${partSize} -f segment video_part%03d.mp4
 echo "Divided ${file}."
