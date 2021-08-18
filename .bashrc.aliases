@@ -24,6 +24,9 @@ alias serialMI0="sudo gtkterm --port /dev/ttyMI0  --speed 115200"
 alias testInternet="/usr/bin/wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 alias gvi="gvim --remote-tab"
 
+alias markdownToPdf='pandoc --doc-engine=wkhtmltopdf --extract-media=. -o output.pdf'
+alias markdownToDocx='pandoc --extract-media=. -o output.docx'
+
 alias ssh_detect_172="sudo nmap -p 22 --open -sV 172.31.0.0/24"
 alias ssh_detect_192="sudo nmap -p 22 --open -sV 192.168.100.0/24"
 alias ssh_detect_local="sudo nmap -p 22 --open -sV 192.168.0.0/24"
