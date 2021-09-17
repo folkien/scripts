@@ -208,6 +208,7 @@ sudo ln -sf $DIR/video-cut.sh video-cut
 sudo ln -sf $DIR/video-divide.sh video-divide
 sudo ln -sf $DIR/nvidia-validate.sh nvidia-validate
 sudo ln -sf $DIR/drop-duplicate-lines.sh drop-duplicate-lines
+sudo ln -sf $DIR/video-thumbnail.sh video-thumbnail
 
 # git modifications
 # -------------------------------------
