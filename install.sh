@@ -298,6 +298,8 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER pdftk
     $PKG_MANAGER autojump
     $PKG_MANAGER exfat-fuse exfat-utils
+    $PKG_MANAGER cifs-utils
+    $PKG_MANAGER cachefilesd
     ./packages/ubuntu-packages/fatcat.sh
 
     #Narzędzia systemowe
