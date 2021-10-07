@@ -209,6 +209,7 @@ sudo ln -sf $DIR/video-divide.sh video-divide
 sudo ln -sf $DIR/nvidia-validate.sh nvidia-validate
 sudo ln -sf $DIR/drop-duplicate-lines.sh drop-duplicate-lines
 sudo ln -sf $DIR/video-thumbnail.sh video-thumbnail
+sudo ln -sf $DIR/video-create-blank.sh video-create-blank
 
 # git modifications
 # -------------------------------------
@@ -240,8 +241,10 @@ gsettings set org.gnome.meld detect-encodings "['UTF-8', 'WINDOWS-1252', 'ISO-88
 
 # Systemd
 # -------------------------------------
-cd ${DIR}
-./install-systemd.sh
+if [ $# -gt 0 ] && [ $Argument = "all" ]; then
+    cd ${DIR}
+    ./install-systemd.sh
+fi
 
 # Packages
 # -------------------------------------
