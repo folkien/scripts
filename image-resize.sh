@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# Jeżeli zdjecie ma szerokosc wieksza od 800px to zostanie 
+# Jeżeli zdjecie ma szerokosc wieksza od 800px to zostanie
 # przeskalowane. Mniejszych zdjec nie rusza.
 #
-# Sławomir Paszko 
+# Sławomir Paszko
 # Argument $1 to zdjecia do konwersji.
 # Argument $2 jezeli jest podany, to max-szerokość zdjęcia.
 
-# 
+#
 #
 # Przykład użycia
 # ./resize.sh /images/ 800
@@ -26,7 +26,7 @@ function convertPhoto {
 		echo $FILE
 		EXTENSION=`echo $FILE | grep "\.[a-zA-Z0-9]*$" -o`
 		case "$EXTENSION" in
-		.png | .PNG | .JPG | .jpg | .GIF | .gif | .tiff | .TIFF ) 
+		.png | .PNG | .JPG | .jpg | .jpeg | .JPEG | .GIF | .gif | .tiff | .TIFF )
 		  echo "convert -resize $WIDTH\> $FILE $FILE"
 		  convert -resize $WIDTH\> "$FILE" "$FILE"
 		  ;;
@@ -46,7 +46,7 @@ find $FILES -mindepth 1 -maxdepth 2 -type f -print0 | xargs -0 -i bash -c 'conve
 #do
   #EXTENSION=`echo $f | grep "\.[a-zA-Z0-9]*$" -o`
   #case "$EXTENSION" in
-        #.png | .PNG | .JPG | .jpg | .GIF | .gif | .tiff | .TIFF ) 
+        #.png | .PNG | .JPG | .jpg | .GIF | .gif | .tiff | .TIFF )
 		  #let PERC=($I*100)/N
 		  #echo "($PERC %)Konwersja $f ..."
 		  #echo "convert -resize $WIDTH $f $f"
