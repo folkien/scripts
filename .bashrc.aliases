@@ -49,6 +49,8 @@ alias udev-reload="sudo udevadm --debug control --reload-rules && sudo udevadm -
 
 # video
 alias video-from-images="ffmpeg -framerate 25 -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p vidimages.mp4 -start_number_range 200 -i "
+#alias gif-from-images="convert -delay 20 -loop 0"
+alias gif-from-png-bydatetime="convert -delay 20 -loop 0 `ls *.png -t` output.gif"
 
 # Getters
 alias get-owner="stat -c %U"
