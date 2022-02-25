@@ -320,7 +320,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER iotop
     $PKG_MANAGER usbtop
     $PKG_MANAGER usbview
-    $PKG_MANAGER vusb-analyzer
+#    $PKG_MANAGER vusb-analyzer
     $PKG_MANAGER python-gnome2
     $PKG_MANAGER fonts-inconsolata ttf-mscorefonts-installer
     $PKG_MANAGER exuberant-ctags
@@ -329,7 +329,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER synaptic
     $PKG_MANAGER libnotify-bin
     $PKG_MANAGER wine winetricks
-    $PKG_MANAGER golang-go
+#    $PKG_MANAGER golang-go
     $PKG_MANAGER rename
     $PKG_MANAGER python3-pip
     sudo snap install powerstat
@@ -346,30 +346,30 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER valgrind
     $PKG_MANAGER kcachegrind
     $PKG_MANAGER libgl-dev
-    $PKG_MANAGER openocd
+ #   $PKG_MANAGER openocd
     $PKG_MANAGER colordiff
     $PKG_MANAGER cppcheck
     $PKG_MANAGER clang-format
     $PKG_MANAGER clang-tidy
     $PKG_MANAGER clang-tools
-    $PKG_MANAGER qemu-user-static
+ #   $PKG_MANAGER qemu-user-static
     $PKG_MANAGER sqlitebrowser
     ./packages/ubuntu-packages/diff-so-fancy.sh
-    ./packages/ubuntu-packages/arduino.sh
+#    ./packages/ubuntu-packages/arduino.sh
     ./packages/ubuntu-packages/firacode.sh
-    ./packages/ubuntu-packages/bluepy.sh
-    ./packages/ubuntu-packages/eclipse-oxygen.sh
-    ./packages/ubuntu-packages/pyocd.sh
-    ./packages/ubuntu-packages/mbed.sh
-    ./packages/ubuntu-packages/octave.sh
+#    ./packages/ubuntu-packages/bluepy.sh
+#    ./packages/ubuntu-packages/eclipse-oxygen.sh
+#    ./packages/ubuntu-packages/pyocd.sh
+#    ./packages/ubuntu-packages/mbed.sh
+#    ./packages/ubuntu-packages/octave.sh
     ./packages/ubuntu-packages/markdown.sh
-    ./packages/ubuntu-packages/esptool.sh
-    ./packages/ubuntu-packages/biosppy.sh
-    ./packages/ubuntu-packages/supla.sh
-    ./packages/ubuntu-packages/sonoff.sh
-    ./packages/ubuntu-packages/QtProject.sh
-    ./packages/ubuntu-packages/googletest.sh
-    sudo snap install pycharm-community --classic
+#    ./packages/ubuntu-packages/esptool.sh
+#    ./packages/ubuntu-packages/biosppy.sh
+#    ./packages/ubuntu-packages/supla.sh
+#    ./packages/ubuntu-packages/sonoff.sh
+#    ./packages/ubuntu-packages/QtProject.sh
+#    ./packages/ubuntu-packages/googletest.sh
+#    sudo snap install pycharm-community --classic
 
     # Biological
     $PKG_MANAGER pymca
@@ -426,11 +426,11 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     sudo snap install gimp
     ./packages/ubuntu-packages/shutter.sh
     ./packages/ubuntu-packages/flux.sh
-    ./packages/ubuntu-packages/obs-studio.sh
+#    ./packages/ubuntu-packages/obs-studio.sh
     ./packages/ubuntu-packages/nvtop.sh
 
     # Książki
-    $PKG_MANAGER calibre
+#    $PKG_MANAGER calibre
 
 
     #Muzyka
@@ -449,10 +449,10 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER streamer
 
     # Komunikatory
-    sudo snap install skype --classic
-    ./packages/ubuntu-packages/caprine.sh
+#    sudo snap install skype --classic
+#    ./packages/ubuntu-packages/caprine.sh
 #    sudo snap install caprine
-    ./packages/ubuntu-packages/kdeconnect-indicator.sh
+#    ./packages/ubuntu-packages/kdeconnect-indicator.sh
 
 
     cd $DIR

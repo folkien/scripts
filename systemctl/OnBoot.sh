@@ -46,7 +46,7 @@ notify-send-all "Update repozytoriów!\n \n${results_str}"
 
 # Stock
 # -------------------------------------------------------
-stock-alarms -c
+# stock-alarms -c
 # -------------------------------------------------------
 
 # Katechezy papieskie
