@@ -27,8 +27,8 @@ function convertPhoto {
 		EXTENSION=`echo $FILE | grep "\.[a-zA-Z0-9]*$" -o`
 		case "$EXTENSION" in
 		.png | .PNG | .JPG | .jpg | .jpeg | .JPEG | .GIF | .gif | .tiff | .TIFF )
-		  echo "convert -resize $WIDTH $FILE $FILE"
-		  convert -resize $WIDTH "$FILE" "$FILE"
+		  echo "convert -resize $WIDTH\> $FILE $FILE"
+		  convert -resize $WIDTH\> "$FILE" "$FILE"
 		  ;;
 		* ) echo " Nie znam tego rozszerzenia $f."
 		   ;;

@@ -121,6 +121,7 @@ sudo ln -sf $DIR/filesize.sh filesize
 sudo ln -sf $DIR/focus_or_launch.sh focus_or_launch
 sudo ln -sf $DIR/zdjecia-na-strone.sh zdjecia-na-strone
 sudo ln -sf $DIR/image-resize.sh image-resize
+sudo ln -sf $DIR/image-max-resize.sh image-max-resize
 sudo ln -sf $DIR/decompile-dtb.sh decompile-dtb
 sudo ln -sf $DIR/ddpv ddpv
 sudo ln -sf $DIR/drive-make-footprint.sh drive-make-footprint
