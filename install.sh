@@ -412,6 +412,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
     $PKG_MANAGER wkhtmltopdf
     ./packages/ubuntu-packages/mail-server.sh
     ./packages/ubuntu-packages/ssh-server.sh
+    ./packages/ubuntu-packages/nettop.sh
 
     #Grafika
     $PKG_MANAGER arandr
