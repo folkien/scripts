@@ -212,6 +212,7 @@ sudo ln -sf $DIR/drop-duplicate-lines.sh drop-duplicate-lines
 sudo ln -sf $DIR/video-thumbnail.sh video-thumbnail
 sudo ln -sf $DIR/video-create-blank.sh video-create-blank
 sudo ln -sf $DIR/gif-from-png-bydatetime.sh gif-from-png-bydatetime
+sudo ln -sf $DIR/windows-bios-get-licensekey.sh windows-bios-get-licensekey
 
 # git modifications
 # -------------------------------------
