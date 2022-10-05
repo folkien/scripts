@@ -1,1 +1,1 @@
-sudo cat  /sys/firmware/acpi/tables/MSDM
+sudo strings  /sys/firmware/acpi/tables/MSDM
