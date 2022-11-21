@@ -206,6 +206,7 @@ sudo ln -sf $DIR/wait-till-online.sh wait-till-online
 sudo ln -sf $DIR/email-html.sh email-html
 sudo ln -sf $DIR/picklePlot.py pickle-plot
 sudo ln -sf $DIR/video-cut.sh video-cut
+sudo ln -sf $DIR/video-reduceh265.sh video-reduceh265
 sudo ln -sf $DIR/video-divide.sh video-divide
 sudo ln -sf $DIR/nvidia-validate.sh nvidia-validate
 sudo ln -sf $DIR/drop-duplicate-lines.sh drop-duplicate-lines
