@@ -16,5 +16,5 @@ to=$(\
 )
 
 echo "Cut from ${from} to ${to}."
-ffmpeg -ss ${from} -i "${file}" -t ${to} -vcodec copy -acodec copy Cuted${file}
+ffmpeg -ss ${from} -i "${file}" -t ${to} -vcodec copy -acodec copy  -copy_unknown -map_metadata 0 Cuted${file}
 echo "Created Cuted${file}."
