@@ -63,10 +63,6 @@ if [ ! -d $python ]; then
     sudo install -d -o $USER -g $USER $python
 fi
 cd $python
-if [ ! -e $python/pyNotify ]; then
-    git clone git@github.com:folkien/pyNotify.git
-    sh $python/pyNotify/install.sh
-fi
 if [ ! -e $python/pypass ]; then
     git clone git@github.com:folkien/pypass.git
     sh $python/pypass/install.sh
@@ -74,10 +70,6 @@ fi
 if [ ! -e $python/pyIoCat ]; then
     git clone git@github.com:folkien/pyIoCat.git
     sh $python/pyIoCat/install.sh
-fi
-if [ ! -e $python/pyStock ]; then
-    git clone git@github.com:folkien/pyStock.git
-    sh $python/pyStock/install.sh
 fi
 if [ ! -e $python/pySocket ]; then
     git clone git@github.com:folkien/pySocket.git
@@ -375,6 +367,7 @@ if [ $# -gt 0 ] && [ $Argument = "all" ]; then
 #    ./packages/ubuntu-packages/QtProject.sh
 #    ./packages/ubuntu-packages/googletest.sh
 #    sudo snap install pycharm-community --classic
+    ./packages/ubuntu-packages/osslsigncode.sh
 
     # Biological
     $PKG_MANAGER pymca
