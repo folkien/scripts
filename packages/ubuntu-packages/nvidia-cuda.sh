@@ -1,31 +1,39 @@
-
 source /etc/os-release
+source /etc/messages.sh
 versionCode=$(echo ${VERSION_ID} | sed 's/\.//g')
 url=${ID}${versionCode}
 distro=${url}
 arch=$(uname -m)
 
-echo "Repository URL code is '${url}'."
-sleep 1
+echo "Repository URL code is '$url' / $arch."
+sleep 0.5
 
-# Add the package repositories
-sudo add-apt-repository ppa:graphics-drivers
-sudo apt-key adv --fetch-keys  http://developer.download.nvidia.com/compute/cuda/repos/${url}/x86_64/7fa2af80.pub
+# NVIDIA keys
+minfo "Nvidia keys"
+sudo apt-key adv --fetch-keys  http://developer.download.nvidia.com/compute/cuda/repos/$distro/$arch/7fa2af80.pub
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/$distro/$arch/3bf863cc.pub
-wget https://developer.download.nvidia.com/compute/cuda/repos/${url}/x86_64/cuda-${url}.pin
+wget https://developer.download.nvidia.com/compute/cuda/repos/$distro/$arch/cuda-$distro.pin
 sudo mv cuda-${url}.pin /etc/apt/preferences.d/cuda-repository-pin-600
 
-sudo apt-add-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/${url}/x86_64 /" 
-sudo apt-add-repository "deb http://developer.download.nvidia.com/compute/machine-learning/repos/${url}/x86_64 /"
+# NVIDIA repository
+minfo "Nvidia DEB repositories : 'deb http://developer.download.nvidia.com/compute/cuda/repos/$distro/$arch /'"
+sudo apt-add-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/$distro/$arch /"
+sudo apt-add-repository "deb http://developer.download.nvidia.com/compute/machine-learning/repos/$distro/$arch /"
+sudo add-apt-repository ppa:graphics-drivers
 
+# UPDATE everything
+minfo "Update"
 sudo apt-get update
-sudo apt-get install cuda
+
+# Install CUDA.11
+minfo "Installation"
+sudo apt-get install cuda-11-2
 sudo apt install libcudnn8
 sudo apt install libcudnn8-dev
 
 cat <<EOF >> ~/.profile
-if [ -d "/usr/local/cuda-11.0/bin/" ]; then
-    export PATH=/usr/local/cuda-11.0/bin${PATH:+:${PATH}}
-    export LD_LIBRARY_PATH=/usr/local/cuda-11.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+if [ -d "/usr/local/cuda-11.2/bin/" ]; then
+    export PATH=/usr/local/cuda-11.2/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
 EOF
