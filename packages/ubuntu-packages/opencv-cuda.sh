@@ -1,28 +1,48 @@
-choice=$(dialog --clear --backtitle "Select" \
-       --title "GPU architecture" --menu "Select GPU architecture:" \
-       15 40 5 \
-1 "GPU RTX2060/RTX2070" \
-2 "GPU RTX3060/3070" 3>&2 2>&1 1>&3)
+# GPU : Check if nvidia GPU exists
+if [ ! -e /dev/nvidia0 ]; then
+    echo "Error! No nvidia GPU found!"
+    exit -1
+fi
 
-# GPU arch list
+# GPU : Get graphics card name
+GPUname=$(nvidia-smi --query-gpu=gpu_name --format=csv,noheader,nounits | head -n 1)
+
+# Get : Name or RTX from full GPU name
+GPUnameRTX=$(echo ${GPUname} | grep -i "RTX.[0-9]*" -o)
+
+# NVIDIA GPUs architecture list.
 archRTX2060=7.5
 archRTX2070=7.5
 archRTX3060=8.6
 archRTX3070=8.6
 
-# GPU architecture
+# GPU architecture (default : RTX2060)
 GPUarch=${archRTX2060}
-
-clear
-case ${choice} in
-        1)
+# GPU architecture selection
+case ${GPUnameRTX} in
+        "RTX 2060" | "RTX 2070" | "RTX 2080" | "RTX 2080 Ti")
             GPUarch=${archRTX2060}
             ;;
-        2)
+        "RTX 3060" | "RTX 3070" | "RTX 3080" | "RTX 3090")
             GPUarch=${archRTX3060}
             ;;
         *)
             echo "Error! Unknown ${choice}!"
+            exit -1
+            ;;
+esac
+
+# Info : Print GPU info
+echo "GPU found : ${GPUname}"
+echo "GPU architecture found: ${GPUarch}"
+
+# Confirm : Ask to continue if data is corect?
+read -p "Continue? (y/n) " choice
+case ${choice} in
+        n|N)
+            exit 0
+            ;;
+        *)
             exit -1
             ;;
 esac
@@ -38,7 +58,13 @@ esac
 #sudo apt install libatlas-base-dev gfortran
 #sudo apt install python3-dev
 
+echo "(OpenCV) Download and unpacking."
 cd ~
+# Clean before download
+if [ -e opencv ]; then
+    rm -rf opencv
+fi
+# Download and unpack
 wget -O opencv.zip https://github.com/opencv/opencv/archive/refs/tags/4.5.2.zip
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/refs/tags/4.5.2.zip
 unzip opencv.zip
@@ -46,11 +72,10 @@ unzip opencv_contrib.zip
 mv opencv-4.5.2 opencv
 mv opencv_contrib-4.5.2 opencv_contrib
 
+echo "(OpenCV) Configuring project."
 cd ~/opencv
 mkdir build
 cd build
-
-
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_PYTHON_EXAMPLES=OFF \
@@ -67,11 +92,21 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D HAVE_opencv_python3=ON \
     -D PYTHON_EXECUTABLE=/usr/bin/python3.8 \
     -D BUILD_EXAMPLES=OFF ..
+if [ $? -ne 0 ]; then
+    echo "(OpenCV) Configuration failed!"
+    exit -1
+fi
 
 
 # Build and compile
+echo "(OpenCV) Compilation."
 make -j$(nproc)
+if [ $? -ne 0 ]; then
+    echo "(OpenCV) Compilation failed."
+    exit -1
+fi
 
 # Install in system
+echo "(OpenCV) Installation in system."
 sudo make install
 sudo ldconfig
