@@ -42,9 +42,6 @@ case ${choice} in
         n|N)
             exit 0
             ;;
-        *)
-            exit -1
-            ;;
 esac
 
 
@@ -65,8 +62,15 @@ if [ -e opencv ]; then
     rm -rf opencv
 fi
 # Download and unpack
-wget -O opencv.zip https://github.com/opencv/opencv/archive/refs/tags/4.5.2.zip
-wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/refs/tags/4.5.2.zip
+
+# Download if not exists
+if [ ! -e opencv.zip ]; then
+    wget -O opencv.zip https://github.com/opencv/opencv/archive/refs/tags/4.5.2.zip
+fi
+# Download if not exists
+if [ ! -e opencv_contrib.zip ]; then
+    wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/refs/tags/4.5.2.zip
+fi
 unzip opencv.zip
 unzip opencv_contrib.zip
 mv opencv-4.5.2 opencv
@@ -90,8 +94,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D WITH_CUBLAS=1 \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
     -D HAVE_opencv_python3=ON \
-    -D PYTHON_EXECUTABLE=/usr/bin/python3.8 \
     -D BUILD_EXAMPLES=OFF ..
+
 if [ $? -ne 0 ]; then
     echo "(OpenCV) Configuration failed!"
     exit -1
@@ -105,6 +109,14 @@ if [ $? -ne 0 ]; then
     echo "(OpenCV) Compilation failed."
     exit -1
 fi
+
+# Confirm : Ask are you ready to install?
+read -p "Install? (y/n) " choice
+case ${choice} in
+        n|N)
+            exit 0
+            ;;
+esac
 
 # Install in system
 echo "(OpenCV) Installation in system."
