@@ -200,6 +200,7 @@ sudo ln -sf $DIR/wait-till-online.sh wait-till-online
 sudo ln -sf $DIR/email-html.sh email-html
 sudo ln -sf $DIR/picklePlot.py pickle-plot
 sudo ln -sf $DIR/video-cut.sh video-cut
+sudo ln -sf $DIR/video-combine.sh video-combine
 sudo ln -sf $DIR/video-reduceh265.sh video-reduceh265
 sudo ln -sf $DIR/video-removeaudio.sh video-removeaudio
 sudo ln -sf $DIR/video-divide.sh video-divide
