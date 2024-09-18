@@ -204,6 +204,7 @@ sudo ln -sf $DIR/video-combine.sh video-combine
 sudo ln -sf $DIR/video-reduceh265.sh video-reduceh265
 sudo ln -sf $DIR/video-removeaudio.sh video-removeaudio
 sudo ln -sf $DIR/video-divide.sh video-divide
+sudo ln -sf $DIR/video-rotate90.sh video-rotate90
 sudo ln -sf $DIR/nvidia-validate.sh nvidia-validate
 sudo ln -sf $DIR/drop-duplicate-lines.sh drop-duplicate-lines
 sudo ln -sf $DIR/video-thumbnail.sh video-thumbnail
