@@ -132,6 +132,7 @@ sudo ln -sf $DIR/hex2ascii.sh hex2asci
 sudo ln -sf $DIR/hex2dec.sh hex2dec
 sudo ln -sf $DIR/dec2hex.sh dec2hex
 sudo ln -sf $DIR/ip-ping-find.sh ip-ping-find
+sudo ln -sf $DIR/ip-http-find.sh ip-http-find
 sudo ln -sf $DIR/ip-ssh-find.sh ip-ssh-find
 sudo ln -sf $DIR/gccMapAnalyzer.py gccMapAnalyzer
 sudo ln -sf $DIR/ascii2hex.sh ascii2hex
