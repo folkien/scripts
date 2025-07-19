@@ -57,28 +57,28 @@ if [ ! -e ${git}/config ]; then
     ./install.sh
 fi
 
-# Python programs
-# -------------------------------------
-if [ ! -d $python ]; then
-    sudo install -d -o $USER -g $USER $python
-fi
-cd $python
-if [ ! -e $python/pypass ]; then
-    git clone git@github.com:folkien/pypass.git
-    sh $python/pypass/install.sh
-fi
-if [ ! -e $python/pyIoCat ]; then
-    git clone git@github.com:folkien/pyIoCat.git
-    sh $python/pyIoCat/install.sh
-fi
-if [ ! -e $python/pySocket ]; then
-    git clone git@github.com:folkien/pySocket.git
-    sh $python/pySocket/install.sh
-fi
-if [ ! -e $python/pyBleCat ]; then
-    git clone git@github.com:folkien/pyBleCat.git
-    sh $python/pyBleCat/install.sh
-fi
+# # Python programs
+# # -------------------------------------
+# if [ ! -d $python ]; then
+#     sudo install -d -o $USER -g $USER $python
+# fi
+# cd $python
+# if [ ! -e $python/pypass ]; then
+#     git clone git@github.com:folkien/pypass.git
+#     sh $python/pypass/install.sh
+# fi
+# if [ ! -e $python/pyIoCat ]; then
+#     git clone git@github.com:folkien/pyIoCat.git
+#     sh $python/pyIoCat/install.sh
+# fi
+# if [ ! -e $python/pySocket ]; then
+#     git clone git@github.com:folkien/pySocket.git
+#     sh $python/pySocket/install.sh
+# fi
+# if [ ! -e $python/pyBleCat ]; then
+#     git clone git@github.com:folkien/pyBleCat.git
+#     sh $python/pyBleCat/install.sh
+# fi
 
 # Scripts
 # -------------------------------------
